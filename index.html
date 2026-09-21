@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Today's Ex-Dividend Stocks - DividendRadar</title>
   <meta name="description" content="Live list of stocks going ex-dividend today, September 21, 2026.">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Today's Ex-Dividend Stocks",
+    "description": "Live list of stocks going ex-dividend today, September 21, 2026.",
+    "dateModified": "2026-09-21",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DividendRadar"
+    }
+  }
+  </script>
+    
   <style>
     :root {
       --bg: #0d1117;
@@ -136,7 +151,7 @@
     tr:hover td {
       background-color: rgba(255, 255, 255, 0.02);
     }
-    .badge {
+    a.badge {
       background-color: #21262d;
       border: 1px solid var(--border);
       color: var(--primary);
@@ -144,6 +159,12 @@
       border-radius: 4px;
       font-weight: bold;
       font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.badge:hover {
+      background-color: var(--primary);
+      color: #fff;
     }
     .text-accent { color: var(--accent); }
     .font-bold { font-weight: bold; }
@@ -211,7 +232,9 @@
 
     <div class="search-box">
       <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
-      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
+      <span style="font-size: 0.85rem; color: var(--text-muted);">
+        Data dynamically sourced from <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API</a>.
+      </span>
     </div>
 
     <div class="table-container">
@@ -229,7 +252,7 @@
         <tbody>
           
         <tr>
-            <td><span class="badge">AVGO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AVGO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AVGO on Yahoo Finance">AVGO</a></td>
             <td>Broadcom Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.65</td>
             <td class="num">N/A%</td>
@@ -238,7 +261,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BRKR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BRKR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BRKR on Yahoo Finance">BRKR</a></td>
             <td>Bruker Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.05</td>
             <td class="num">N/A%</td>
@@ -247,7 +270,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BCAL</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BCAL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BCAL on Yahoo Finance">BCAL</a></td>
             <td>California BanCorp Common Stock</td>
             <td class="num font-bold text-accent">0.12</td>
             <td class="num">N/A%</td>
@@ -256,7 +279,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GLAD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GLAD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GLAD on Yahoo Finance">GLAD</a></td>
             <td>Gladstone Capital Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.15</td>
             <td class="num">N/A%</td>
@@ -265,7 +288,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GOODO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GOODO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GOODO on Yahoo Finance">GOODO</a></td>
             <td>Gladstone Commercial Corporation 6.00% Series G Cumulative Redeemable Preferred Stock, par value $0.001 per share</td>
             <td class="num font-bold text-accent">0.125</td>
             <td class="num">N/A%</td>
@@ -274,7 +297,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GOODN</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GOODN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GOODN on Yahoo Finance">GOODN</a></td>
             <td>Gladstone Commercial Corporation 6.625% Series E Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.138021</td>
             <td class="num">N/A%</td>
@@ -283,7 +306,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GOOD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GOOD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GOOD on Yahoo Finance">GOOD</a></td>
             <td>Gladstone Commercial Corporation Real Estate Investment Trust</td>
             <td class="num font-bold text-accent">0.1</td>
             <td class="num">N/A%</td>
@@ -292,7 +315,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GAIN</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GAIN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GAIN on Yahoo Finance">GAIN</a></td>
             <td>Gladstone Investment Corporation Business Development Company</td>
             <td class="num font-bold text-accent">0.08</td>
             <td class="num">N/A%</td>
@@ -301,7 +324,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">LANDO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/LANDO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LANDO on Yahoo Finance">LANDO</a></td>
             <td>Gladstone Land Corporation 6.00% Series B Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.125</td>
             <td class="num">N/A%</td>
@@ -310,7 +333,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">LANDP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/LANDP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LANDP on Yahoo Finance">LANDP</a></td>
             <td>Gladstone Land Corporation 6.00% Series C Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.125</td>
             <td class="num">N/A%</td>
@@ -319,7 +342,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">LAND</span></td>
+            <td><a href="https://finance.yahoo.com/quote/LAND" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LAND on Yahoo Finance">LAND</a></td>
             <td>Gladstone Land Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.0467</td>
             <td class="num">N/A%</td>
@@ -328,7 +351,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QYLG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QYLG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QYLG on Yahoo Finance">QYLG</a></td>
             <td>Global X Nasdaq 100 Covered Call &amp; Growth ETF</td>
             <td class="num font-bold text-accent">0.1398</td>
             <td class="num">N/A%</td>
@@ -337,7 +360,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QYLD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QYLD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QYLD on Yahoo Finance">QYLD</a></td>
             <td>Global X NASDAQ 100 Covered Call ETF</td>
             <td class="num font-bold text-accent">0.1767</td>
             <td class="num">N/A%</td>
@@ -346,7 +369,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QRMI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QRMI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QRMI on Yahoo Finance">QRMI</a></td>
             <td>Global X NASDAQ 100 Risk Managed Income ETF</td>
             <td class="num font-bold text-accent">0.1542</td>
             <td class="num">N/A%</td>
@@ -355,7 +378,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">YBST</span></td>
+            <td><a href="https://finance.yahoo.com/quote/YBST" target="_blank" rel="noopener noreferrer" class="badge" title="Verify YBST on Yahoo Finance">YBST</a></td>
             <td>GraniteShares YieldBoost Single Stock Universe ETF</td>
             <td class="num font-bold text-accent">0.10052</td>
             <td class="num">N/A%</td>
@@ -364,7 +387,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">YBTY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/YBTY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify YBTY on Yahoo Finance">YBTY</a></td>
             <td>GraniteShares YieldBoost TopYielders ETF</td>
             <td class="num font-bold text-accent">0.1023</td>
             <td class="num">N/A%</td>
@@ -373,7 +396,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HLNE</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HLNE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HLNE on Yahoo Finance">HLNE</a></td>
             <td>Hamilton Lane Incorporated Class A Common Stock</td>
             <td class="num font-bold text-accent">0.6</td>
             <td class="num">N/A%</td>
@@ -382,7 +405,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HUBG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HUBG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HUBG on Yahoo Finance">HUBG</a></td>
             <td>Hub Group, Inc. Class A Common Stock</td>
             <td class="num font-bold text-accent">0.125</td>
             <td class="num">N/A%</td>
@@ -391,7 +414,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">FDIQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/FDIQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FDIQ on Yahoo Finance">FDIQ</a></td>
             <td>Invesco Bloomberg Financial Data Providers ETF</td>
             <td class="num font-bold text-accent">0.36523</td>
             <td class="num">N/A%</td>
@@ -400,7 +423,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCQ on Yahoo Finance">BSCQ</a></td>
             <td>Invesco BulletShares 2026 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.06567</td>
             <td class="num">N/A%</td>
@@ -409,7 +432,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJQ on Yahoo Finance">BSJQ</a></td>
             <td>Invesco BulletShares 2026 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.08808</td>
             <td class="num">N/A%</td>
@@ -418,7 +441,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMQ on Yahoo Finance">BSMQ</a></td>
             <td>Invesco BulletShares 2026 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.05313</td>
             <td class="num">N/A%</td>
@@ -427,7 +450,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCR on Yahoo Finance">BSCR</a></td>
             <td>Invesco BulletShares 2027 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.06969</td>
             <td class="num">N/A%</td>
@@ -436,7 +459,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJR on Yahoo Finance">BSJR</a></td>
             <td>Invesco BulletShares 2027 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.09378</td>
             <td class="num">N/A%</td>
@@ -445,7 +468,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMR on Yahoo Finance">BSMR</a></td>
             <td>Invesco BulletShares 2027 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.05302</td>
             <td class="num">N/A%</td>
@@ -454,7 +477,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSGR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSGR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSGR on Yahoo Finance">BSGR</a></td>
             <td>Invesco BulletShares 2027 Treasury Bond ETF</td>
             <td class="num font-bold text-accent">0.06364</td>
             <td class="num">N/A%</td>
@@ -463,7 +486,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCS on Yahoo Finance">BSCS</a></td>
             <td>Invesco BulletShares 2028 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.07443</td>
             <td class="num">N/A%</td>
@@ -472,7 +495,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJS on Yahoo Finance">BSJS</a></td>
             <td>Invesco BulletShares 2028 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.10461</td>
             <td class="num">N/A%</td>
@@ -481,7 +504,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMS on Yahoo Finance">BSMS</a></td>
             <td>Invesco BulletShares 2028 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.05347</td>
             <td class="num">N/A%</td>
@@ -490,7 +513,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSTS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSTS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSTS on Yahoo Finance">BSTS</a></td>
             <td>Invesco BulletShares 2028 Treasury Bond ETF</td>
             <td class="num font-bold text-accent">0.08288</td>
             <td class="num">N/A%</td>
@@ -499,7 +522,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCT on Yahoo Finance">BSCT</a></td>
             <td>Invesco BulletShares 2029 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.06876</td>
             <td class="num">N/A%</td>
@@ -508,7 +531,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJT on Yahoo Finance">BSJT</a></td>
             <td>Invesco BulletShares 2029 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.11105</td>
             <td class="num">N/A%</td>
@@ -517,7 +540,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMT on Yahoo Finance">BSMT</a></td>
             <td>Invesco BulletShares 2029 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.0519</td>
             <td class="num">N/A%</td>
@@ -526,7 +549,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSGT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSGT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSGT on Yahoo Finance">BSGT</a></td>
             <td>Invesco BulletShares 2029 Treasury Bond ETF</td>
             <td class="num font-bold text-accent">0.08372</td>
             <td class="num">N/A%</td>
@@ -535,7 +558,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCU</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCU" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCU on Yahoo Finance">BSCU</a></td>
             <td>Invesco BulletShares 2030 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.06286</td>
             <td class="num">N/A%</td>
@@ -544,7 +567,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJU</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJU" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJU on Yahoo Finance">BSJU</a></td>
             <td>Invesco BulletShares 2030 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.13939</td>
             <td class="num">N/A%</td>
@@ -553,7 +576,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMU</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMU" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMU on Yahoo Finance">BSMU</a></td>
             <td>Invesco BulletShares 2030 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.05168</td>
             <td class="num">N/A%</td>
@@ -562,7 +585,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSTU</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSTU" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSTU on Yahoo Finance">BSTU</a></td>
             <td>Invesco BulletShares 2030 Treasury Bond ETF</td>
             <td class="num font-bold text-accent">0.08485</td>
             <td class="num">N/A%</td>
@@ -571,7 +594,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCV</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCV on Yahoo Finance">BSCV</a></td>
             <td>Invesco BulletShares 2031 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.06342</td>
             <td class="num">N/A%</td>
@@ -580,7 +603,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJV</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJV on Yahoo Finance">BSJV</a></td>
             <td>Invesco BulletShares 2031 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.13591</td>
             <td class="num">N/A%</td>
@@ -589,7 +612,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMV</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMV on Yahoo Finance">BSMV</a></td>
             <td>Invesco BulletShares 2031 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.0508</td>
             <td class="num">N/A%</td>
@@ -598,7 +621,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSTV</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSTV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSTV on Yahoo Finance">BSTV</a></td>
             <td>Invesco BulletShares 2031 Treasury Bond ETF</td>
             <td class="num font-bold text-accent">0.08655</td>
             <td class="num">N/A%</td>
@@ -607,7 +630,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCW on Yahoo Finance">BSCW</a></td>
             <td>Invesco BulletShares 2032 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.07943</td>
             <td class="num">N/A%</td>
@@ -616,7 +639,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJW on Yahoo Finance">BSJW</a></td>
             <td>Invesco BulletShares 2032 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.13289</td>
             <td class="num">N/A%</td>
@@ -625,7 +648,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMW on Yahoo Finance">BSMW</a></td>
             <td>Invesco BulletShares 2032 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.06723</td>
             <td class="num">N/A%</td>
@@ -634,7 +657,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCX</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCX on Yahoo Finance">BSCX</a></td>
             <td>Invesco BulletShares 2033 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.08485</td>
             <td class="num">N/A%</td>
@@ -643,7 +666,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJX</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJX on Yahoo Finance">BSJX</a></td>
             <td>Invesco BulletShares 2033 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.12914</td>
             <td class="num">N/A%</td>
@@ -652,7 +675,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSSX</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSSX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSSX on Yahoo Finance">BSSX</a></td>
             <td>Invesco BulletShares 2033 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.06835</td>
             <td class="num">N/A%</td>
@@ -661,7 +684,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCY on Yahoo Finance">BSCY</a></td>
             <td>Invesco BulletShares 2034 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.08086</td>
             <td class="num">N/A%</td>
@@ -670,7 +693,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSJY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSJY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSJY on Yahoo Finance">BSJY</a></td>
             <td>Invesco BulletShares 2034 High Yield Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.13711</td>
             <td class="num">N/A%</td>
@@ -679,7 +702,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMY on Yahoo Finance">BSMY</a></td>
             <td>Invesco BulletShares 2034 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.07414</td>
             <td class="num">N/A%</td>
@@ -688,7 +711,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCZ on Yahoo Finance">BSCZ</a></td>
             <td>Invesco BulletShares 2035 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.07644</td>
             <td class="num">N/A%</td>
@@ -697,7 +720,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSMZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSMZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSMZ on Yahoo Finance">BSMZ</a></td>
             <td>Invesco BulletShares 2035 Municipal Bond ETF</td>
             <td class="num font-bold text-accent">0.06977</td>
             <td class="num">N/A%</td>
@@ -706,7 +729,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BSCA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BSCA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSCA on Yahoo Finance">BSCA</a></td>
             <td>Invesco BulletShares 2036 Corporate Bond ETF</td>
             <td class="num font-bold text-accent">0.08771</td>
             <td class="num">N/A%</td>
@@ -715,7 +738,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PKW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PKW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PKW on Yahoo Finance">PKW</a></td>
             <td>Invesco BuyBack Achievers ETF</td>
             <td class="num font-bold text-accent">0.21834</td>
             <td class="num">N/A%</td>
@@ -724,7 +747,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PFM</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PFM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PFM on Yahoo Finance">PFM</a></td>
             <td>Invesco Dividend Achievers ETF</td>
             <td class="num font-bold text-accent">0.17987</td>
             <td class="num">N/A%</td>
@@ -733,7 +756,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PYZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PYZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PYZ on Yahoo Finance">PYZ</a></td>
             <td>Invesco Dorsey Wright Basic Materials Momentum ETF</td>
             <td class="num font-bold text-accent">0.15094</td>
             <td class="num">N/A%</td>
@@ -742,7 +765,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PEZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PEZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PEZ on Yahoo Finance">PEZ</a></td>
             <td>Invesco Dorsey Wright Consumer Cyclicals Momentum ETF</td>
             <td class="num font-bold text-accent">0.13438</td>
             <td class="num">N/A%</td>
@@ -751,7 +774,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSL</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSL on Yahoo Finance">PSL</a></td>
             <td>Invesco Dorsey Wright Consumer Staples Momentum ETF</td>
             <td class="num font-bold text-accent">0.16524</td>
             <td class="num">N/A%</td>
@@ -760,7 +783,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PIZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PIZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PIZ on Yahoo Finance">PIZ</a></td>
             <td>Invesco Dorsey Wright Developed Markets Momentum ETF</td>
             <td class="num font-bold text-accent">0.12753</td>
             <td class="num">N/A%</td>
@@ -769,7 +792,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PIE</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PIE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PIE on Yahoo Finance">PIE</a></td>
             <td>Invesco Dorsey Wright Emerging Markets Momentum ETF</td>
             <td class="num font-bold text-accent">0.25747</td>
             <td class="num">N/A%</td>
@@ -778,7 +801,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PXI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PXI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PXI on Yahoo Finance">PXI</a></td>
             <td>Invesco Dorsey Wright Energy Momentum ETF</td>
             <td class="num font-bold text-accent">0.20339</td>
             <td class="num">N/A%</td>
@@ -787,7 +810,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PFI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PFI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PFI on Yahoo Finance">PFI</a></td>
             <td>Invesco Dorsey Wright Financial Momentum ETF</td>
             <td class="num font-bold text-accent">0.16177</td>
             <td class="num">N/A%</td>
@@ -796,7 +819,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">DWAS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/DWAS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DWAS on Yahoo Finance">DWAS</a></td>
             <td>Invesco Dorsey Wright SmallCap Momentum ETF</td>
             <td class="num font-bold text-accent">0.03542</td>
             <td class="num">N/A%</td>
@@ -805,7 +828,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PUI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PUI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PUI on Yahoo Finance">PUI</a></td>
             <td>Invesco Dorsey Wright Utilities Momentum ETF</td>
             <td class="num font-bold text-accent">0.24561</td>
             <td class="num">N/A%</td>
@@ -814,7 +837,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GOVI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GOVI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GOVI on Yahoo Finance">GOVI</a></td>
             <td>Invesco Equal Weight 0-30 Year Treasury ETF</td>
             <td class="num font-bold text-accent">0.09263</td>
             <td class="num">N/A%</td>
@@ -823,7 +846,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQMG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQMG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQMG on Yahoo Finance">QQMG</a></td>
             <td>Invesco ESG NASDAQ 100 ETF</td>
             <td class="num font-bold text-accent">0.04208</td>
             <td class="num">N/A%</td>
@@ -832,7 +855,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PGJ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PGJ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PGJ on Yahoo Finance">PGJ</a></td>
             <td>Invesco Golden Dragon China ETF</td>
             <td class="num font-bold text-accent">0.14802</td>
             <td class="num">N/A%</td>
@@ -841,7 +864,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PEY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PEY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PEY on Yahoo Finance">PEY</a></td>
             <td>Invesco High Yield Equity Dividend Achievers ETF</td>
             <td class="num font-bold text-accent">0.09315</td>
             <td class="num">N/A%</td>
@@ -850,7 +873,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">GTOQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GTOQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GTOQ on Yahoo Finance">GTOQ</a></td>
             <td>Invesco High Yield Systematic Bond ETF</td>
             <td class="num font-bold text-accent">0.13654</td>
             <td class="num">N/A%</td>
@@ -859,7 +882,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">IPKW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/IPKW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify IPKW on Yahoo Finance">IPKW</a></td>
             <td>Invesco International BuyBack Achievers ETF</td>
             <td class="num font-bold text-accent">0.24939</td>
             <td class="num">N/A%</td>
@@ -868,7 +891,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PID</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PID" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PID on Yahoo Finance">PID</a></td>
             <td>Invesco International Dividend Achievers ETF</td>
             <td class="num font-bold text-accent">0.15416</td>
             <td class="num">N/A%</td>
@@ -877,7 +900,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">KBWB</span></td>
+            <td><a href="https://finance.yahoo.com/quote/KBWB" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KBWB on Yahoo Finance">KBWB</a></td>
             <td>Invesco KBW Bank ETF</td>
             <td class="num font-bold text-accent">0.46007</td>
             <td class="num">N/A%</td>
@@ -886,7 +909,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">KBWD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/KBWD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KBWD on Yahoo Finance">KBWD</a></td>
             <td>Invesco KBW High Dividend Yield Financial ETF</td>
             <td class="num font-bold text-accent">0.13497</td>
             <td class="num">N/A%</td>
@@ -895,7 +918,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">KBWY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/KBWY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KBWY on Yahoo Finance">KBWY</a></td>
             <td>Invesco KBW Premium Yield Equity REIT ETF</td>
             <td class="num font-bold text-accent">0.11987</td>
             <td class="num">N/A%</td>
@@ -904,7 +927,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">KBWP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/KBWP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KBWP on Yahoo Finance">KBWP</a></td>
             <td>Invesco KBW Property &amp; Casualty Insurance ETF</td>
             <td class="num font-bold text-accent">0.35989</td>
             <td class="num">N/A%</td>
@@ -913,7 +936,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQQM</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQQM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQQM on Yahoo Finance">QQQM</a></td>
             <td>Invesco NASDAQ 100 ETF</td>
             <td class="num font-bold text-accent">0.31266</td>
             <td class="num">N/A%</td>
@@ -922,7 +945,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">IBBQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/IBBQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify IBBQ on Yahoo Finance">IBBQ</a></td>
             <td>Invesco Nasdaq Biotechnology ETF</td>
             <td class="num font-bold text-accent">0.23037</td>
             <td class="num">N/A%</td>
@@ -931,7 +954,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QOWZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QOWZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QOWZ on Yahoo Finance">QOWZ</a></td>
             <td>Invesco Nasdaq Free Cash Flow Achievers ETF</td>
             <td class="num font-bold text-accent">0.01738</td>
             <td class="num">N/A%</td>
@@ -940,7 +963,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQQS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQQS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQQS on Yahoo Finance">QQQS</a></td>
             <td>Invesco NASDAQ Future Gen 200 ETF</td>
             <td class="num font-bold text-accent">0.02135</td>
             <td class="num">N/A%</td>
@@ -949,7 +972,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQQJ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQQJ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQQJ on Yahoo Finance">QQQJ</a></td>
             <td>Invesco NASDAQ Next Gen 100 ETF</td>
             <td class="num font-bold text-accent">0.19766</td>
             <td class="num">N/A%</td>
@@ -958,7 +981,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SOXQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SOXQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SOXQ on Yahoo Finance">SOXQ</a></td>
             <td>Invesco PHLX Semiconductor ETF</td>
             <td class="num font-bold text-accent">0.08447</td>
             <td class="num">N/A%</td>
@@ -967,7 +990,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QEW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QEW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QEW on Yahoo Finance">QEW</a></td>
             <td>Invesco QQQ Equal Weight ETF</td>
             <td class="num font-bold text-accent">0.05295</td>
             <td class="num">N/A%</td>
@@ -976,7 +999,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQHG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQHG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQHG on Yahoo Finance">QQHG</a></td>
             <td>Invesco QQQ Hedged Advantage ETF</td>
             <td class="num font-bold text-accent">0.02997</td>
             <td class="num">N/A%</td>
@@ -985,7 +1008,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQA on Yahoo Finance">QQA</a></td>
             <td>Invesco QQQ Income Advantage ETF</td>
             <td class="num font-bold text-accent">0.4859</td>
             <td class="num">N/A%</td>
@@ -994,7 +1017,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQLV</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQLV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQLV on Yahoo Finance">QQLV</a></td>
             <td>Invesco QQQ Low Volatility ETF</td>
             <td class="num font-bold text-accent">0.02912</td>
             <td class="num">N/A%</td>
@@ -1003,7 +1026,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QQQ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QQQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QQQ on Yahoo Finance">QQQ</a></td>
             <td>Invesco QQQ Trust, Series 1</td>
             <td class="num font-bold text-accent">0.75143</td>
             <td class="num">N/A%</td>
@@ -1012,7 +1035,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">IUS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/IUS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify IUS on Yahoo Finance">IUS</a></td>
             <td>Invesco RAFI Strategic US ETF</td>
             <td class="num font-bold text-accent">0.22839</td>
             <td class="num">N/A%</td>
@@ -1021,7 +1044,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PRFZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PRFZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PRFZ on Yahoo Finance">PRFZ</a></td>
             <td>Invesco RAFI US 1500 Small-Mid ETF</td>
             <td class="num font-bold text-accent">0.12898</td>
             <td class="num">N/A%</td>
@@ -1030,7 +1053,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCD on Yahoo Finance">PSCD</a></td>
             <td>Invesco S&amp;P SmallCap Consumer Discretionary ETF</td>
             <td class="num font-bold text-accent">0.23507</td>
             <td class="num">N/A%</td>
@@ -1039,7 +1062,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCC on Yahoo Finance">PSCC</a></td>
             <td>Invesco S&amp;P SmallCap Consumer Staples ETF</td>
             <td class="num font-bold text-accent">0.28315</td>
             <td class="num">N/A%</td>
@@ -1048,7 +1071,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCE</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCE on Yahoo Finance">PSCE</a></td>
             <td>Invesco S&amp;P SmallCap Energy ETF</td>
             <td class="num font-bold text-accent">0.41072</td>
             <td class="num">N/A%</td>
@@ -1057,7 +1080,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCF</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCF" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCF on Yahoo Finance">PSCF</a></td>
             <td>Invesco S&amp;P SmallCap Financials ETF</td>
             <td class="num font-bold text-accent">0.38681</td>
             <td class="num">N/A%</td>
@@ -1066,7 +1089,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCI on Yahoo Finance">PSCI</a></td>
             <td>Invesco S&amp;P SmallCap Industrials ETF</td>
             <td class="num font-bold text-accent">0.20626</td>
             <td class="num">N/A%</td>
@@ -1075,7 +1098,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCT on Yahoo Finance">PSCT</a></td>
             <td>Invesco S&amp;P SmallCap Information Technology ETF</td>
             <td class="num font-bold text-accent">0.00354</td>
             <td class="num">N/A%</td>
@@ -1084,7 +1107,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCM</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCM on Yahoo Finance">PSCM</a></td>
             <td>Invesco S&amp;P SmallCap Materials ETF</td>
             <td class="num font-bold text-accent">0.25168</td>
             <td class="num">N/A%</td>
@@ -1093,7 +1116,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSCU</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSCU" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSCU on Yahoo Finance">PSCU</a></td>
             <td>Invesco S&amp;P SmallCap Utilities &amp; Communication Services ETF</td>
             <td class="num font-bold text-accent">0.13809</td>
             <td class="num">N/A%</td>
@@ -1102,7 +1125,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">VRIG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/VRIG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify VRIG on Yahoo Finance">VRIG</a></td>
             <td>Invesco Variable Rate Investment Grade ETF</td>
             <td class="num font-bold text-accent">0.09125</td>
             <td class="num">N/A%</td>
@@ -1111,7 +1134,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PHO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PHO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PHO on Yahoo Finance">PHO</a></td>
             <td>Invesco Water Resources ETF</td>
             <td class="num font-bold text-accent">0.06131</td>
             <td class="num">N/A%</td>
@@ -1120,7 +1143,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">LAMR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/LAMR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LAMR on Yahoo Finance">LAMR</a></td>
             <td>Lamar Advertising Company Class A Common Stock</td>
             <td class="num font-bold text-accent">1.65</td>
             <td class="num">N/A%</td>
@@ -1129,7 +1152,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">MPIA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/MPIA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify MPIA on Yahoo Finance">MPIA</a></td>
             <td>m+ Nasdaq-100 Accelerator Autocall ETF</td>
             <td class="num font-bold text-accent">0.6247</td>
             <td class="num">N/A%</td>
@@ -1138,7 +1161,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">META</span></td>
+            <td><a href="https://finance.yahoo.com/quote/META" target="_blank" rel="noopener noreferrer" class="badge" title="Verify META on Yahoo Finance">META</a></td>
             <td>Meta Platforms, Inc. Class A Common Stock</td>
             <td class="num font-bold text-accent">0.525</td>
             <td class="num">N/A%</td>
@@ -1147,7 +1170,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PEPS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PEPS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PEPS on Yahoo Finance">PEPS</a></td>
             <td>Parametric Equity Plus ETF</td>
             <td class="num font-bold text-accent">0.085493</td>
             <td class="num">N/A%</td>
@@ -1156,7 +1179,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">QNDX</span></td>
+            <td><a href="https://finance.yahoo.com/quote/QNDX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QNDX on Yahoo Finance">QNDX</a></td>
             <td>State Street SPDR Portfolio Nasdaq 100 ETF</td>
             <td class="num font-bold text-accent">0.027225</td>
             <td class="num">N/A%</td>
@@ -1165,7 +1188,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SYBT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SYBT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SYBT on Yahoo Finance">SYBT</a></td>
             <td>Stock Yards Bancorp, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.33</td>
             <td class="num">N/A%</td>
@@ -1174,7 +1197,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SATA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
             <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.0516</td>
             <td class="num">N/A%</td>
@@ -1183,7 +1206,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">WHF</span></td>
+            <td><a href="https://finance.yahoo.com/quote/WHF" target="_blank" rel="noopener noreferrer" class="badge" title="Verify WHF on Yahoo Finance">WHF</a></td>
             <td>WhiteHorse Finance, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.25</td>
             <td class="num">N/A%</td>
@@ -1197,10 +1220,10 @@
 
     <section class="editorial">
       <h2>Trading Strategy & Settlement Rules</h2>
-      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date, in accordance with <a href="https://www.investor.gov/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">SEC settlement guidelines</a>.</p>
       
       <h2>Risk Management Considerations</h2>
-      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+      <p>Click on any ticker symbol in the table above to verify real-time financials and payout sustainability on Yahoo Finance. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
     </section>
   </main>
 
@@ -1216,6 +1239,7 @@
       <a href="terms.html">Terms of Service</a> |
       <a href="privacy.html">Privacy Policy</a>
     </p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
 
   <script>

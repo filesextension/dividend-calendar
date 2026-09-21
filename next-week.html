@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ex-Dividend Stocks Next Week - DividendRadar</title>
   <meta name="description" content="Early planning radar for upcoming corporate payouts from Sep 28 to Oct 02, 2026.">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Ex-Dividend Stocks Next Week",
+    "description": "Early planning radar for upcoming corporate payouts from Sep 28 to Oct 02, 2026.",
+    "dateModified": "2026-09-21",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DividendRadar"
+    }
+  }
+  </script>
+    
   <style>
     :root {
       --bg: #0d1117;
@@ -136,7 +151,7 @@
     tr:hover td {
       background-color: rgba(255, 255, 255, 0.02);
     }
-    .badge {
+    a.badge {
       background-color: #21262d;
       border: 1px solid var(--border);
       color: var(--primary);
@@ -144,6 +159,12 @@
       border-radius: 4px;
       font-weight: bold;
       font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.badge:hover {
+      background-color: var(--primary);
+      color: #fff;
     }
     .text-accent { color: var(--accent); }
     .font-bold { font-weight: bold; }
@@ -211,7 +232,9 @@
 
     <div class="search-box">
       <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
-      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
+      <span style="font-size: 0.85rem; color: var(--text-muted);">
+        Data dynamically sourced from <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API</a>.
+      </span>
     </div>
 
     <div class="table-container">
@@ -229,7 +252,7 @@
         <tbody>
           
         <tr>
-            <td><span class="badge">GSBC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/GSBC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GSBC on Yahoo Finance">GSBC</a></td>
             <td>Great Southern Bancorp, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.43</td>
             <td class="num">N/A%</td>
@@ -238,7 +261,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">INDB</span></td>
+            <td><a href="https://finance.yahoo.com/quote/INDB" target="_blank" rel="noopener noreferrer" class="badge" title="Verify INDB on Yahoo Finance">INDB</a></td>
             <td>Independent Bank Corp. Common Stock</td>
             <td class="num font-bold text-accent">0.64</td>
             <td class="num">N/A%</td>
@@ -247,7 +270,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ISBA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ISBA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ISBA on Yahoo Finance">ISBA</a></td>
             <td>Isabella Bank Corporation Common stock</td>
             <td class="num font-bold text-accent">0.28</td>
             <td class="num">N/A%</td>
@@ -256,7 +279,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">BZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/BZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BZ on Yahoo Finance">BZ</a></td>
             <td>KANZHUN LIMITED American Depository Shares</td>
             <td class="num font-bold text-accent">0.51</td>
             <td class="num">N/A%</td>
@@ -265,7 +288,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">KDP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/KDP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KDP on Yahoo Finance">KDP</a></td>
             <td>Keurig Dr Pepper Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.23</td>
             <td class="num">N/A%</td>
@@ -274,7 +297,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PSEC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PSEC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSEC on Yahoo Finance">PSEC</a></td>
             <td>Prospect Capital Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.035</td>
             <td class="num">N/A%</td>
@@ -283,7 +306,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SATA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
             <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.0516</td>
             <td class="num">N/A%</td>
@@ -292,7 +315,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ERIC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ERIC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ERIC on Yahoo Finance">ERIC</a></td>
             <td>Ericsson American Depositary Shares</td>
             <td class="num font-bold text-accent">0.15792</td>
             <td class="num">N/A%</td>
@@ -301,7 +324,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ITRN</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ITRN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ITRN on Yahoo Finance">ITRN</a></td>
             <td>Ituran Location and Control Ltd. Ordinary Shares</td>
             <td class="num font-bold text-accent">0.5</td>
             <td class="num">N/A%</td>
@@ -310,7 +333,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SATA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
             <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.0516</td>
             <td class="num">N/A%</td>
@@ -319,7 +342,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AFCG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AFCG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AFCG on Yahoo Finance">AFCG</a></td>
             <td>Advanced Flower Capital Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.05</td>
             <td class="num">N/A%</td>
@@ -328,7 +351,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNC on Yahoo Finance">AGNC</a></td>
             <td>AGNC Investment Corp. Common Stock</td>
             <td class="num font-bold text-accent">0.12</td>
             <td class="num">N/A%</td>
@@ -337,7 +360,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">DOX</span></td>
+            <td><a href="https://finance.yahoo.com/quote/DOX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DOX on Yahoo Finance">DOX</a></td>
             <td>Amdocs Limited Ordinary Shares</td>
             <td class="num font-bold text-accent">0.569</td>
             <td class="num">N/A%</td>
@@ -346,7 +369,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CPHC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CPHC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CPHC on Yahoo Finance">CPHC</a></td>
             <td>Canterbury Park Holding Corporation &#x27;New&#x27; Common Stock</td>
             <td class="num font-bold text-accent">0.07</td>
             <td class="num">N/A%</td>
@@ -355,7 +378,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CGBD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CGBD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CGBD on Yahoo Finance">CGBD</a></td>
             <td>Carlyle Secured Lending, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.35</td>
             <td class="num">N/A%</td>
@@ -364,7 +387,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CHTRP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CHTRP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CHTRP on Yahoo Finance">CHTRP</a></td>
             <td>Charter Communications, Inc. Series A Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.4375</td>
             <td class="num">N/A%</td>
@@ -373,7 +396,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">REFI</span></td>
+            <td><a href="https://finance.yahoo.com/quote/REFI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify REFI on Yahoo Finance">REFI</a></td>
             <td>Chicago Atlantic Real Estate Finance, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.47</td>
             <td class="num">N/A%</td>
@@ -382,7 +405,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CCAP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CCAP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CCAP on Yahoo Finance">CCAP</a></td>
             <td>Crescent Capital BDC, Inc. Common stock</td>
             <td class="num font-bold text-accent">0.34</td>
             <td class="num">N/A%</td>
@@ -391,7 +414,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CVBF</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CVBF" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CVBF on Yahoo Finance">CVBF</a></td>
             <td>CVB Financial Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.2</td>
             <td class="num">N/A%</td>
@@ -400,7 +423,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CHAD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CHAD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CHAD on Yahoo Finance">CHAD</a></td>
             <td>DeFi Development Corp. Variable Rate Series C Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.07944</td>
             <td class="num">N/A%</td>
@@ -409,7 +432,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">DRH</span></td>
+            <td><a href="https://finance.yahoo.com/quote/DRH" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DRH on Yahoo Finance">DRH</a></td>
             <td>Diamondrock Hospitality Company Common Stock</td>
             <td class="num font-bold text-accent">0.11</td>
             <td class="num">N/A%</td>
@@ -418,7 +441,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ELE</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ELE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ELE on Yahoo Finance">ELE</a></td>
             <td>Elemental Royalty Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.03</td>
             <td class="num">N/A%</td>
@@ -427,7 +450,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ESOA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ESOA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ESOA on Yahoo Finance">ESOA</a></td>
             <td>Energy Services of America Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.04</td>
             <td class="num">N/A%</td>
@@ -436,7 +459,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">FBNC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/FBNC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FBNC on Yahoo Finance">FBNC</a></td>
             <td>First Bancorp Common Stock</td>
             <td class="num font-bold text-accent">0.24</td>
             <td class="num">N/A%</td>
@@ -445,7 +468,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">FSV</span></td>
+            <td><a href="https://finance.yahoo.com/quote/FSV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FSV on Yahoo Finance">FSV</a></td>
             <td>FirstService Corporation Common Shares</td>
             <td class="num font-bold text-accent">0.305</td>
             <td class="num">N/A%</td>
@@ -454,7 +477,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">FLXS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/FLXS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FLXS on Yahoo Finance">FLXS</a></td>
             <td>Flexsteel Industries, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.25</td>
             <td class="num">N/A%</td>
@@ -463,7 +486,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">FULTP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/FULTP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FULTP on Yahoo Finance">FULTP</a></td>
             <td>Fulton Financial Corporation Depositary Shares, Each Representing a 1/40th Interest in a Share of Fixed Rate Non-Cumulative Perpetual Preferred Stock, Series A</td>
             <td class="num font-bold text-accent">0.32025</td>
             <td class="num">N/A%</td>
@@ -472,7 +495,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HST</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HST" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HST on Yahoo Finance">HST</a></td>
             <td>Host Hotels &amp; Resorts, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.2</td>
             <td class="num">N/A%</td>
@@ -481,7 +504,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ISTR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ISTR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ISTR on Yahoo Finance">ISTR</a></td>
             <td>Investar Holding Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.12</td>
             <td class="num">N/A%</td>
@@ -490,7 +513,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">JOYY</span></td>
+            <td><a href="https://finance.yahoo.com/quote/JOYY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify JOYY on Yahoo Finance">JOYY</a></td>
             <td>JOYY Inc. American Depositary Shares</td>
             <td class="num font-bold text-accent">1.55</td>
             <td class="num">N/A%</td>
@@ -499,7 +522,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">LECO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/LECO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LECO on Yahoo Finance">LECO</a></td>
             <td>Lincoln Electric Holdings, Inc. Common Shares</td>
             <td class="num font-bold text-accent">0.79</td>
             <td class="num">N/A%</td>
@@ -508,7 +531,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">LINE</span></td>
+            <td><a href="https://finance.yahoo.com/quote/LINE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LINE on Yahoo Finance">LINE</a></td>
             <td>Lineage, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.5325</td>
             <td class="num">N/A%</td>
@@ -517,7 +540,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">MDLZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/MDLZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify MDLZ on Yahoo Finance">MDLZ</a></td>
             <td>Mondelez International, Inc. Class A Common Stock</td>
             <td class="num font-bold text-accent">0.52</td>
             <td class="num">N/A%</td>
@@ -526,7 +549,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">MPWR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/MPWR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify MPWR on Yahoo Finance">MPWR</a></td>
             <td>Monolithic Power Systems, Inc. Common Stock</td>
             <td class="num font-bold text-accent">2.0</td>
             <td class="num">N/A%</td>
@@ -535,7 +558,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">RMCO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/RMCO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify RMCO on Yahoo Finance">RMCO</a></td>
             <td>Royalty Management Holding Corporation Class A Common Stock</td>
             <td class="num font-bold text-accent">0.0025</td>
             <td class="num">N/A%</td>
@@ -544,7 +567,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SRBK</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SRBK" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SRBK on Yahoo Finance">SRBK</a></td>
             <td>SR Bancorp, Inc. Common stock</td>
             <td class="num font-bold text-accent">0.06</td>
             <td class="num">N/A%</td>
@@ -553,7 +576,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">STLD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/STLD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify STLD on Yahoo Finance">STLD</a></td>
             <td>Steel Dynamics, Inc.</td>
             <td class="num font-bold text-accent">0.53</td>
             <td class="num">N/A%</td>
@@ -562,7 +585,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">STRC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/STRC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify STRC on Yahoo Finance">STRC</a></td>
             <td>Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock</td>
             <td class="num font-bold text-accent">0.5</td>
             <td class="num">N/A%</td>
@@ -571,7 +594,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SATA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
             <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.0516</td>
             <td class="num">N/A%</td>
@@ -580,7 +603,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SUNS</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SUNS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SUNS on Yahoo Finance">SUNS</a></td>
             <td>Sunrise Realty Trust, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.3</td>
             <td class="num">N/A%</td>
@@ -589,7 +612,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ENSG</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ENSG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ENSG on Yahoo Finance">ENSG</a></td>
             <td>The Ensign Group, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.065</td>
             <td class="num">N/A%</td>
@@ -598,7 +621,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">UMBFO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/UMBFO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UMBFO on Yahoo Finance">UMBFO</a></td>
             <td>UMB Financial Corporation Depositary Shares Each Representing a 1/400th Interest in a Share of 7.750% Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock, Series B</td>
             <td class="num font-bold text-accent">0.484375</td>
             <td class="num">N/A%</td>
@@ -607,7 +630,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">VOXR</span></td>
+            <td><a href="https://finance.yahoo.com/quote/VOXR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify VOXR on Yahoo Finance">VOXR</a></td>
             <td>Vox Royalty Corp. Common Stock</td>
             <td class="num font-bold text-accent">0.015</td>
             <td class="num">N/A%</td>
@@ -616,7 +639,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">WAFDP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/WAFDP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify WAFDP on Yahoo Finance">WAFDP</a></td>
             <td>WaFd, Inc. Depositary Shares</td>
             <td class="num font-bold text-accent">0.3046875</td>
             <td class="num">N/A%</td>
@@ -625,7 +648,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">WTW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/WTW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify WTW on Yahoo Finance">WTW</a></td>
             <td>Willis Towers Watson Public Limited Company Ordinary Shares</td>
             <td class="num font-bold text-accent">0.96</td>
             <td class="num">N/A%</td>
@@ -634,7 +657,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">XRX</span></td>
+            <td><a href="https://finance.yahoo.com/quote/XRX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify XRX on Yahoo Finance">XRX</a></td>
             <td>Xerox Holdings Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.025</td>
             <td class="num">N/A%</td>
@@ -643,7 +666,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">YORW</span></td>
+            <td><a href="https://finance.yahoo.com/quote/YORW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify YORW on Yahoo Finance">YORW</a></td>
             <td>York Water Company (The) Common Stock</td>
             <td class="num font-bold text-accent">0.228</td>
             <td class="num">N/A%</td>
@@ -652,7 +675,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ADAML</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ADAML" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ADAML on Yahoo Finance">ADAML</a></td>
             <td>Adamas Trust, Inc. 6.875% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock, $0.01 par value per share</td>
             <td class="num font-bold text-accent">0.4296875</td>
             <td class="num">N/A%</td>
@@ -661,7 +684,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ADAMZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ADAMZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ADAMZ on Yahoo Finance">ADAMZ</a></td>
             <td>Adamas Trust, Inc. 7.000% Series G Cumulative Redeemable Preferred Stock, $0.01 par value per share</td>
             <td class="num font-bold text-accent">0.4375</td>
             <td class="num">N/A%</td>
@@ -670,7 +693,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ADAMM</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ADAMM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ADAMM on Yahoo Finance">ADAMM</a></td>
             <td>Adamas Trust, Inc. 7.875% Series E Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.6672255</td>
             <td class="num">N/A%</td>
@@ -679,7 +702,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ADAMN</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ADAMN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ADAMN on Yahoo Finance">ADAMN</a></td>
             <td>Adamas Trust, Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.5</td>
             <td class="num">N/A%</td>
@@ -688,7 +711,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNCP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNCP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNCP on Yahoo Finance">AGNCP</a></td>
             <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 6.125% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.55912</td>
             <td class="num">N/A%</td>
@@ -697,7 +720,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNCN</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNCN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNCN on Yahoo Finance">AGNCN</a></td>
             <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 7.00% Series C Fixed-To-Floating Rate Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.58557</td>
             <td class="num">N/A%</td>
@@ -706,7 +729,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNCL</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNCL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNCL on Yahoo Finance">AGNCL</a></td>
             <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 7.75% Series G Fixed-Rate Reset Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.48438</td>
             <td class="num">N/A%</td>
@@ -715,7 +738,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNCZ</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNCZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNCZ on Yahoo Finance">AGNCZ</a></td>
             <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 8.75% Series H Fixed-Rate Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.54688</td>
             <td class="num">N/A%</td>
@@ -724,7 +747,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNCM</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNCM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNCM on Yahoo Finance">AGNCM</a></td>
             <td>AGNC Investment Corp. Depositary Shares rep 6.875% Series D Fixed-to-Floating Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.5358</td>
             <td class="num">N/A%</td>
@@ -733,7 +756,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">AGNCO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/AGNCO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify AGNCO on Yahoo Finance">AGNCO</a></td>
             <td>AGNC Investment Corp. Depositary Shares, each representing a 1/1,000th interest in a share of 6.50% Series E Fixed-to-Floating Cumulative Redeemable Preferred Stock</td>
             <td class="num font-bold text-accent">0.57803</td>
             <td class="num">N/A%</td>
@@ -742,7 +765,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ANDE</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ANDE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ANDE on Yahoo Finance">ANDE</a></td>
             <td>Andersons, Inc. (The) Common Stock</td>
             <td class="num font-bold text-accent">0.2</td>
             <td class="num">N/A%</td>
@@ -751,7 +774,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CWCO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CWCO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CWCO on Yahoo Finance">CWCO</a></td>
             <td>Consolidated Water Co. Ltd. Ordinary Shares</td>
             <td class="num font-bold text-accent">0.14</td>
             <td class="num">N/A%</td>
@@ -760,7 +783,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CHAD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CHAD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CHAD on Yahoo Finance">CHAD</a></td>
             <td>DeFi Development Corp. Variable Rate Series C Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.00516</td>
             <td class="num">N/A%</td>
@@ -769,7 +792,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">THFF</span></td>
+            <td><a href="https://finance.yahoo.com/quote/THFF" target="_blank" rel="noopener noreferrer" class="badge" title="Verify THFF on Yahoo Finance">THFF</a></td>
             <td>First Financial Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.56</td>
             <td class="num">N/A%</td>
@@ -778,7 +801,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">FULT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/FULT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FULT on Yahoo Finance">FULT</a></td>
             <td>Fulton Financial Corporation Common Stock</td>
             <td class="num font-bold text-accent">0.19</td>
             <td class="num">N/A%</td>
@@ -787,7 +810,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HOVNP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HOVNP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HOVNP on Yahoo Finance">HOVNP</a></td>
             <td>Hovnanian Enterprises Inc Dep Shr Srs A Pfd</td>
             <td class="num font-bold text-accent">0.476563</td>
             <td class="num">N/A%</td>
@@ -796,7 +819,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HBANP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HBANP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HBANP on Yahoo Finance">HBANP</a></td>
             <td>Huntington Bancshares Incorporated Depositary Shares 4.500% Series H Non-Cumulative Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.28125</td>
             <td class="num">N/A%</td>
@@ -805,7 +828,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HBANL</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HBANL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HBANL on Yahoo Finance">HBANL</a></td>
             <td>Huntington Bancshares Incorporated Depositary Shares, Each Representing a 1/40th Interest in a Share of 6.875% Series J Non-Cumulative Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.42975</td>
             <td class="num">N/A%</td>
@@ -814,7 +837,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PEGA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PEGA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PEGA on Yahoo Finance">PEGA</a></td>
             <td>Pegasystems Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.03</td>
             <td class="num">N/A%</td>
@@ -823,7 +846,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">PLPC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/PLPC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PLPC on Yahoo Finance">PLPC</a></td>
             <td>Preformed Line Products Company Common Stock</td>
             <td class="num font-bold text-accent">0.21</td>
             <td class="num">N/A%</td>
@@ -832,7 +855,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SATA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
             <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.0516</td>
             <td class="num">N/A%</td>
@@ -841,7 +864,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CPB</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CPB" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CPB on Yahoo Finance">CPB</a></td>
             <td>The Campbell&#x27;s Company Common Stock</td>
             <td class="num font-bold text-accent">0.25</td>
             <td class="num">N/A%</td>
@@ -850,7 +873,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">VSNT</span></td>
+            <td><a href="https://finance.yahoo.com/quote/VSNT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify VSNT on Yahoo Finance">VSNT</a></td>
             <td>Versant Media Group, Inc. Class A Common Stock </td>
             <td class="num font-bold text-accent">0.375</td>
             <td class="num">N/A%</td>
@@ -859,7 +882,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">VLGEA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/VLGEA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify VLGEA on Yahoo Finance">VLGEA</a></td>
             <td>Village Super Market, Inc. Class A Common Stock</td>
             <td class="num font-bold text-accent">0.25</td>
             <td class="num">N/A%</td>
@@ -868,7 +891,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">WASH</span></td>
+            <td><a href="https://finance.yahoo.com/quote/WASH" target="_blank" rel="noopener noreferrer" class="badge" title="Verify WASH on Yahoo Finance">WASH</a></td>
             <td>Washington Trust Bancorp, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.56</td>
             <td class="num">N/A%</td>
@@ -877,7 +900,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">WTFCN</span></td>
+            <td><a href="https://finance.yahoo.com/quote/WTFCN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify WTFCN on Yahoo Finance">WTFCN</a></td>
             <td>Wintrust Financial Corporation Depositary Shares, Each Representing a 1/1,000th Interest in a Share of 7.875% Fixed-Rate Reset Non-Cumulative Perpetual Preferred StocK</td>
             <td class="num font-bold text-accent">0.49219</td>
             <td class="num">N/A%</td>
@@ -886,7 +909,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ALCO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ALCO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ALCO on Yahoo Finance">ALCO</a></td>
             <td>Alico, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.05</td>
             <td class="num">N/A%</td>
@@ -895,7 +918,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CSCO</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CSCO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CSCO on Yahoo Finance">CSCO</a></td>
             <td>Cisco Systems, Inc. Common Stock (DE)</td>
             <td class="num font-bold text-accent">0.42</td>
             <td class="num">N/A%</td>
@@ -904,7 +927,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">CHAD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/CHAD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CHAD on Yahoo Finance">CHAD</a></td>
             <td>DeFi Development Corp. Variable Rate Series C Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.00516</td>
             <td class="num">N/A%</td>
@@ -913,7 +936,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">THRM</span></td>
+            <td><a href="https://finance.yahoo.com/quote/THRM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify THRM on Yahoo Finance">THRM</a></td>
             <td>Gentherm Inc Common Stock</td>
             <td class="num font-bold text-accent">1.9</td>
             <td class="num">N/A%</td>
@@ -922,7 +945,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">HBNC</span></td>
+            <td><a href="https://finance.yahoo.com/quote/HBNC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HBNC on Yahoo Finance">HBNC</a></td>
             <td>Horizon Bancorp, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.16</td>
             <td class="num">N/A%</td>
@@ -931,7 +954,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">ROP</span></td>
+            <td><a href="https://finance.yahoo.com/quote/ROP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ROP on Yahoo Finance">ROP</a></td>
             <td>Roper Technologies, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.91</td>
             <td class="num">N/A%</td>
@@ -940,7 +963,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">RGLD</span></td>
+            <td><a href="https://finance.yahoo.com/quote/RGLD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify RGLD on Yahoo Finance">RGLD</a></td>
             <td>Royal Gold, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.475</td>
             <td class="num">N/A%</td>
@@ -949,7 +972,7 @@
         </tr>
         
         <tr>
-            <td><span class="badge">SATA</span></td>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
             <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
             <td class="num font-bold text-accent">0.0516</td>
             <td class="num">N/A%</td>
@@ -963,10 +986,10 @@
 
     <section class="editorial">
       <h2>Trading Strategy & Settlement Rules</h2>
-      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date, in accordance with <a href="https://www.investor.gov/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">SEC settlement guidelines</a>.</p>
       
       <h2>Risk Management Considerations</h2>
-      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+      <p>Click on any ticker symbol in the table above to verify real-time financials and payout sustainability on Yahoo Finance. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
     </section>
   </main>
 
@@ -982,6 +1005,7 @@
       <a href="terms.html">Terms of Service</a> |
       <a href="privacy.html">Privacy Policy</a>
     </p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
 
   <script>

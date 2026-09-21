@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex-Dividend Stocks Next Week - DividendRadar</title>
+  <meta name="description" content="Early planning radar for upcoming corporate payouts from Sep 28 to Oct 02, 2026.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    header a.brand {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    nav a.active {
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
+    }
+    .search-box {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .search-box input {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 380px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .table-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .badge {
+      background-color: #21262d;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .text-accent { color: var(--accent); }
+    .font-bold { font-weight: bold; }
+    .num { text-align: right; }
+    th.num { text-align: right; }
+    .editorial {
+      margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .editorial h2 {
+      color: #fff;
+      font-size: 1.35rem;
+      margin-top: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .editorial h2:first-child {
+      margin-top: 0;
+    }
+    .editorial p {
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">📈 DividendRadar</a>
+    <nav>
+      <a href="index.html">Today</a>
+<a href="tomorrow.html">Tomorrow</a>
+<a href="this-week.html">This Week</a>
+<a href="next-week.html" class="active">Next Week</a>
+<a href="guide.html">Dividend Guide</a>
+<a href="about.html">About</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Ex-Dividend Stocks Next Week</h1>
+      <p>Early planning radar for upcoming corporate payouts from Sep 28 to Oct 02, 2026.</p>
+    </div>
+
+    <div class="callout"><strong>Advance Planning:</strong> Upcoming dividend schedule for next week. Verify declared corporate announcements prior to trade execution.</div>
+
+    <div class="search-box">
+      <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
+      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
+    </div>
+
+    <div class="table-container">
+      <table id="tabla-dividendos">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Company Name</th>
+            <th class="num">Cash Amount</th>
+            <th class="num">Yield (%)</th>
+            <th>Ex-Dividend Date</th>
+            <th>Pay Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+            <td><span class="badge">GSBC</span></td>
+            <td>Great Southern Bancorp, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.43</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">INDB</span></td>
+            <td>Independent Bank Corp. Common Stock</td>
+            <td class="num font-bold text-accent">0.64</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ISBA</span></td>
+            <td>Isabella Bank Corporation Common stock</td>
+            <td class="num font-bold text-accent">0.28</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BZ</span></td>
+            <td>KANZHUN LIMITED American Depository Shares</td>
+            <td class="num font-bold text-accent">0.51</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">KDP</span></td>
+            <td>Keurig Dr Pepper Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.23</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSEC</span></td>
+            <td>Prospect Capital Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.035</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/21/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ERIC</span></td>
+            <td>Ericsson American Depositary Shares</td>
+            <td class="num font-bold text-accent">0.15792</td>
+            <td class="num">N/A%</td>
+            <td>9/29/2026</td>
+            <td>9/21/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ITRN</span></td>
+            <td>Ituran Location and Control Ltd. Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.5</td>
+            <td class="num">N/A%</td>
+            <td>9/29/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/29/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AFCG</span></td>
+            <td>Advanced Flower Capital Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.05</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNC</span></td>
+            <td>AGNC Investment Corp. Common Stock</td>
+            <td class="num font-bold text-accent">0.12</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">DOX</span></td>
+            <td>Amdocs Limited Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.569</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CPHC</span></td>
+            <td>Canterbury Park Holding Corporation &#x27;New&#x27; Common Stock</td>
+            <td class="num font-bold text-accent">0.07</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CGBD</span></td>
+            <td>Carlyle Secured Lending, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.35</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CHTRP</span></td>
+            <td>Charter Communications, Inc. Series A Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.4375</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">REFI</span></td>
+            <td>Chicago Atlantic Real Estate Finance, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.47</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CCAP</span></td>
+            <td>Crescent Capital BDC, Inc. Common stock</td>
+            <td class="num font-bold text-accent">0.34</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CVBF</span></td>
+            <td>CVB Financial Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.2</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CHAD</span></td>
+            <td>DeFi Development Corp. Variable Rate Series C Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.07944</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/01/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">DRH</span></td>
+            <td>Diamondrock Hospitality Company Common Stock</td>
+            <td class="num font-bold text-accent">0.11</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ELE</span></td>
+            <td>Elemental Royalty Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.03</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ESOA</span></td>
+            <td>Energy Services of America Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.04</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FBNC</span></td>
+            <td>First Bancorp Common Stock</td>
+            <td class="num font-bold text-accent">0.24</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FSV</span></td>
+            <td>FirstService Corporation Common Shares</td>
+            <td class="num font-bold text-accent">0.305</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/07/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FLXS</span></td>
+            <td>Flexsteel Industries, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.25</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/12/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FULTP</span></td>
+            <td>Fulton Financial Corporation Depositary Shares, Each Representing a 1/40th Interest in a Share of Fixed Rate Non-Cumulative Perpetual Preferred Stock, Series A</td>
+            <td class="num font-bold text-accent">0.32025</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HST</span></td>
+            <td>Host Hotels &amp; Resorts, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.2</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ISTR</span></td>
+            <td>Investar Holding Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.12</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">JOYY</span></td>
+            <td>JOYY Inc. American Depositary Shares</td>
+            <td class="num font-bold text-accent">1.55</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LECO</span></td>
+            <td>Lincoln Electric Holdings, Inc. Common Shares</td>
+            <td class="num font-bold text-accent">0.79</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LINE</span></td>
+            <td>Lineage, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.5325</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/21/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">MDLZ</span></td>
+            <td>Mondelez International, Inc. Class A Common Stock</td>
+            <td class="num font-bold text-accent">0.52</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">MPWR</span></td>
+            <td>Monolithic Power Systems, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">2.0</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">RMCO</span></td>
+            <td>Royalty Management Holding Corporation Class A Common Stock</td>
+            <td class="num font-bold text-accent">0.0025</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/10/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SRBK</span></td>
+            <td>SR Bancorp, Inc. Common stock</td>
+            <td class="num font-bold text-accent">0.06</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">STLD</span></td>
+            <td>Steel Dynamics, Inc.</td>
+            <td class="num font-bold text-accent">0.53</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">STRC</span></td>
+            <td>Strategy Inc Variable Rate Series A Perpetual Stretch Preferred Stock</td>
+            <td class="num font-bold text-accent">0.5</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/01/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SUNS</span></td>
+            <td>Sunrise Realty Trust, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.3</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ENSG</span></td>
+            <td>The Ensign Group, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.065</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/31/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">UMBFO</span></td>
+            <td>UMB Financial Corporation Depositary Shares Each Representing a 1/400th Interest in a Share of 7.750% Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock, Series B</td>
+            <td class="num font-bold text-accent">0.484375</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">VOXR</span></td>
+            <td>Vox Royalty Corp. Common Stock</td>
+            <td class="num font-bold text-accent">0.015</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">WAFDP</span></td>
+            <td>WaFd, Inc. Depositary Shares</td>
+            <td class="num font-bold text-accent">0.3046875</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">WTW</span></td>
+            <td>Willis Towers Watson Public Limited Company Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.96</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">XRX</span></td>
+            <td>Xerox Holdings Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.025</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">YORW</span></td>
+            <td>York Water Company (The) Common Stock</td>
+            <td class="num font-bold text-accent">0.228</td>
+            <td class="num">N/A%</td>
+            <td>9/30/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ADAML</span></td>
+            <td>Adamas Trust, Inc. 6.875% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock, $0.01 par value per share</td>
+            <td class="num font-bold text-accent">0.4296875</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ADAMZ</span></td>
+            <td>Adamas Trust, Inc. 7.000% Series G Cumulative Redeemable Preferred Stock, $0.01 par value per share</td>
+            <td class="num font-bold text-accent">0.4375</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ADAMM</span></td>
+            <td>Adamas Trust, Inc. 7.875% Series E Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.6672255</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ADAMN</span></td>
+            <td>Adamas Trust, Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.5</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNCP</span></td>
+            <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 6.125% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.55912</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNCN</span></td>
+            <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 7.00% Series C Fixed-To-Floating Rate Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.58557</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNCL</span></td>
+            <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 7.75% Series G Fixed-Rate Reset Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.48438</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNCZ</span></td>
+            <td>AGNC Investment Corp. Depositary Shares Each Representing a 1/1,000th Interest in a Share of 8.75% Series H Fixed-Rate Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.54688</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNCM</span></td>
+            <td>AGNC Investment Corp. Depositary Shares rep 6.875% Series D Fixed-to-Floating Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.5358</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">AGNCO</span></td>
+            <td>AGNC Investment Corp. Depositary Shares, each representing a 1/1,000th interest in a share of 6.50% Series E Fixed-to-Floating Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.57803</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ANDE</span></td>
+            <td>Andersons, Inc. (The) Common Stock</td>
+            <td class="num font-bold text-accent">0.2</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/22/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CWCO</span></td>
+            <td>Consolidated Water Co. Ltd. Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.14</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CHAD</span></td>
+            <td>DeFi Development Corp. Variable Rate Series C Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.00516</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/02/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">THFF</span></td>
+            <td>First Financial Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.56</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FULT</span></td>
+            <td>Fulton Financial Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.19</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HOVNP</span></td>
+            <td>Hovnanian Enterprises Inc Dep Shr Srs A Pfd</td>
+            <td class="num font-bold text-accent">0.476563</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HBANP</span></td>
+            <td>Huntington Bancshares Incorporated Depositary Shares 4.500% Series H Non-Cumulative Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.28125</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HBANL</span></td>
+            <td>Huntington Bancshares Incorporated Depositary Shares, Each Representing a 1/40th Interest in a Share of 6.875% Series J Non-Cumulative Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.42975</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PEGA</span></td>
+            <td>Pegasystems Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.03</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PLPC</span></td>
+            <td>Preformed Line Products Company Common Stock</td>
+            <td class="num font-bold text-accent">0.21</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/20/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/02/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CPB</span></td>
+            <td>The Campbell&#x27;s Company Common Stock</td>
+            <td class="num font-bold text-accent">0.25</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>11/02/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">VSNT</span></td>
+            <td>Versant Media Group, Inc. Class A Common Stock </td>
+            <td class="num font-bold text-accent">0.375</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/22/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">VLGEA</span></td>
+            <td>Village Super Market, Inc. Class A Common Stock</td>
+            <td class="num font-bold text-accent">0.25</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/22/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">WASH</span></td>
+            <td>Washington Trust Bancorp, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.56</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">WTFCN</span></td>
+            <td>Wintrust Financial Corporation Depositary Shares, Each Representing a 1/1,000th Interest in a Share of 7.875% Fixed-Rate Reset Non-Cumulative Perpetual Preferred StocK</td>
+            <td class="num font-bold text-accent">0.49219</td>
+            <td class="num">N/A%</td>
+            <td>10/01/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ALCO</span></td>
+            <td>Alico, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.05</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CSCO</span></td>
+            <td>Cisco Systems, Inc. Common Stock (DE)</td>
+            <td class="num font-bold text-accent">0.42</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/21/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CHAD</span></td>
+            <td>DeFi Development Corp. Variable Rate Series C Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.00516</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/05/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">THRM</span></td>
+            <td>Gentherm Inc Common Stock</td>
+            <td class="num font-bold text-accent">1.9</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/07/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HBNC</span></td>
+            <td>Horizon Bancorp, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.16</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ROP</span></td>
+            <td>Roper Technologies, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.91</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/21/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">RGLD</span></td>
+            <td>Royal Gold, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.475</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>10/02/2026</td>
+            <td>10/05/2026</td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+
+    <section class="editorial">
+      <h2>Trading Strategy & Settlement Rules</h2>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
+      
+      <h2>Risk Management Considerations</h2>
+      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DividendRadar. Financial data provided for informational and research purposes only.</p>
+    <p>
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
+      <a href="about.html">About & Methodology</a> |
+      <a href="guide.html">Dividend Strategy Guide</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    function filtrarTabla() {
+      const input = document.getElementById("filtro");
+      const filtro = input.value.toUpperCase();
+      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
+      for (let i = 1; i < tr.length; i++) {
+        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
+        const tdNombre = tr[i].getElementsByTagName("td")[1];
+        if (tdSimbolo || tdNombre) {
+          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
+          const txtNombre = tdNombre.textContent || tdNombre.innerText;
+          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

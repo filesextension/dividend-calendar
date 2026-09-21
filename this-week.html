@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex-Dividend Stocks This Week - DividendRadar</title>
+  <meta name="description" content="Complete schedule of all U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    header a.brand {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    nav a.active {
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
+    }
+    .search-box {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .search-box input {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 380px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .table-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .badge {
+      background-color: #21262d;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .text-accent { color: var(--accent); }
+    .font-bold { font-weight: bold; }
+    .num { text-align: right; }
+    th.num { text-align: right; }
+    .editorial {
+      margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .editorial h2 {
+      color: #fff;
+      font-size: 1.35rem;
+      margin-top: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .editorial h2:first-child {
+      margin-top: 0;
+    }
+    .editorial p {
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">📈 DividendRadar</a>
+    <nav>
+      <a href="index.html">Today</a>
+<a href="tomorrow.html">Tomorrow</a>
+<a href="this-week.html" class="active">This Week</a>
+<a href="next-week.html">Next Week</a>
+<a href="guide.html">Dividend Guide</a>
+<a href="about.html">About</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Ex-Dividend Stocks This Week</h1>
+      <p>Complete schedule of all U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.</p>
+    </div>
+
+    <div class="callout"><strong>Weekly Outlook:</strong> Plan your capital allocation for the entire current trading week across NYSE and NASDAQ securities.</div>
+
+    <div class="search-box">
+      <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
+      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
+    </div>
+
+    <div class="table-container">
+      <table id="tabla-dividendos">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Company Name</th>
+            <th class="num">Cash Amount</th>
+            <th class="num">Yield (%)</th>
+            <th>Ex-Dividend Date</th>
+            <th>Pay Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+            <td><span class="badge">AVGO</span></td>
+            <td>Broadcom Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.65</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BRKR</span></td>
+            <td>Bruker Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.05</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>10/07/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BCAL</span></td>
+            <td>California BanCorp Common Stock</td>
+            <td class="num font-bold text-accent">0.12</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GLAD</span></td>
+            <td>Gladstone Capital Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.15</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GOODO</span></td>
+            <td>Gladstone Commercial Corporation 6.00% Series G Cumulative Redeemable Preferred Stock, par value $0.001 per share</td>
+            <td class="num font-bold text-accent">0.125</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GOODN</span></td>
+            <td>Gladstone Commercial Corporation 6.625% Series E Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.138021</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GOOD</span></td>
+            <td>Gladstone Commercial Corporation Real Estate Investment Trust</td>
+            <td class="num font-bold text-accent">0.1</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GAIN</span></td>
+            <td>Gladstone Investment Corporation Business Development Company</td>
+            <td class="num font-bold text-accent">0.08</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LANDO</span></td>
+            <td>Gladstone Land Corporation 6.00% Series B Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.125</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LANDP</span></td>
+            <td>Gladstone Land Corporation 6.00% Series C Cumulative Redeemable Preferred Stock</td>
+            <td class="num font-bold text-accent">0.125</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LAND</span></td>
+            <td>Gladstone Land Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.0467</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QYLG</span></td>
+            <td>Global X Nasdaq 100 Covered Call &amp; Growth ETF</td>
+            <td class="num font-bold text-accent">0.1398</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/24/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QYLD</span></td>
+            <td>Global X NASDAQ 100 Covered Call ETF</td>
+            <td class="num font-bold text-accent">0.1767</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/24/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QRMI</span></td>
+            <td>Global X NASDAQ 100 Risk Managed Income ETF</td>
+            <td class="num font-bold text-accent">0.1542</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/24/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">YBST</span></td>
+            <td>GraniteShares YieldBoost Single Stock Universe ETF</td>
+            <td class="num font-bold text-accent">0.10052</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">YBTY</span></td>
+            <td>GraniteShares YieldBoost TopYielders ETF</td>
+            <td class="num font-bold text-accent">0.1023</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HLNE</span></td>
+            <td>Hamilton Lane Incorporated Class A Common Stock</td>
+            <td class="num font-bold text-accent">0.6</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>10/06/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HUBG</span></td>
+            <td>Hub Group, Inc. Class A Common Stock</td>
+            <td class="num font-bold text-accent">0.125</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FDIQ</span></td>
+            <td>Invesco Bloomberg Financial Data Providers ETF</td>
+            <td class="num font-bold text-accent">0.36523</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCQ</span></td>
+            <td>Invesco BulletShares 2026 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.06567</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJQ</span></td>
+            <td>Invesco BulletShares 2026 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.08808</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMQ</span></td>
+            <td>Invesco BulletShares 2026 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.05313</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCR</span></td>
+            <td>Invesco BulletShares 2027 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.06969</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJR</span></td>
+            <td>Invesco BulletShares 2027 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.09378</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMR</span></td>
+            <td>Invesco BulletShares 2027 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.05302</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSGR</span></td>
+            <td>Invesco BulletShares 2027 Treasury Bond ETF</td>
+            <td class="num font-bold text-accent">0.06364</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCS</span></td>
+            <td>Invesco BulletShares 2028 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.07443</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJS</span></td>
+            <td>Invesco BulletShares 2028 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.10461</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMS</span></td>
+            <td>Invesco BulletShares 2028 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.05347</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSTS</span></td>
+            <td>Invesco BulletShares 2028 Treasury Bond ETF</td>
+            <td class="num font-bold text-accent">0.08288</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCT</span></td>
+            <td>Invesco BulletShares 2029 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.06876</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJT</span></td>
+            <td>Invesco BulletShares 2029 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.11105</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMT</span></td>
+            <td>Invesco BulletShares 2029 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.0519</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSGT</span></td>
+            <td>Invesco BulletShares 2029 Treasury Bond ETF</td>
+            <td class="num font-bold text-accent">0.08372</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCU</span></td>
+            <td>Invesco BulletShares 2030 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.06286</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJU</span></td>
+            <td>Invesco BulletShares 2030 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.13939</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMU</span></td>
+            <td>Invesco BulletShares 2030 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.05168</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSTU</span></td>
+            <td>Invesco BulletShares 2030 Treasury Bond ETF</td>
+            <td class="num font-bold text-accent">0.08485</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCV</span></td>
+            <td>Invesco BulletShares 2031 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.06342</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJV</span></td>
+            <td>Invesco BulletShares 2031 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.13591</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMV</span></td>
+            <td>Invesco BulletShares 2031 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.0508</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSTV</span></td>
+            <td>Invesco BulletShares 2031 Treasury Bond ETF</td>
+            <td class="num font-bold text-accent">0.08655</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCW</span></td>
+            <td>Invesco BulletShares 2032 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.07943</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJW</span></td>
+            <td>Invesco BulletShares 2032 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.13289</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMW</span></td>
+            <td>Invesco BulletShares 2032 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.06723</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCX</span></td>
+            <td>Invesco BulletShares 2033 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.08485</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJX</span></td>
+            <td>Invesco BulletShares 2033 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.12914</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSSX</span></td>
+            <td>Invesco BulletShares 2033 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.06835</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCY</span></td>
+            <td>Invesco BulletShares 2034 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.08086</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSJY</span></td>
+            <td>Invesco BulletShares 2034 High Yield Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.13711</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMY</span></td>
+            <td>Invesco BulletShares 2034 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.07414</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCZ</span></td>
+            <td>Invesco BulletShares 2035 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.07644</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSMZ</span></td>
+            <td>Invesco BulletShares 2035 Municipal Bond ETF</td>
+            <td class="num font-bold text-accent">0.06977</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSCA</span></td>
+            <td>Invesco BulletShares 2036 Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.08771</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PKW</span></td>
+            <td>Invesco BuyBack Achievers ETF</td>
+            <td class="num font-bold text-accent">0.21834</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PFM</span></td>
+            <td>Invesco Dividend Achievers ETF</td>
+            <td class="num font-bold text-accent">0.17987</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PYZ</span></td>
+            <td>Invesco Dorsey Wright Basic Materials Momentum ETF</td>
+            <td class="num font-bold text-accent">0.15094</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PEZ</span></td>
+            <td>Invesco Dorsey Wright Consumer Cyclicals Momentum ETF</td>
+            <td class="num font-bold text-accent">0.13438</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSL</span></td>
+            <td>Invesco Dorsey Wright Consumer Staples Momentum ETF</td>
+            <td class="num font-bold text-accent">0.16524</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PIZ</span></td>
+            <td>Invesco Dorsey Wright Developed Markets Momentum ETF</td>
+            <td class="num font-bold text-accent">0.12753</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PIE</span></td>
+            <td>Invesco Dorsey Wright Emerging Markets Momentum ETF</td>
+            <td class="num font-bold text-accent">0.25747</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PXI</span></td>
+            <td>Invesco Dorsey Wright Energy Momentum ETF</td>
+            <td class="num font-bold text-accent">0.20339</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PFI</span></td>
+            <td>Invesco Dorsey Wright Financial Momentum ETF</td>
+            <td class="num font-bold text-accent">0.16177</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">DWAS</span></td>
+            <td>Invesco Dorsey Wright SmallCap Momentum ETF</td>
+            <td class="num font-bold text-accent">0.03542</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PUI</span></td>
+            <td>Invesco Dorsey Wright Utilities Momentum ETF</td>
+            <td class="num font-bold text-accent">0.24561</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GOVI</span></td>
+            <td>Invesco Equal Weight 0-30 Year Treasury ETF</td>
+            <td class="num font-bold text-accent">0.09263</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQMG</span></td>
+            <td>Invesco ESG NASDAQ 100 ETF</td>
+            <td class="num font-bold text-accent">0.04208</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PGJ</span></td>
+            <td>Invesco Golden Dragon China ETF</td>
+            <td class="num font-bold text-accent">0.14802</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PEY</span></td>
+            <td>Invesco High Yield Equity Dividend Achievers ETF</td>
+            <td class="num font-bold text-accent">0.09315</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GTOQ</span></td>
+            <td>Invesco High Yield Systematic Bond ETF</td>
+            <td class="num font-bold text-accent">0.13654</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">IPKW</span></td>
+            <td>Invesco International BuyBack Achievers ETF</td>
+            <td class="num font-bold text-accent">0.24939</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PID</span></td>
+            <td>Invesco International Dividend Achievers ETF</td>
+            <td class="num font-bold text-accent">0.15416</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">KBWB</span></td>
+            <td>Invesco KBW Bank ETF</td>
+            <td class="num font-bold text-accent">0.46007</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">KBWD</span></td>
+            <td>Invesco KBW High Dividend Yield Financial ETF</td>
+            <td class="num font-bold text-accent">0.13497</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">KBWY</span></td>
+            <td>Invesco KBW Premium Yield Equity REIT ETF</td>
+            <td class="num font-bold text-accent">0.11987</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">KBWP</span></td>
+            <td>Invesco KBW Property &amp; Casualty Insurance ETF</td>
+            <td class="num font-bold text-accent">0.35989</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQQM</span></td>
+            <td>Invesco NASDAQ 100 ETF</td>
+            <td class="num font-bold text-accent">0.31266</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">IBBQ</span></td>
+            <td>Invesco Nasdaq Biotechnology ETF</td>
+            <td class="num font-bold text-accent">0.23037</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QOWZ</span></td>
+            <td>Invesco Nasdaq Free Cash Flow Achievers ETF</td>
+            <td class="num font-bold text-accent">0.01738</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQQS</span></td>
+            <td>Invesco NASDAQ Future Gen 200 ETF</td>
+            <td class="num font-bold text-accent">0.02135</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQQJ</span></td>
+            <td>Invesco NASDAQ Next Gen 100 ETF</td>
+            <td class="num font-bold text-accent">0.19766</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SOXQ</span></td>
+            <td>Invesco PHLX Semiconductor ETF</td>
+            <td class="num font-bold text-accent">0.08447</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QEW</span></td>
+            <td>Invesco QQQ Equal Weight ETF</td>
+            <td class="num font-bold text-accent">0.05295</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQHG</span></td>
+            <td>Invesco QQQ Hedged Advantage ETF</td>
+            <td class="num font-bold text-accent">0.02997</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQA</span></td>
+            <td>Invesco QQQ Income Advantage ETF</td>
+            <td class="num font-bold text-accent">0.4859</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQLV</span></td>
+            <td>Invesco QQQ Low Volatility ETF</td>
+            <td class="num font-bold text-accent">0.02912</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QQQ</span></td>
+            <td>Invesco QQQ Trust, Series 1</td>
+            <td class="num font-bold text-accent">0.75143</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>10/08/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">IUS</span></td>
+            <td>Invesco RAFI Strategic US ETF</td>
+            <td class="num font-bold text-accent">0.22839</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PRFZ</span></td>
+            <td>Invesco RAFI US 1500 Small-Mid ETF</td>
+            <td class="num font-bold text-accent">0.12898</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCD</span></td>
+            <td>Invesco S&amp;P SmallCap Consumer Discretionary ETF</td>
+            <td class="num font-bold text-accent">0.23507</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCC</span></td>
+            <td>Invesco S&amp;P SmallCap Consumer Staples ETF</td>
+            <td class="num font-bold text-accent">0.28315</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCE</span></td>
+            <td>Invesco S&amp;P SmallCap Energy ETF</td>
+            <td class="num font-bold text-accent">0.41072</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCF</span></td>
+            <td>Invesco S&amp;P SmallCap Financials ETF</td>
+            <td class="num font-bold text-accent">0.38681</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCI</span></td>
+            <td>Invesco S&amp;P SmallCap Industrials ETF</td>
+            <td class="num font-bold text-accent">0.20626</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCT</span></td>
+            <td>Invesco S&amp;P SmallCap Information Technology ETF</td>
+            <td class="num font-bold text-accent">0.00354</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCM</span></td>
+            <td>Invesco S&amp;P SmallCap Materials ETF</td>
+            <td class="num font-bold text-accent">0.25168</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PSCU</span></td>
+            <td>Invesco S&amp;P SmallCap Utilities &amp; Communication Services ETF</td>
+            <td class="num font-bold text-accent">0.13809</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">VRIG</span></td>
+            <td>Invesco Variable Rate Investment Grade ETF</td>
+            <td class="num font-bold text-accent">0.09125</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PHO</span></td>
+            <td>Invesco Water Resources ETF</td>
+            <td class="num font-bold text-accent">0.06131</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LAMR</span></td>
+            <td>Lamar Advertising Company Class A Common Stock</td>
+            <td class="num font-bold text-accent">1.65</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">MPIA</span></td>
+            <td>m+ Nasdaq-100 Accelerator Autocall ETF</td>
+            <td class="num font-bold text-accent">0.6247</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">META</span></td>
+            <td>Meta Platforms, Inc. Class A Common Stock</td>
+            <td class="num font-bold text-accent">0.525</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/28/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PEPS</span></td>
+            <td>Parametric Equity Plus ETF</td>
+            <td class="num font-bold text-accent">0.085493</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">QNDX</span></td>
+            <td>State Street SPDR Portfolio Nasdaq 100 ETF</td>
+            <td class="num font-bold text-accent">0.027225</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SYBT</span></td>
+            <td>Stock Yards Bancorp, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.33</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>10/01/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>9/22/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">WHF</span></td>
+            <td>WhiteHorse Finance, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.25</td>
+            <td class="num">N/A%</td>
+            <td>9/21/2026</td>
+            <td>10/05/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ADAM</span></td>
+            <td>Adamas Trust, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.3</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>10/28/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSY</span></td>
+            <td>Bentley Systems, Incorporated Class B Common Stock</td>
+            <td class="num font-bold text-accent">0.07</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">USOI</span></td>
+            <td>Credit Suisse AG Credit Suisse X-Links Crude Oil Shares Covered Call ETN</td>
+            <td class="num font-bold text-accent">1.7002</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GLDI</span></td>
+            <td>Credit Suisse X-Links Gold Shares Covered Call ETNs due February 2, 2033</td>
+            <td class="num font-bold text-accent">2.4852</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SLVO</span></td>
+            <td>Credit Suisse X-Links Silver Shares Covered Call ETNs due April 21, 2033</td>
+            <td class="num font-bold text-accent">1.899</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GSM</span></td>
+            <td>Ferroglobe PLC Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.015</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FORTY</span></td>
+            <td>Formula Systems (1985) Ltd. American Depositary Shares</td>
+            <td class="num font-bold text-accent">1.63</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LOGI</span></td>
+            <td>Logitech International S.A. Ordinary Shares</td>
+            <td class="num font-bold text-accent">1.682136</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BANX</span></td>
+            <td>ArrowMark Financial Corp. Common Stock</td>
+            <td class="num font-bold text-accent">0.15</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BFC</span></td>
+            <td>Bank First Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.6</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>10/07/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">CINF</span></td>
+            <td>Cincinnati Financial Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.94</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>10/15/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GFS</span></td>
+            <td>GlobalFoundries Inc. Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.12</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LRCX</span></td>
+            <td>Lam Research Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.33</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SGA</span></td>
+            <td>Saga Communications, Inc. Class A Common Stock (FL)</td>
+            <td class="num font-bold text-accent">0.25</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>9/24/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">NEWT</span></td>
+            <td>NewtekOne, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.19</td>
+            <td class="num">N/A%</td>
+            <td>9/24/2026</td>
+            <td>10/01/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">NEWTP</span></td>
+            <td>NewtekOne, Inc. Depositary Shares, Non-Cumulative Perpetual Preferred Stock, Series B</td>
+            <td class="num font-bold text-accent">0.53125</td>
+            <td class="num">N/A%</td>
+            <td>9/24/2026</td>
+            <td>10/01/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">STX</span></td>
+            <td>Seagate Technology Holdings PLC Ordinary Shares (Ireland)</td>
+            <td class="num font-bold text-accent">0.74</td>
+            <td class="num">N/A%</td>
+            <td>9/24/2026</td>
+            <td>10/07/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/24/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">ALRS</span></td>
+            <td>Alerus Financial Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.22</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LIEN</span></td>
+            <td>Chicago Atlantic BDC, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.34</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FGBI</span></td>
+            <td>First Guaranty Bancshares, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.01</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">HTLD</span></td>
+            <td>Heartland Express, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.02</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/07/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">IMPPP</span></td>
+            <td>Imperial Petroleum Inc. 8.75% Series A Cumulative Redeemable Perpetual Preferred Shares</td>
+            <td class="num font-bold text-accent">0.546875</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">NRC</span></td>
+            <td>NRC Health Common Stock</td>
+            <td class="num font-bold text-accent">0.16</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">PPHC</span></td>
+            <td>Public Policy Holding Company, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.117</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SHIP</span></td>
+            <td>Seanergy Maritime Holdings Corp. Common Stock</td>
+            <td class="num font-bold text-accent">0.35</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>9/28/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">TOWN</span></td>
+            <td>TowneBank Common Stock</td>
+            <td class="num font-bold text-accent">0.28</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">USEA</span></td>
+            <td>United Maritime Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.1</td>
+            <td class="num">N/A%</td>
+            <td>9/25/2026</td>
+            <td>10/09/2026</td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+
+    <section class="editorial">
+      <h2>Trading Strategy & Settlement Rules</h2>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
+      
+      <h2>Risk Management Considerations</h2>
+      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DividendRadar. Financial data provided for informational and research purposes only.</p>
+    <p>
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
+      <a href="about.html">About & Methodology</a> |
+      <a href="guide.html">Dividend Strategy Guide</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    function filtrarTabla() {
+      const input = document.getElementById("filtro");
+      const filtro = input.value.toUpperCase();
+      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
+      for (let i = 1; i < tr.length; i++) {
+        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
+        const tdNombre = tr[i].getElementsByTagName("td")[1];
+        if (tdSimbolo || tdNombre) {
+          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
+          const txtNombre = tdNombre.textContent || tdNombre.innerText;
+          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

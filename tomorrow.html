@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stocks Going Ex-Dividend Tomorrow - DividendRadar</title>
+  <meta name="description" content="Critical cutoff list for tomorrow, September 22, 2026. Action required before market close today.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    header a.brand {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    nav a.active {
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
+    }
+    .search-box {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .search-box input {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 380px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .table-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .badge {
+      background-color: #21262d;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .text-accent { color: var(--accent); }
+    .font-bold { font-weight: bold; }
+    .num { text-align: right; }
+    th.num { text-align: right; }
+    .editorial {
+      margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .editorial h2 {
+      color: #fff;
+      font-size: 1.35rem;
+      margin-top: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .editorial h2:first-child {
+      margin-top: 0;
+    }
+    .editorial p {
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">📈 DividendRadar</a>
+    <nav>
+      <a href="index.html">Today</a>
+<a href="tomorrow.html" class="active">Tomorrow</a>
+<a href="this-week.html">This Week</a>
+<a href="next-week.html">Next Week</a>
+<a href="guide.html">Dividend Guide</a>
+<a href="about.html">About</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Stocks Going Ex-Dividend Tomorrow</h1>
+      <p>Critical cutoff list for tomorrow, September 22, 2026. Action required before market close today.</p>
+    </div>
+
+    <div class="callout"><strong>Action Required:</strong> To receive these dividends, you must purchase qualifying shares before today's market closing bell (4:00 PM EST).</div>
+
+    <div class="search-box">
+      <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
+      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
+    </div>
+
+    <div class="table-container">
+      <table id="tabla-dividendos">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Company Name</th>
+            <th class="num">Cash Amount</th>
+            <th class="num">Yield (%)</th>
+            <th>Ex-Dividend Date</th>
+            <th>Pay Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+            <td><span class="badge">ADAM</span></td>
+            <td>Adamas Trust, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.3</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>10/28/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">BSY</span></td>
+            <td>Bentley Systems, Incorporated Class B Common Stock</td>
+            <td class="num font-bold text-accent">0.07</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">USOI</span></td>
+            <td>Credit Suisse AG Credit Suisse X-Links Crude Oil Shares Covered Call ETN</td>
+            <td class="num font-bold text-accent">1.7002</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GLDI</span></td>
+            <td>Credit Suisse X-Links Gold Shares Covered Call ETNs due February 2, 2033</td>
+            <td class="num font-bold text-accent">2.4852</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SLVO</span></td>
+            <td>Credit Suisse X-Links Silver Shares Covered Call ETNs due April 21, 2033</td>
+            <td class="num font-bold text-accent">1.899</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">GSM</span></td>
+            <td>Ferroglobe PLC Ordinary Shares</td>
+            <td class="num font-bold text-accent">0.015</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">FORTY</span></td>
+            <td>Formula Systems (1985) Ltd. American Depositary Shares</td>
+            <td class="num font-bold text-accent">1.63</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>10/16/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">LOGI</span></td>
+            <td>Logitech International S.A. Ordinary Shares</td>
+            <td class="num font-bold text-accent">1.682136</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge">SATA</span></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/22/2026</td>
+            <td>9/23/2026</td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+
+    <section class="editorial">
+      <h2>Trading Strategy & Settlement Rules</h2>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
+      
+      <h2>Risk Management Considerations</h2>
+      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DividendRadar. Financial data provided for informational and research purposes only.</p>
+    <p>
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
+      <a href="about.html">About & Methodology</a> |
+      <a href="guide.html">Dividend Strategy Guide</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    function filtrarTabla() {
+      const input = document.getElementById("filtro");
+      const filtro = input.value.toUpperCase();
+      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
+      for (let i = 1; i < tr.length; i++) {
+        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
+        const tdNombre = tr[i].getElementsByTagName("td")[1];
+        if (tdSimbolo || tdNombre) {
+          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
+          const txtNombre = tdNombre.textContent || tdNombre.innerText;
+          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -20,6 +20,7 @@
   }
   </script>
     
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is Free Cash Flow payout ratio better than Net Income payout ratio?", "acceptedAnswer": {"@type": "Answer", "text": "Net income includes non-cash accounting items like depreciation and goodwill write-downs. Free cash flow measures actual cash in the bank, providing an accurate view of dividend affordability."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -249,20 +250,32 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 2.2rem;
     }
     .editorial h2 {
       color: #fff;
-      font-size: 1.35rem;
-      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
     .editorial h2:first-child {
       margin-top: 0;
     }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
     .editorial p, .editorial li {
       color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
     }
     .editorial a {
       color: var(--primary);
@@ -270,6 +283,37 @@
     }
     .editorial a:hover {
       text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
     }
     footer {
       text-align: center;
@@ -326,14 +370,22 @@
         <h2>Understanding the Dividend Payout Ratio</h2>
         <p>The Dividend Payout Ratio measures the percentage of net earnings paid to shareholders as dividends. It acts as the primary indicator of dividend safety.</p>
         <div class="callout"><strong>Formula:</strong> Payout Ratio = (Total Annual Dividends / Net Income) &times; 100</div>
-        <h2>Warning Thresholds</h2>
+        
+        <h2>Warning Thresholds Across Sectors:</h2>
         <ul>
-          <li><strong>0% - 60%:</strong> Healthy coverage with strong reinvestment cushion.</li>
-          <li><strong>61% - 85%:</strong> Moderate safety typical for consumer staples and utilities.</li>
-          <li><strong>Over 100%:</strong> High alert. Company is paying out more than it earns in GAAP net income.</li>
+          <li><strong>0% - 50%:</strong> Healthy coverage with abundant cushion for reinvestment and capital expenditure.</li>
+          <li><strong>51% - 75%:</strong> Moderate safety typical for mature consumer staples and regulated utilities.</li>
+          <li><strong>76% - 95%:</strong> Thin margin of safety. Highly vulnerable during macroeconomic recessions.</li>
+          <li><strong>Over 100%:</strong> Critical alert. The firm is distributing more capital than it generates in GAAP earnings.</li>
         </ul>
         <p>For Real Estate entities, net income is distorted by depreciation. Learn how to evaluate REITs using AFFO in our <a href="reit-bdc-dividend-guide.html">REIT & BDC Dividend Guide</a>.</p>
         
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary><strong>Why is Free Cash Flow payout ratio better than Net Income payout ratio?</strong></summary>
+          <div class="faq-answer"><p>Net income includes non-cash accounting items like depreciation and goodwill write-downs. Free cash flow measures actual cash in the bank, providing an accurate view of dividend affordability.</p></div>
+        </details>
+        </div>
     </section>
   </main>
 

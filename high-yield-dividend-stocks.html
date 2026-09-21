@@ -20,6 +20,7 @@
   }
   </script>
     
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is an 8% or 10% dividend yield sustainable long-term?", "acceptedAnswer": {"@type": "Answer", "text": "In capital-intensive sectors or standard corporations, yields above 8% often signal severe market distress and risk of an upcoming dividend cut. However, specialized pass-through structures like BDCs, Master Limited Partnerships (MLPs), and Covered Call ETFs can legitimately sustain higher yields."}}, {"@type": "Question", "name": "What happens to a stock's price when its dividend is cut?", "acceptedAnswer": {"@type": "Answer", "text": "Historically, when a high-yield company announces a dividend reduction or suspension, its stock price drops sharply (often 10% to 25% in a single trading session) as income funds dump shares."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -249,20 +250,32 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 2.2rem;
     }
     .editorial h2 {
       color: #fff;
-      font-size: 1.35rem;
-      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
     .editorial h2:first-child {
       margin-top: 0;
     }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
     .editorial p, .editorial li {
       color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
     }
     .editorial a {
       color: var(--primary);
@@ -270,6 +283,37 @@
     }
     .editorial a:hover {
       text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
     }
     footer {
       text-align: center;
@@ -316,12 +360,12 @@
       <p>Screen U.S. equities with declared annual dividend yields exceeding 6.0% going ex-dividend soon.</p>
     </div>
 
-    <div class="callout"><strong>Yield Caution:</strong> Abnormally high yields (>10%) may signal dividend sustainability risks or declining stock prices.</div>
+    <div class="callout"><strong>Yield Caution:</strong> Abnormally high yields (>10%) may signal dividend cut risks or declining underlying stock prices.</div>
     
 <div class="calc-card">
   <div class="calc-header">
-    <h3>🧮 Interactive Dividend Yield & Income Calculator</h3>
-    <p>Estimate your passive cash flow and projected payouts before entering positions.</p>
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
   </div>
   <div class="calc-grid">
     <div class="calc-input">
@@ -359,10 +403,31 @@
 </div>
 
 
-    <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody><tr><td colspan='6' style='text-align:center; padding: 2rem; color: #8b949e;'>No dividend declarations found for this specific screener.</td></tr></tbody></table></div>
+    <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody><tr><td colspan='6' style='text-align:center; padding: 2rem; color: #8b949e;'>No dividend declarations found for this specific period or screener criteria.</td></tr></tbody></table></div>
 
     <section class="editorial">
-      <h2>Beware of Yield Traps</h2><p>Yields over 8% require intense scrutiny of operational cash flow. Read our breakdown on <a href='payout-ratio-safety.html'>Analyzing Dividend Payout Ratios</a> or verify whether a distribution is a one-time payout in our <a href='special-dividends-explained.html'>Special Dividends Guide</a>.</p>
+      
+<h2>High Yield Screener: Navigating Equities Yielding Over 6.0%</h2>
+<p>An annual dividend yield exceeding 6% offers immediate cash return, but it demands strict fundamental skepticism. In financial markets, yield is inversely proportional to share price: <em>Dividend Yield = Annual Dividend / Stock Price</em>. When a stock price collapses due to deteriorating business conditions, its nominal yield spikes to artificial double-digit levels, creating a <strong>Value Trap</strong>.</p>
+
+<h3>How to Distinguish Real High Yield from Dangerous Traps:</h3>
+<ol>
+  <li><strong>Check Free Cash Flow Coverage:</strong> Net income can be manipulated by accounting adjustments, but cash flow cannot. Ensure Free Cash Flow comfortably exceeds declared dividends.</li>
+  <li><strong>Beware of Special Dividends:</strong> Sometimes a massive yield is caused by a one-time windfall distribution that will not repeat. Read our <a href="special-dividends-explained.html">Special Dividends Breakdown</a>.</li>
+  <li><strong>Examine Debt Maturity Profiles:</strong> In higher interest rate regimes, highly levered companies may be forced to slash dividends to refinance maturing bonds.</li>
+</ol>
+
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary><strong>Is an 8% or 10% dividend yield sustainable long-term?</strong></summary>
+          <div class="faq-answer"><p>In capital-intensive sectors or standard corporations, yields above 8% often signal severe market distress and risk of an upcoming dividend cut. However, specialized pass-through structures like BDCs, Master Limited Partnerships (MLPs), and Covered Call ETFs can legitimately sustain higher yields.</p></div>
+        </details>
+        
+        <details class="faq-item">
+          <summary><strong>What happens to a stock&#x27;s price when its dividend is cut?</strong></summary>
+          <div class="faq-answer"><p>Historically, when a high-yield company announces a dividend reduction or suspension, its stock price drops sharply (often 10% to 25% in a single trading session) as income funds dump shares.</p></div>
+        </details>
+        </div>
     </section>
   </main>
 

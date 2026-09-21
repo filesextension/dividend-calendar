@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ex-Dividend Stocks This Week - DividendRadar</title>
-  <meta name="description" content="Complete schedule of all U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.">
+  <meta name="description" content="Complete schedule of U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.">
   
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Ex-Dividend Stocks This Week",
-    "description": "Complete schedule of all U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.",
+    "description": "Complete schedule of U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.",
     "dateModified": "2026-09-21",
     "publisher": {
       "@type": "Organization",
@@ -20,6 +20,7 @@
   }
   </script>
     
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often is this weekly ex-dividend calendar updated?", "acceptedAnswer": {"@type": "Answer", "text": "Our automated market scraper queries official Nasdaq data feeds daily before the New York opening bell to ensure all declared corporate corporate actions are current."}}, {"@type": "Question", "name": "Why do ex-dividend dates rarely fall on weekends or market holidays?", "acceptedAnswer": {"@type": "Answer", "text": "Ex-dividend dates are tied directly to active exchange trading sessions. If markets are closed, clearing and settlement mechanisms do not operate."}}, {"@type": "Question", "name": "How can I filter this weekly table for specific high-yield stocks?", "acceptedAnswer": {"@type": "Answer", "text": "Use the real-time search box above the table to search by company ticker, name, or inspect our pre-screened High Yield Screener (>6%)."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -249,20 +250,32 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 2.2rem;
     }
     .editorial h2 {
       color: #fff;
-      font-size: 1.35rem;
-      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
     .editorial h2:first-child {
       margin-top: 0;
     }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
     .editorial p, .editorial li {
       color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
     }
     .editorial a {
       color: var(--primary);
@@ -270,6 +283,37 @@
     }
     .editorial a:hover {
       text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
     }
     footer {
       text-align: center;
@@ -313,15 +357,15 @@
   <main>
     <div class="hero">
       <h1>Ex-Dividend Stocks This Week</h1>
-      <p>Complete schedule of all U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.</p>
+      <p>Complete schedule of U.S. equities going ex-dividend between Sep 21 and Sep 25, 2026.</p>
     </div>
 
-    <div class="callout"><strong>Weekly Outlook:</strong> Plan capital allocations for the current trading week across NYSE and NASDAQ securities.</div>
+    <div class="callout"><strong>Weekly Outlook:</strong> Plan your capital allocation for the entire current trading week across NYSE and NASDAQ securities.</div>
     
 <div class="calc-card">
   <div class="calc-header">
-    <h3>🧮 Interactive Dividend Yield & Income Calculator</h3>
-    <p>Estimate your passive cash flow and projected payouts before entering positions.</p>
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
   </div>
   <div class="calc-grid">
     <div class="calc-input">
@@ -359,10 +403,39 @@
 </div>
 
 
-    <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody><tr><td colspan='6' style='text-align:center; padding: 2rem; color: #8b949e;'>No dividend declarations found for this specific screener.</td></tr></tbody></table></div>
+    <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody><tr><td colspan='6' style='text-align:center; padding: 2rem; color: #8b949e;'>No dividend declarations found for this specific period or screener criteria.</td></tr></tbody></table></div>
 
     <section class="editorial">
-      <h2>Weekly Strategy & Capital Allocation</h2><p>Construct a diversified capture ladder across various defensive industries. Test compound yields above using our interactive projection tool.</p>
+      
+<h2>Weekly Dividend Income Outlook & Capital Allocation</h2>
+<p>Tracking the weekly schedule enables portfolio managers and retail investors to stage capital across various sectors without concentrating ex-date risk on a single trading session. Corporate distributions across NYSE, NASDAQ, and AMEX occur continuously throughout the five-day trading week.</p>
+
+<h3>Building a Weekly Dividend Income Ladder</h3>
+<p>Investors can systematically diversify their monthly passive cash flow by staggering positions across companies with differing ex-dates and payment cycles. By combining defensive blue chips, high-yielding Real Estate Investment Trusts, and monthly payers, you can generate regular cash flow distributed evenly throughout the quarter.</p>
+
+<h3>Key Variables to Screen Every Week:</h3>
+<ol>
+  <li><strong>Yield on Cost Potential:</strong> Prioritize companies that regularly grow distributions over static high-yield traps. Review our <a href="dividend-growth-investing.html">Dividend Growth Guide</a>.</li>
+  <li><strong>Ex-Date vs. Record Date:</strong> Remember that exchange ex-dates always precede the corporate record date to account for settlement clearing times.</li>
+  <li><strong>Reinvestment Compounding:</strong> Run our interactive calculator above to see how automatic reinvestment (DRIP) amplifies weekly declared dividends over a multi-year horizon.</li>
+</ol>
+
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary><strong>How often is this weekly ex-dividend calendar updated?</strong></summary>
+          <div class="faq-answer"><p>Our automated market scraper queries official Nasdaq data feeds daily before the New York opening bell to ensure all declared corporate corporate actions are current.</p></div>
+        </details>
+        
+        <details class="faq-item">
+          <summary><strong>Why do ex-dividend dates rarely fall on weekends or market holidays?</strong></summary>
+          <div class="faq-answer"><p>Ex-dividend dates are tied directly to active exchange trading sessions. If markets are closed, clearing and settlement mechanisms do not operate.</p></div>
+        </details>
+        
+        <details class="faq-item">
+          <summary><strong>How can I filter this weekly table for specific high-yield stocks?</strong></summary>
+          <div class="faq-answer"><p>Use the real-time search box above the table to search by company ticker, name, or inspect our pre-screened <a href='high-yield-dividend-stocks.html'>High Yield Screener (>6%)</a>.</p></div>
+        </details>
+        </div>
     </section>
   </main>
 

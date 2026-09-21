@@ -20,6 +20,7 @@
   }
   </script>
     
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Dividend Growth Investing beat the S&P 500 index?", "acceptedAnswer": {"@type": "Answer", "text": "Historically, companies initiating and growing dividends have outperformed the broad equal-weighted S&P 500 with significantly lower downside price volatility during bear markets."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -249,20 +250,32 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 2.2rem;
     }
     .editorial h2 {
       color: #fff;
-      font-size: 1.35rem;
-      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
     .editorial h2:first-child {
       margin-top: 0;
     }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
     .editorial p, .editorial li {
       color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
     }
     .editorial a {
       color: var(--primary);
@@ -270,6 +283,37 @@
     }
     .editorial a:hover {
       text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
     }
     footer {
       text-align: center;
@@ -320,8 +364,8 @@
     
 <div class="calc-card">
   <div class="calc-header">
-    <h3>🧮 Interactive Dividend Yield & Income Calculator</h3>
-    <p>Estimate your passive cash flow and projected payouts before entering positions.</p>
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
   </div>
   <div class="calc-grid">
     <div class="calc-input">
@@ -367,14 +411,18 @@
         <p>A common pitfall among novice income investors is prioritizing nominal yield today (e.g., a stagnant 8% utility) over dividend growth (e.g., a 2.5% yield compounding payouts at 10% per year).</p>
         
         <h2>The Concept of Yield on Cost (YoC)</h2>
-        <p>Yield on Cost measures the current annual dividend payment divided by your original purchase price. An investor who purchased Apple or Microsoft a decade ago may enjoy a Yield on Cost exceeding 15% or 20% on original invested capital, despite current nominal yields sitting under 1%.</p>
+        <p>Yield on Cost measures current annual dividend income divided by your original purchase price. An investor who bought dividend growth champions like Microsoft or Apple a decade ago enjoys a Yield on Cost exceeding 15% to 25% on original capital today.</p>
 
-        <h2>The Chowder Rule for Dividend Screening</h2>
         <div class="callout">
-          <strong>The Chowder Number:</strong> Current Dividend Yield (%) + 5-Year Dividend Growth Rate (%). A score of 12% or higher indicates an attractive candidate for total return.
+          <strong>The Chowder Rule:</strong> Current Dividend Yield (%) + 5-Year Dividend Growth Rate (%). A score above 12% indicates high total-return compounding potential.
         </div>
-        <p>Track elite compounding machines on our <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</p>
         
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary><strong>Can Dividend Growth Investing beat the S&amp;P 500 index?</strong></summary>
+          <div class="faq-answer"><p>Historically, companies initiating and growing dividends have outperformed the broad equal-weighted S&P 500 with significantly lower downside price volatility during bear markets.</p></div>
+        </details>
+        </div>
     </section>
   </main>
 

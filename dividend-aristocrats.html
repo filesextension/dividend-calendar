@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dividend Aristocrats Ex-Dividend Radar - DividendRadar</title>
-  <meta name="description" content="Upcoming payout schedules for elite S&P 500 companies with 25+ consecutive years of dividend increases.">
+  <meta name="description" content="Upcoming payout schedules for elite S&P 500 companies with 25+ consecutive years of annual dividend increases.">
   
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Dividend Aristocrats Ex-Dividend Radar",
-    "description": "Upcoming payout schedules for elite S&P 500 companies with 25+ consecutive years of dividend increases.",
+    "description": "Upcoming payout schedules for elite S&P 500 companies with 25+ consecutive years of annual dividend increases.",
     "dateModified": "2026-09-21",
     "publisher": {
       "@type": "Organization",
@@ -20,6 +20,7 @@
   }
   </script>
     
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between a Dividend Aristocrat and a Dividend King?", "acceptedAnswer": {"@type": "Answer", "text": "What is the difference between a Dividend Aristocrat and a Dividend King? A Dividend Aristocrat has increased its dividend payout for at least 25 consecutive years and belongs to the S&P 500. A Dividend King has increased payouts for at least 50 consecutive years, regardless of index membership."}}, {"@type": "Question", "name": "What happens if a Dividend Aristocrat freezes or cuts its payout?", "acceptedAnswer": {"@type": "Answer", "text": "It is immediately ejected from the official S&P 500 Dividend Aristocrats index at the next quarterly rebalancing, forcing institutional index funds to divest holdings."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -249,20 +250,32 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 2.2rem;
     }
     .editorial h2 {
       color: #fff;
-      font-size: 1.35rem;
-      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
     .editorial h2:first-child {
       margin-top: 0;
     }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
     .editorial p, .editorial li {
       color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
     }
     .editorial a {
       color: var(--primary);
@@ -270,6 +283,37 @@
     }
     .editorial a:hover {
       text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
     }
     footer {
       text-align: center;
@@ -313,15 +357,15 @@
   <main>
     <div class="hero">
       <h1>Dividend Aristocrats Ex-Dividend Radar</h1>
-      <p>Upcoming payout schedules for elite S&P 500 companies with 25+ consecutive years of dividend increases.</p>
+      <p>Upcoming payout schedules for elite S&P 500 companies with 25+ consecutive years of annual dividend increases.</p>
     </div>
 
-    <div class="callout"><strong>Elite Quality:</strong> Dividend Aristocrats have increased dividend distributions through recessions, market crashes, and inflationary periods.</div>
+    <div class="callout"><strong>Elite Quality:</strong> Dividend Aristocrats have increased dividend payouts through recessions, market crashes, and inflationary periods.</div>
     
 <div class="calc-card">
   <div class="calc-header">
-    <h3>🧮 Interactive Dividend Yield & Income Calculator</h3>
-    <p>Estimate your passive cash flow and projected payouts before entering positions.</p>
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
   </div>
   <div class="calc-grid">
     <div class="calc-input">
@@ -361,15 +405,6 @@
 
     <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody>
         <tr>
-            <td><a href="https://finance.yahoo.com/quote/CINF" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CINF on Yahoo Finance">CINF</a></td>
-            <td>Cincinnati Financial Corporation Common Stock</td>
-            <td class="num font-bold text-accent">0.94</td>
-            <td class="num">N/A%</td>
-            <td>9/23/2026</td>
-            <td>10/15/2026</td>
-        </tr>
-        
-        <tr>
             <td><a href="https://finance.yahoo.com/quote/ROP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ROP on Yahoo Finance">ROP</a></td>
             <td>Roper Technologies, Inc. Common Stock</td>
             <td class="num font-bold text-accent">0.91</td>
@@ -377,10 +412,40 @@
             <td>10/02/2026</td>
             <td>10/21/2026</td>
         </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/CINF" target="_blank" rel="noopener noreferrer" class="badge" title="Verify CINF on Yahoo Finance">CINF</a></td>
+            <td>Cincinnati Financial Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.94</td>
+            <td class="num">N/A%</td>
+            <td>9/23/2026</td>
+            <td>10/15/2026</td>
+        </tr>
         </tbody></table></div>
 
     <section class="editorial">
-      <h2>The Long-Term Aristocrat Moat</h2><p>Aristocrats offer superior dividend durability. Combine high-quality balance sheets with automated reinvestment plans for multi-decade compounding wealth. Dive deeper into <a href='dividend-growth-investing.html'>Dividend Growth Investing (DGI)</a>.</p>
+      
+<h2>The Elite S&P 500 Dividend Aristocrats</h2>
+<p>To qualify as an official <strong>S&P 500 Dividend Aristocrat</strong>, an enterprise must satisfy stringent regulatory and performance criteria: it must belong to the S&P 500, maintain a minimum market capitalization of $3 billion, and crucially, <strong>increase its base annual dividend per share for at least 25 consecutive years</strong>.</p>
+
+<h3>Why Aristocrats Deliver Superior Risk-Adjusted Returns:</h3>
+<ul>
+  <li><strong>Durable Economic Moats:</strong> Increasing dividends across oil shocks, recessions, the 2008 financial crisis, and global pandemics requires unshakeable competitive pricing power.</li>
+  <li><strong>Prudent Capital Allocation:</strong> Management teams that commit to uninterrupted dividend growth avoid destructive speculative acquisitions and keep balance sheet leverage disciplined.</li>
+  <li><strong>Inflation Hedge:</strong> Aristocrats increase their cash distributions annually, keeping pace with or outpacing real inflation rates. Learn more in our <a href="dividend-growth-investing.html">Dividend Growth Investing Guide</a>.</li>
+</ul>
+
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary><strong>What is the difference between a Dividend Aristocrat and a Dividend King?</strong></summary>
+          <div class="faq-answer"><p>A Dividend Aristocrat has increased its dividend payout for at least 25 consecutive years and belongs to the S&P 500. A Dividend King has increased payouts for at least 50 consecutive years, regardless of index membership.</p></div>
+        </details>
+        
+        <details class="faq-item">
+          <summary><strong>What happens if a Dividend Aristocrat freezes or cuts its payout?</strong></summary>
+          <div class="faq-answer"><p>It is immediately ejected from the official S&P 500 Dividend Aristocrats index at the next quarterly rebalancing, forcing institutional index funds to divest holdings.</p></div>
+        </details>
+        </div>
     </section>
   </main>
 

@@ -2,7 +2,6 @@ import datetime
 import html
 import requests
 
-# Configuración de cabeceras para Nasdaq
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
@@ -12,7 +11,6 @@ HEADERS = {
 }
 
 def obtener_datos_fecha(fecha_str):
-    """Consulta la API de Nasdaq para una fecha específica (YYYY-MM-DD)."""
     url = f"https://api.nasdaq.com/api/calendar/dividends?date={fecha_str}"
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
@@ -24,7 +22,6 @@ def obtener_datos_fecha(fecha_str):
     return []
 
 def renderizar_filas(rows):
-    """Convierte los datos de dividendos en filas HTML limpias."""
     if not rows:
         return "<tr><td colspan='6' style='text-align:center; padding: 2rem; color: #8b949e;'>No dividend declarations found for this period.</td></tr>"
     
@@ -37,9 +34,12 @@ def renderizar_filas(rows):
         ex_date = html.escape(str(r.get("dividend_Ex_Date", "N/A")))
         pay_date = html.escape(str(r.get("payment_Date", "N/A")))
         
+        # Enlace externo dinámico a Yahoo Finance para aportar E-E-A-T y utilidad
+        yahoo_url = f"https://finance.yahoo.com/quote/{ticker}"
+        
         filas += f"""
         <tr>
-            <td><span class="badge">{ticker}</span></td>
+            <td><a href="{yahoo_url}" target="_blank" rel="noopener noreferrer" class="badge" title="Verify {ticker} on Yahoo Finance">{ticker}</a></td>
             <td>{name}</td>
             <td class="num font-bold text-accent">{amount}</td>
             <td class="num">{yield_val}%</td>
@@ -49,8 +49,7 @@ def renderizar_filas(rows):
         """
     return filas
 
-def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta=""):
-    """Genera la estructura HTML completa con menú temporal optimizado."""
+def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta="", fecha_iso=""):
     nav_links = [
         ("index.html", "Today"),
         ("tomorrow.html", "Tomorrow"),
@@ -67,6 +66,23 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
 
     alert_box = f'<div class="callout">{alerta}</div>' if alerta else ""
 
+    # Schema markup dinámico por página
+    schema_markup = f"""
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{titulo}",
+    "description": "{subtitulo}",
+    "dateModified": "{fecha_iso}",
+    "publisher": {{
+      "@type": "Organization",
+      "name": "DividendRadar"
+    }}
+  }}
+  </script>
+    """
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,6 +90,7 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{titulo} - DividendRadar</title>
   <meta name="description" content="{subtitulo}">
+  {schema_markup}
   <style>
     :root {{
       --bg: #0d1117;
@@ -205,7 +222,7 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
     tr:hover td {{
       background-color: rgba(255, 255, 255, 0.02);
     }}
-    .badge {{
+    a.badge {{
       background-color: #21262d;
       border: 1px solid var(--border);
       color: var(--primary);
@@ -213,6 +230,12 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
       border-radius: 4px;
       font-weight: bold;
       font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-block;
+    }}
+    a.badge:hover {{
+      background-color: var(--primary);
+      color: #fff;
     }}
     .text-accent {{ color: var(--accent); }}
     .font-bold {{ font-weight: bold; }}
@@ -274,7 +297,9 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
 
     <div class="search-box">
       <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
-      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
+      <span style="font-size: 0.85rem; color: var(--text-muted);">
+        Data dynamically sourced from <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API</a>.
+      </span>
     </div>
 
     <div class="table-container">
@@ -297,10 +322,10 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
 
     <section class="editorial">
       <h2>Trading Strategy & Settlement Rules</h2>
-      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date, in accordance with <a href="https://www.investor.gov/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">SEC settlement guidelines</a>.</p>
       
       <h2>Risk Management Considerations</h2>
-      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+      <p>Click on any ticker symbol in the table above to verify real-time financials and payout sustainability on Yahoo Finance. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
     </section>
   </main>
 
@@ -316,6 +341,7 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
       <a href="terms.html">Terms of Service</a> |
       <a href="privacy.html">Privacy Policy</a>
     </p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
 
   <script>
@@ -342,47 +368,42 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
 </html>
 """
 
-# ==========================================
-# CÁLCULO DE FECHAS
-# ==========================================
 hoy = datetime.date.today()
 manana = hoy + datetime.timedelta(days=1)
-
-# Esta semana (días laborales restantes de lunes a viernes)
 inicio_semana = hoy - datetime.timedelta(days=hoy.weekday())
 dias_esta_semana = [inicio_semana + datetime.timedelta(days=i) for i in range(5)]
-
-# Próxima semana (lunes a viernes de la siguiente semana)
 inicio_proxima_semana = inicio_semana + datetime.timedelta(days=7)
 dias_proxima_semana = [inicio_proxima_semana + datetime.timedelta(days=i) for i in range(5)]
 
 print(f"Generando calendario para Hoy: {hoy.strftime('%Y-%m-%d')}")
 
-# 1. PÁGINA: TODAY (index.html)
+# 1. TODAY
 datos_hoy = obtener_datos_fecha(hoy.strftime("%Y-%m-%d"))
 html_today = generar_plantilla(
     titulo="Today's Ex-Dividend Stocks",
     subtitulo=f"Live list of stocks going ex-dividend today, {hoy.strftime('%B %d, %Y')}.",
     pestana_activa="index.html",
     contenido_filas=renderizar_filas(datos_hoy),
-    alerta="<strong>Notice:</strong> Stocks listed here are trading ex-dividend today. Shares purchased today will not qualify for the upcoming payout."
+    alerta="<strong>Notice:</strong> Stocks listed here are trading ex-dividend today. Shares purchased today will not qualify for the upcoming payout.",
+    fecha_iso=hoy.isoformat()
 )
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_today)
 
-# 2. PÁGINA: TOMORROW (tomorrow.html)
+# 2. TOMORROW
 datos_manana = obtener_datos_fecha(manana.strftime("%Y-%m-%d"))
 html_tomorrow = generar_plantilla(
     titulo="Stocks Going Ex-Dividend Tomorrow",
     subtitulo=f"Critical cutoff list for tomorrow, {manana.strftime('%B %d, %Y')}. Action required before market close today.",
     pestana_activa="tomorrow.html",
     contenido_filas=renderizar_filas(datos_manana),
-    alerta="<strong>Action Required:</strong> To receive these dividends, you must purchase qualifying shares before today's market closing bell (4:00 PM EST)."
+    alerta="<strong>Action Required:</strong> To receive these dividends, you must purchase qualifying shares before today's market closing bell (4:00 PM EST).",
+    fecha_iso=hoy.isoformat()
 )
 with open("tomorrow.html", "w", encoding="utf-8") as f:
     f.write(html_tomorrow)
 
-# 3. PÁGINA: THIS WEEK (this-week.html)
+# 3. THIS WEEK
 datos_esta_semana = []
 for d in dias_esta_semana:
     datos_esta_semana.extend(obtener_datos_fecha(d.strftime("%Y-%m-%d")))
@@ -392,12 +413,13 @@ html_this_week = generar_plantilla(
     subtitulo=f"Complete schedule of all U.S. equities going ex-dividend between {dias_esta_semana[0].strftime('%b %d')} and {dias_esta_semana[-1].strftime('%b %d, %Y')}.",
     pestana_activa="this-week.html",
     contenido_filas=renderizar_filas(datos_esta_semana),
-    alerta="<strong>Weekly Outlook:</strong> Plan your capital allocation for the entire current trading week across NYSE and NASDAQ securities."
+    alerta="<strong>Weekly Outlook:</strong> Plan your capital allocation for the entire current trading week across NYSE and NASDAQ securities.",
+    fecha_iso=hoy.isoformat()
 )
 with open("this-week.html", "w", encoding="utf-8") as f:
     f.write(html_this_week)
 
-# 4. PÁGINA: NEXT WEEK (next-week.html)
+# 4. NEXT WEEK
 datos_proxima_semana = []
 for d in dias_proxima_semana:
     datos_proxima_semana.extend(obtener_datos_fecha(d.strftime("%Y-%m-%d")))
@@ -407,14 +429,13 @@ html_next_week = generar_plantilla(
     subtitulo=f"Early planning radar for upcoming corporate payouts from {dias_proxima_semana[0].strftime('%b %d')} to {dias_proxima_semana[-1].strftime('%b %d, %Y')}.",
     pestana_activa="next-week.html",
     contenido_filas=renderizar_filas(datos_proxima_semana),
-    alerta="<strong>Advance Planning:</strong> Upcoming dividend schedule for next week. Verify declared corporate announcements prior to trade execution."
+    alerta="<strong>Advance Planning:</strong> Upcoming dividend schedule for next week. Verify declared corporate announcements prior to trade execution.",
+    fecha_iso=hoy.isoformat()
 )
 with open("next-week.html", "w", encoding="utf-8") as f:
     f.write(html_next_week)
 
-# ==========================================
-# 5. GENERADOR DINÁMICO DE SITEMAP.XML
-# ==========================================
+# 5. SITEMAP
 sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -458,5 +479,3 @@ sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 
 with open("sitemap.xml", "w", encoding="utf-8") as f:
     f.write(sitemap_xml)
-
-print("Todas las páginas temporales y sitemap.xml generados exitosamente.")

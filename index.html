@@ -42,7 +42,7 @@
     header {
       background-color: var(--card);
       border-bottom: 1px solid var(--border);
-      padding: 1.2rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -55,12 +55,16 @@
       font-weight: bold;
       text-decoration: none;
     }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
     nav a {
       color: var(--text-muted);
       text-decoration: none;
-      margin-left: 1.2rem;
-      font-size: 0.95rem;
-      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+      padding: 0.35rem 0.65rem;
       border-radius: 4px;
       transition: all 0.2s;
     }
@@ -187,7 +191,7 @@
     .editorial h2:first-child {
       margin-top: 0;
     }
-    .editorial p {
+    .editorial p, .editorial li {
       color: var(--text-muted);
     }
     footer {
@@ -216,7 +220,10 @@
 <a href="tomorrow.html">Tomorrow</a>
 <a href="this-week.html">This Week</a>
 <a href="next-week.html">Next Week</a>
-<a href="guide.html">Dividend Guide</a>
+<a href="monthly-dividend-stocks.html">Monthly Payers</a>
+<a href="high-yield-dividend-stocks.html">High Yield (>6%)</a>
+<a href="dividend-aristocrats.html">Aristocrats</a>
+<a href="guide.html">Guide</a>
 <a href="about.html">About</a>
 
     </nav>
@@ -228,12 +235,12 @@
       <p>Live list of stocks going ex-dividend today, September 21, 2026.</p>
     </div>
 
-    <div class="callout"><strong>Notice:</strong> Stocks listed here are trading ex-dividend today. Shares purchased today will not qualify for the upcoming payout.</div>
+    <div class="callout"><strong>Notice:</strong> Stocks trading ex-dividend today must have been purchased prior to market open to qualify.</div>
 
     <div class="search-box">
       <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
       <span style="font-size: 0.85rem; color: var(--text-muted);">
-        Data dynamically sourced from <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API</a>.
+        Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a>
       </span>
     </div>
 
@@ -1219,25 +1226,24 @@
     </div>
 
     <section class="editorial">
-      <h2>Trading Strategy & Settlement Rules</h2>
-      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date, in accordance with <a href="https://www.investor.gov/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">SEC settlement guidelines</a>.</p>
-      
-      <h2>Risk Management Considerations</h2>
-      <p>Click on any ticker symbol in the table above to verify real-time financials and payout sustainability on Yahoo Finance. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
+      <h2>Today's Market Execution</h2><p>Review the exact cutoff declarations for equities trading ex-date today. Positions entered on or after market open will not capture declared disbursements.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 DividendRadar. Financial data provided for informational and research purposes only.</p>
+    <p>&copy; 2026 DividendRadar. Financial market research data updated daily.</p>
     <p>
       <a href="index.html">Today</a> |
       <a href="tomorrow.html">Tomorrow</a> |
       <a href="this-week.html">This Week</a> |
       <a href="next-week.html">Next Week</a> |
+      <a href="monthly-dividend-stocks.html">Monthly Payers</a> |
+      <a href="high-yield-dividend-stocks.html">High Yield (&gt;6%)</a> |
+      <a href="dividend-aristocrats.html">Aristocrats</a> |
       <a href="about.html">About & Methodology</a> |
-      <a href="guide.html">Dividend Strategy Guide</a> |
-      <a href="terms.html">Terms of Service</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="guide.html">Dividend Guide</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy</a>
     </p>
     <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>

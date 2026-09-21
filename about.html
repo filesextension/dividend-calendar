@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Methodology - DividendRadar</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a.brand {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .content-block {
+      padding: 2rem;
+    }
+    h1 {
+      color: #fff;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.8rem;
+    }
+    h2 {
+      color: #fff;
+      margin-top: 1.8rem;
+      font-size: 1.25rem;
+    }
+    p, li {
+      color: var(--text-muted);
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">📈 DividendRadar</a>
+    <nav>
+      <a href="index.html">Calendar</a>
+      <a href="guide.html">Dividend Guide</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-block">
+      <h1>About DividendRadar & Our Methodology</h1>
+      <p>DividendRadar was created to provide individual retail investors with straightforward, reliable, and noise-free access to daily U.S. stock market dividend schedules.</p>
+
+      <h2>Our Mission</h2>
+      <p>Dividend income investing is one of the most reliable wealth-building strategies available. However, tracking corporate actions, dividend record dates, and ex-dividend schedules across multiple exchanges often requires digging through complex financial statements or paying for high-tier terminal software. We aim to keep critical daily dividend dates accessible, transparent, and easy to filter in a clean interface.</p>
+
+      <h2>Data Sources & Processing</h2>
+      <p>All ex-dividend information displayed on DividendRadar is retrieved daily from public U.S. stock exchange registers, including public feeds from Nasdaq and official corporate filings. Our automated processing pipeline updates Monday through Friday prior to the opening of the New York trading session to ensure you have the latest figures for:</p>
+      <ul>
+        <li><strong>Ex-Dividend Date:</strong> The critical cutoff date determining eligibility for upcoming dividend distributions.</li>
+        <li><strong>Cash Amount:</strong> The declared payout per individual share.</li>
+        <li><strong>Annual Yield (%):</strong> The annualized yield calculation based on current trading market price.</li>
+        <li><strong>Payment Date:</strong> The projected disbursement date when capital is credited to shareholder brokerage accounts.</li>
+      </ul>
+
+      <h2>Important Disclaimer</h2>
+      <p>DividendRadar does not offer registered financial advisory, investment management, or personalized trading recommendations. All market data is compiled for informational and research purposes only. Always consult a licensed professional or certified advisor before making capital allocation decisions.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DividendRadar. Financial data provided for informational purposes only.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About & Methodology</a> |
+      <a href="guide.html">Dividend Strategy Guide</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+</body>
+</html>

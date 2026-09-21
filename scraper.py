@@ -2,13 +2,8 @@ import datetime
 import html
 import requests
 
-# 1. Obtener la fecha de hoy
-hoy = datetime.date.today()
-fecha_str = hoy.strftime("%Y-%m-%d")
-fecha_legible = hoy.strftime("%B %d, %Y")
-
-url = f"https://api.nasdaq.com/api/calendar/dividends?date={fecha_str}"
-headers = {
+# Configuración de cabeceras para Nasdaq
+HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
     "Accept-Language": "en-US,en;q=0.9",
@@ -16,47 +11,69 @@ headers = {
     "Referer": "https://www.nasdaq.com/"
 }
 
-print(f"Descargando datos de dividendos para: {fecha_str}")
-filas_html = ""
+def obtener_datos_fecha(fecha_str):
+    """Consulta la API de Nasdaq para una fecha específica (YYYY-MM-DD)."""
+    url = f"https://api.nasdaq.com/api/calendar/dividends?date={fecha_str}"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=15)
+        if res.status_code == 200:
+            data = res.json()
+            return data.get("data", {}).get("calendar", {}).get("rows", []) or []
+    except Exception as e:
+        print(f"Error consultando {fecha_str}: {e}")
+    return []
 
-try:
-    response = requests.get(url, headers=headers, timeout=15)
-    data = response.json()
-    rows = data.get("data", {}).get("calendar", {}).get("rows", [])
-    
+def renderizar_filas(rows):
+    """Convierte los datos de dividendos en filas HTML limpias."""
     if not rows:
-        filas_html = "<tr><td colspan='6' style='text-align:center; padding: 2rem;'>No ex-dividend records found for today or market is closed.</td></tr>"
-    else:
-        for r in rows:
-            ticker = html.escape(str(r.get("symbol", "N/A")))
-            name = html.escape(str(r.get("companyName", "N/A")))
-            amount = html.escape(str(r.get("dividend_Rate", "N/A")))
-            yield_pct = html.escape(str(r.get("annual_Yield", "N/A")))
-            ex_date = html.escape(str(r.get("dividend_Ex_Date", "N/A")))
-            pay_date = html.escape(str(r.get("payment_Date", "N/A")))
-            
-            filas_html += f"""
-            <tr>
-                <td><span class="badge">{ticker}</span></td>
-                <td>{name}</td>
-                <td class="num font-bold text-accent">{amount}</td>
-                <td class="num">{yield_pct}%</td>
-                <td>{ex_date}</td>
-                <td>{pay_date}</td>
-            </tr>
-            """
-except Exception as e:
-    print(f"Error al descargar datos: {e}")
-    filas_html = f"<tr><td colspan='6' style='text-align:center; padding: 2rem; color: #f85149;'>Error fetching live market feed. Please check back shortly.</td></tr>"
+        return "<tr><td colspan='6' style='text-align:center; padding: 2rem; color: #8b949e;'>No dividend declarations found for this period.</td></tr>"
+    
+    filas = ""
+    for r in rows:
+        ticker = html.escape(str(r.get("symbol", "N/A")))
+        name = html.escape(str(r.get("companyName", "N/A")))
+        amount = html.escape(str(r.get("dividend_Rate", "N/A")))
+        yield_val = html.escape(str(r.get("annual_Yield", "N/A")))
+        ex_date = html.escape(str(r.get("dividend_Ex_Date", "N/A")))
+        pay_date = html.escape(str(r.get("payment_Date", "N/A")))
+        
+        filas += f"""
+        <tr>
+            <td><span class="badge">{ticker}</span></td>
+            <td>{name}</td>
+            <td class="num font-bold text-accent">{amount}</td>
+            <td class="num">{yield_val}%</td>
+            <td>{ex_date}</td>
+            <td>{pay_date}</td>
+        </tr>
+        """
+    return filas
 
-# Plantilla HTML con diseño profesional, enlaces y bloques de contenido
-contenido_index = f"""<!DOCTYPE html>
+def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta=""):
+    """Genera la estructura HTML completa con menú temporal optimizado."""
+    nav_links = [
+        ("index.html", "Today"),
+        ("tomorrow.html", "Tomorrow"),
+        ("this-week.html", "This Week"),
+        ("next-week.html", "Next Week"),
+        ("guide.html", "Dividend Guide"),
+        ("about.html", "About")
+    ]
+    
+    nav_html = ""
+    for url, label in nav_links:
+        active_cls = ' class="active"' if pestana_activa == url else ''
+        nav_html += f'<a href="{url}"{active_cls}>{label}</a>\n'
+
+    alert_box = f'<div class="callout">{alerta}</div>' if alerta else ""
+
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Ex-Dividend Calendar & High-Yield Stock Screener - DividendRadar</title>
-  <meta name="description" content="Free daily U.S. stock market ex-dividend calendar. Track dividend yield, payment dates, and declared cash payouts across NYSE and NASDAQ securities.">
+  <title>{titulo} - DividendRadar</title>
+  <meta name="description" content="{subtitulo}">
   <style>
     :root {{
       --bg: #0d1117;
@@ -95,11 +112,19 @@ contenido_index = f"""<!DOCTYPE html>
     nav a {{
       color: var(--text-muted);
       text-decoration: none;
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
       font-size: 0.95rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: all 0.2s;
     }}
-    nav a:hover, nav a.active {{
+    nav a:hover {{
       color: var(--primary);
+    }}
+    nav a.active {{
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
     }}
     main {{
       max-width: 1100px;
@@ -120,6 +145,14 @@ contenido_index = f"""<!DOCTYPE html>
       font-size: 1.05rem;
       max-width: 750px;
       margin: 0 auto;
+    }}
+    .callout {{
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
     }}
     .search-box {{
       margin: 1.5rem 0;
@@ -227,21 +260,21 @@ contenido_index = f"""<!DOCTYPE html>
   <header>
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
-      <a href="index.html" class="active">Calendar</a>
-      <a href="guide.html">Dividend Guide</a>
-      <a href="about.html">About</a>
+      {nav_html}
     </nav>
   </header>
 
   <main>
     <div class="hero">
-      <h1>Daily Ex-Dividend Calendar</h1>
-      <p>Real-time corporate payout declarations, annualized yields, and cutoff schedules updated for <strong>{fecha_legible}</strong>.</p>
+      <h1>{titulo}</h1>
+      <p>{subtitulo}</p>
     </div>
 
+    {alert_box}
+
     <div class="search-box">
-      <input type="text" id="filtro" placeholder="Search by ticker symbol or company name..." onkeyup="filtrarTabla()">
-      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Market Data Feed</span>
+      <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
+      <span style="font-size: 0.85rem; color: var(--text-muted);">Source: Nasdaq Live Calendar Feed</span>
     </div>
 
     <div class="table-container">
@@ -257,24 +290,27 @@ contenido_index = f"""<!DOCTYPE html>
           </tr>
         </thead>
         <tbody>
-          {filas_html}
+          {contenido_filas}
         </tbody>
       </table>
     </div>
 
     <section class="editorial">
-      <h2>How to Use This Daily Calendar</h2>
-      <p>The ex-dividend date determines who receives an upcoming corporate distribution. If you purchase shares on or after this cutoff date, you will not receive the current declared payout. To qualify, positions must be initiated and settled prior to market open on the designated ex-date.</p>
+      <h2>Trading Strategy & Settlement Rules</h2>
+      <p>Remember that corporate dividends require trades to settle before the official record date. To capture a distribution, you must acquire the stock at least one trading session before its scheduled ex-dividend date.</p>
       
-      <h2>Key Investment Takeaways</h2>
-      <p>While high yields are attractive, always review payout sustainability, debt leverage, and operational cash flows before establishing long-term positions. Learn more about advanced allocation strategies in our <a href="guide.html" style="color: var(--primary);">Comprehensive Dividend Guide</a>.</p>
+      <h2>Risk Management Considerations</h2>
+      <p>Review each security's payout ratio and financial health before establishing positions. Explore complete breakdown guides in our <a href="guide.html" style="color: var(--primary);">Ex-Dividend Strategy Guide</a>.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 DividendRadar. Financial data provided for research purposes only.</p>
+    <p>&copy; 2026 DividendRadar. Financial data provided for informational and research purposes only.</p>
     <p>
-      <a href="index.html">Home</a> |
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
       <a href="about.html">About & Methodology</a> |
       <a href="guide.html">Dividend Strategy Guide</a> |
       <a href="terms.html">Terms of Service</a> |
@@ -306,7 +342,121 @@ contenido_index = f"""<!DOCTYPE html>
 </html>
 """
 
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(contenido_index)
+# ==========================================
+# CÁLCULO DE FECHAS
+# ==========================================
+hoy = datetime.date.today()
+manana = hoy + datetime.timedelta(days=1)
 
-print("index.html generado exitosamente con nuevo diseño y enlaces de navegacion.")
+# Esta semana (días laborales restantes de lunes a viernes)
+inicio_semana = hoy - datetime.timedelta(days=hoy.weekday())
+dias_esta_semana = [inicio_semana + datetime.timedelta(days=i) for i in range(5)]
+
+# Próxima semana (lunes a viernes de la siguiente semana)
+inicio_proxima_semana = inicio_semana + datetime.timedelta(days=7)
+dias_proxima_semana = [inicio_proxima_semana + datetime.timedelta(days=i) for i in range(5)]
+
+print(f"Generando calendario para Hoy: {hoy.strftime('%Y-%m-%d')}")
+
+# 1. PÁGINA: TODAY (index.html)
+datos_hoy = obtener_datos_fecha(hoy.strftime("%Y-%m-%d"))
+html_today = generar_plantilla(
+    titulo="Today's Ex-Dividend Stocks",
+    subtitulo=f"Live list of stocks going ex-dividend today, {hoy.strftime('%B %d, %Y')}.",
+    pestana_activa="index.html",
+    contenido_filas=renderizar_filas(datos_hoy),
+    alerta="<strong>Notice:</strong> Stocks listed here are trading ex-dividend today. Shares purchased today will not qualify for the upcoming payout."
+)
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_today)
+
+# 2. PÁGINA: TOMORROW (tomorrow.html)
+datos_manana = obtener_datos_fecha(manana.strftime("%Y-%m-%d"))
+html_tomorrow = generar_plantilla(
+    titulo="Stocks Going Ex-Dividend Tomorrow",
+    subtitulo=f"Critical cutoff list for tomorrow, {manana.strftime('%B %d, %Y')}. Action required before market close today.",
+    pestana_activa="tomorrow.html",
+    contenido_filas=renderizar_filas(datos_manana),
+    alerta="<strong>Action Required:</strong> To receive these dividends, you must purchase qualifying shares before today's market closing bell (4:00 PM EST)."
+)
+with open("tomorrow.html", "w", encoding="utf-8") as f:
+    f.write(html_tomorrow)
+
+# 3. PÁGINA: THIS WEEK (this-week.html)
+datos_esta_semana = []
+for d in dias_esta_semana:
+    datos_esta_semana.extend(obtener_datos_fecha(d.strftime("%Y-%m-%d")))
+
+html_this_week = generar_plantilla(
+    titulo="Ex-Dividend Stocks This Week",
+    subtitulo=f"Complete schedule of all U.S. equities going ex-dividend between {dias_esta_semana[0].strftime('%b %d')} and {dias_esta_semana[-1].strftime('%b %d, %Y')}.",
+    pestana_activa="this-week.html",
+    contenido_filas=renderizar_filas(datos_esta_semana),
+    alerta="<strong>Weekly Outlook:</strong> Plan your capital allocation for the entire current trading week across NYSE and NASDAQ securities."
+)
+with open("this-week.html", "w", encoding="utf-8") as f:
+    f.write(html_this_week)
+
+# 4. PÁGINA: NEXT WEEK (next-week.html)
+datos_proxima_semana = []
+for d in dias_proxima_semana:
+    datos_proxima_semana.extend(obtener_datos_fecha(d.strftime("%Y-%m-%d")))
+
+html_next_week = generar_plantilla(
+    titulo="Ex-Dividend Stocks Next Week",
+    subtitulo=f"Early planning radar for upcoming corporate payouts from {dias_proxima_semana[0].strftime('%b %d')} to {dias_proxima_semana[-1].strftime('%b %d, %Y')}.",
+    pestana_activa="next-week.html",
+    contenido_filas=renderizar_filas(datos_proxima_semana),
+    alerta="<strong>Advance Planning:</strong> Upcoming dividend schedule for next week. Verify declared corporate announcements prior to trade execution."
+)
+with open("next-week.html", "w", encoding="utf-8") as f:
+    f.write(html_next_week)
+
+# ==========================================
+# 5. GENERADOR DINÁMICO DE SITEMAP.XML
+# ==========================================
+sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dividendradar.netlify.app/index.html</loc>
+    <lastmod>{hoy.strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dividendradar.netlify.app/tomorrow.html</loc>
+    <lastmod>{hoy.strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dividendradar.netlify.app/this-week.html</loc>
+    <lastmod>{hoy.strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dividendradar.netlify.app/next-week.html</loc>
+    <lastmod>{hoy.strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dividendradar.netlify.app/guide.html</loc>
+    <lastmod>{hoy.strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dividendradar.netlify.app/about.html</loc>
+    <lastmod>{hoy.strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
+"""
+
+with open("sitemap.xml", "w", encoding="utf-8") as f:
+    f.write(sitemap_xml)
+
+print("Todas las páginas temporales y sitemap.xml generados exitosamente.")

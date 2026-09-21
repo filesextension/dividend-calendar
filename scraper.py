@@ -70,7 +70,6 @@ def renderizar_filas(rows):
         """
     return filas
 
-# WIDGET INTERACTIVO DE LA CALCULADORA
 CALCULADORA_HTML = """
 <div class="calc-card">
   <div class="calc-header">
@@ -123,7 +122,6 @@ function calcularDividendos() {
   const annualIncome = capital * (yieldPct / 100);
   const perPayout = annualIncome / frequency;
 
-  // Cálculo compuesto DRIP a 10 años (reinversión pasiva simple sin crecimiento de dividendo)
   const rate = yieldPct / 100;
   const drip10Years = capital * Math.pow((1 + rate / frequency), frequency * 10);
 
@@ -141,12 +139,15 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
         ("tomorrow.html", "Tomorrow"),
         ("this-week.html", "This Week"),
         ("next-week.html", "Next Week"),
-        ("monthly-dividend-stocks.html", "Monthly Payers"),
-        ("high-yield-dividend-stocks.html", "High Yield (>6%)"),
+        ("monthly-dividend-stocks.html", "Monthly"),
+        ("high-yield-dividend-stocks.html", "High Yield"),
         ("dividend-aristocrats.html", "Aristocrats"),
-        ("drip-calculator-guide.html", "DRIP Strategy"),
-        ("payout-ratio-safety.html", "Safety / Payout Ratio"),
-        ("qualified-vs-ordinary-dividends.html", "Taxes (Qualified)")
+        ("best-dividend-etfs.html", "ETFs"),
+        ("reit-bdc-dividend-guide.html", "REITs & BDCs"),
+        ("dividend-growth-investing.html", "DGI Strategy"),
+        ("drip-calculator-guide.html", "DRIP"),
+        ("payout-ratio-safety.html", "Safety"),
+        ("qualified-vs-ordinary-dividends.html", "Taxes")
     ]
     
     nav_html = ""
@@ -219,13 +220,13 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
     nav {{
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }}
     nav a {{
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.88rem;
-      padding: 0.35rem 0.6rem;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.55rem;
       border-radius: 4px;
       transition: all 0.2s;
     }}
@@ -265,7 +266,6 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
       border-radius: 0 6px 6px 0;
       color: #c9d1d9;
     }}
-    /* CALCULADORA INTERACTIVA */
     .calc-card {{
       background: #1c2128;
       border: 1px solid #444c56;
@@ -485,10 +485,14 @@ def generar_plantilla(titulo, subtitulo, pestana_activa, contenido_filas, alerta
       <a href="monthly-dividend-stocks.html">Monthly Payers</a> |
       <a href="high-yield-dividend-stocks.html">High Yield (&gt;6%)</a> |
       <a href="dividend-aristocrats.html">Aristocrats</a> |
-      <a href="drip-calculator-guide.html">DRIP Guide</a> |
-      <a href="payout-ratio-safety.html">Safety Guide</a> |
-      <a href="qualified-vs-ordinary-dividends.html">Tax Guide</a> |
-      <a href="about.html">About & Methodology</a> |
+      <a href="best-dividend-etfs.html">Dividend ETFs</a> |
+      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a> |
+      <a href="dividend-growth-investing.html">DGI Guide</a> |
+      <a href="special-dividends-explained.html">Special Dividends</a> |
+      <a href="drip-calculator-guide.html">DRIP</a> |
+      <a href="payout-ratio-safety.html">Safety</a> |
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a> |
+      <a href="about.html">About</a> |
       <a href="terms.html">Terms</a> |
       <a href="privacy.html">Privacy</a>
     </p>
@@ -542,7 +546,7 @@ for item in pool_total:
     pool_unicos[clave] = item
 todos_los_registros = list(pool_unicos.values())
 
-print(f"Total registros obtenidos: {len(todos_los_registros)}")
+print(f"Total registros únicos procesados: {len(todos_los_registros)}")
 
 # 1. TODAY
 datos_hoy = obtener_datos_fecha(hoy.strftime("%Y-%m-%d"))
@@ -606,7 +610,7 @@ with open("monthly-dividend-stocks.html", "w", encoding="utf-8") as f:
         contenido_filas=renderizar_filas(datos_monthly),
         alerta="<strong>Passive Cash Flow:</strong> Monthly paying dividend stocks provide 12 distributions per year, accelerating dividend compounding.",
         fecha_iso=hoy.isoformat(),
-        texto_seo="<h2>Compounding with Monthly Distributions</h2><p>Companies paying on a monthly schedule allow investors to reinvest dividends 12 times a year rather than 4. Learn how compounding works in our <a href='drip-calculator-guide.html'>DRIP Reinvestment Guide</a>.</p>"
+        texto_seo="<h2>Compounding with Monthly Distributions</h2><p>Companies paying on a monthly schedule allow investors to reinvest dividends 12 times a year rather than 4. Learn how compounding works in our <a href='drip-calculator-guide.html'>DRIP Reinvestment Guide</a> or read our sector breakdown on <a href='reit-bdc-dividend-guide.html'>REITs & BDCs</a>.</p>"
     ))
 
 # 6. HIGH YIELD (>6%)
@@ -620,7 +624,7 @@ with open("high-yield-dividend-stocks.html", "w", encoding="utf-8") as f:
         contenido_filas=renderizar_filas(datos_high_yield),
         alerta="<strong>Yield Caution:</strong> Abnormally high yields (>10%) may signal dividend sustainability risks or declining stock prices.",
         fecha_iso=hoy.isoformat(),
-        texto_seo="<h2>Beware of Yield Traps</h2><p>Yields over 8% require intense scrutiny of operational cash flow. Read our breakdown on <a href='payout-ratio-safety.html'>Analyzing Dividend Payout Ratios</a> to avoid dividend cuts.</p>"
+        texto_seo="<h2>Beware of Yield Traps</h2><p>Yields over 8% require intense scrutiny of operational cash flow. Read our breakdown on <a href='payout-ratio-safety.html'>Analyzing Dividend Payout Ratios</a> or verify whether a distribution is a one-time payout in our <a href='special-dividends-explained.html'>Special Dividends Guide</a>.</p>"
     ))
 
 # 7. ARISTOCRATS
@@ -633,14 +637,14 @@ with open("dividend-aristocrats.html", "w", encoding="utf-8") as f:
         contenido_filas=renderizar_filas(datos_aristocrats),
         alerta="<strong>Elite Quality:</strong> Dividend Aristocrats have increased dividend distributions through recessions, market crashes, and inflationary periods.",
         fecha_iso=hoy.isoformat(),
-        texto_seo="<h2>The Long-Term Aristocrat Moat</h2><p>Aristocrats offer superior dividend durability. Combine high-quality balance sheets with automated reinvestment plans for multi-decade compounding wealth.</p>"
+        texto_seo="<h2>The Long-Term Aristocrat Moat</h2><p>Aristocrats offer superior dividend durability. Combine high-quality balance sheets with automated reinvestment plans for multi-decade compounding wealth. Dive deeper into <a href='dividend-growth-investing.html'>Dividend Growth Investing (DGI)</a>.</p>"
     ))
 
 # =========================================================
-# TOPICAL AUTHORITY CLUSTER: 3 ARTÍCULOS ESTRATÉGICOS
+# TOPICAL AUTHORITY CLUSTER: GUÍAS EDITORIALES PROFUNDAS
 # =========================================================
 
-# 8. TOPICAL PILAR 1: DRIP CALCULATOR GUIDE
+# 8. DRIP GUIDE
 with open("drip-calculator-guide.html", "w", encoding="utf-8") as f:
     f.write(generar_plantilla(
         titulo="Dividend Reinvestment Plan (DRIP) Compounding Guide",
@@ -651,21 +655,13 @@ with open("drip-calculator-guide.html", "w", encoding="utf-8") as f:
         fecha_iso=hoy.isoformat(),
         texto_seo="""
         <h2>What is a DRIP (Dividend Reinvestment Plan)?</h2>
-        <p>A Dividend Reinvestment Plan (DRIP) is an automated financial program that allows investors to reinvest their cash dividends into additional shares or fractional shares of the underlying company, typically with zero brokerage commissions.</p>
-        
+        <p>A Dividend Reinvestment Plan (DRIP) is an automated financial program allowing investors to reinvest cash dividends into additional shares or fractional shares of the underlying company, typically commission-free.</p>
         <h2>The Power of Compound Yield on Cost</h2>
-        <p>When you reinvest dividends instead of taking cash payouts, two compounding forces work in tandem:</p>
-        <ol>
-          <li><strong>Share Count Expansion:</strong> Every distribution increases your total share ownership without out-of-pocket capital injections.</li>
-          <li><strong>Increased Future Dividends:</strong> The next dividend payout is calculated on a larger base of shares, creating an exponential "snowball effect."</li>
-        </ol>
-
-        <h2>DRIP vs. Cash Dividends: The Long-Term Difference</h2>
-        <p>Over a 20-year horizon, historical S&P 500 data demonstrates that total returns with reinvested dividends outperform price-appreciation-only returns by more than 200%. Explore upcoming dividend dates on our <a href="this-week.html">Weekly Calendar</a> or screen conservative growth equities on our <a href="dividend-aristocrats.html">Dividend Aristocrats Page</a>.</p>
+        <p>Reinvesting distributions compounds capital exponentially. Each reinvested payment expands your share total, generating higher subsequent dividend payments. Check dividend growth principles in our <a href="dividend-growth-investing.html">DGI Strategy Guide</a>.</p>
         """
     ))
 
-# 9. TOPICAL PILAR 2: PAYOUT RATIO SAFETY
+# 9. PAYOUT RATIO SAFETY
 with open("payout-ratio-safety.html", "w", encoding="utf-8") as f:
     f.write(generar_plantilla(
         titulo="Dividend Safety: How to Analyze the Payout Ratio",
@@ -676,26 +672,19 @@ with open("payout-ratio-safety.html", "w", encoding="utf-8") as f:
         fecha_iso=hoy.isoformat(),
         texto_seo="""
         <h2>Understanding the Dividend Payout Ratio</h2>
-        <p>The Dividend Payout Ratio measures the proportion of net earnings a company distributes to shareholders as dividends. It serves as the primary early-warning metric for dividend cuts.</p>
-        
-        <div class="callout">
-          <strong>Formula:</strong> Payout Ratio = (Total Annual Dividends Paid / Net Income) &times; 100
-        </div>
-
-        <h2>Safe vs. Dangerous Payout Thresholds</h2>
+        <p>The Dividend Payout Ratio measures the percentage of net earnings paid to shareholders as dividends. It acts as the primary indicator of dividend safety.</p>
+        <div class="callout"><strong>Formula:</strong> Payout Ratio = (Total Annual Dividends / Net Income) &times; 100</div>
+        <h2>Warning Thresholds</h2>
         <ul>
-          <li><strong>0% – 50% (Very Safe):</strong> Leaves abundant capital for debt reduction, business reinvestment, and aggressive dividend increases.</li>
-          <li><strong>51% – 75% (Healthy):</strong> Typical for mature corporate stalwarts (consumer staples, utilities).</li>
-          <li><strong>76% – 95% (High Risk):</strong> Minimal safety buffer; vulnerable during economic contractions.</li>
-          <li><strong>Over 100% (Critical Danger):</strong> The company is paying out more than it earns, often funded by debt issuance or asset liquidations.</li>
+          <li><strong>0% - 60%:</strong> Healthy coverage with strong reinvestment cushion.</li>
+          <li><strong>61% - 85%:</strong> Moderate safety typical for consumer staples and utilities.</li>
+          <li><strong>Over 100%:</strong> High alert. Company is paying out more than it earns in GAAP net income.</li>
         </ul>
-
-        <h2>Evaluating REITs and BDCs: FFO & AFFO</h2>
-        <p>For Real Estate Investment Trusts (REITs), traditional Net Income is distorted by heavy depreciation charges. Investors must evaluate <strong>Adjusted Funds From Operations (AFFO)</strong> payout ratios instead. Explore vetted monthly REIT distributions on our <a href="monthly-dividend-stocks.html">Monthly Dividend Calendar</a>.</p>
+        <p>For Real Estate entities, net income is distorted by depreciation. Learn how to evaluate REITs using AFFO in our <a href="reit-bdc-dividend-guide.html">REIT & BDC Dividend Guide</a>.</p>
         """
     ))
 
-# 10. TOPICAL PILAR 3: TAXES (QUALIFIED VS ORDINARY)
+# 10. TAXES (QUALIFIED VS ORDINARY)
 with open("qualified-vs-ordinary-dividends.html", "w", encoding="utf-8") as f:
     f.write(generar_plantilla(
         titulo="Qualified vs. Ordinary Dividends: Complete IRS Tax Guide",
@@ -705,26 +694,112 @@ with open("qualified-vs-ordinary-dividends.html", "w", encoding="utf-8") as f:
         con_calculadora=False,
         fecha_iso=hoy.isoformat(),
         texto_seo="""
-        <h2>Ordinary (Non-Qualified) vs. Qualified Dividends</h2>
-        <p>In the United States, how the IRS taxes your dividend income depends entirely on whether the distribution meets the statutory requirements to be categorized as "Qualified":</p>
-        
+        <h2>Ordinary vs. Qualified Dividend Tax Rates</h2>
+        <p>How dividends are taxed depends on IRS classification:</p>
         <ul>
-          <li><strong>Ordinary Dividends:</strong> Taxed at your standard federal income tax bracket (ranging from 10% to 37%). Typical for REITs, BDCs, and short-term holdings.</li>
-          <li><strong>Qualified Dividends:</strong> Taxed at preferential long-term capital gains tax rates (0%, 15%, or 20% depending on taxable income).</li>
+          <li><strong>Ordinary Dividends:</strong> Taxed as regular income (up to 37%). Typical for REITs and short-term holdings.</li>
+          <li><strong>Qualified Dividends:</strong> Taxed at favorable long-term capital gains rates (0%, 15%, or 20%).</li>
+        </ul>
+        <h2>The 60-Day Holding Period Rule</h2>
+        <p>To qualify for lower tax brackets, shares must be held unhedged for at least 61 days during a 121-day period centered on the ex-dividend date. Short-term dividend capture traders rarely meet this requirement.</p>
+        """
+    ))
+
+# 11. NUEVO: BEST DIVIDEND ETFS
+with open("best-dividend-etfs.html", "w", encoding="utf-8") as f:
+    f.write(generar_plantilla(
+        titulo="Best Dividend ETFs for Passive Income (SCHD, VYM, JEPI)",
+        subtitulo="Comparing low-cost index dividend funds, dividend growth ETFs, and high-yield covered call strategies.",
+        pestana_activa="best-dividend-etfs.html",
+        contenido_filas="",
+        con_calculadora=True,
+        fecha_iso=hoy.isoformat(),
+        texto_seo="""
+        <h2>Why Many Investors Prefer Dividend ETFs</h2>
+        <p>Exchange-Traded Funds (ETFs) eliminate single-stock dividend cut risk through broad diversification. Instead of analyzing individual balance sheets, an ETF automatically rebalances holdings according to index rules.</p>
+        
+        <h2>Top Tier Dividend ETFs Compared</h2>
+        <ul>
+          <li><strong>Schwab U.S. Dividend Equity ETF (SCHD):</strong> The gold standard for dividend growth, screening for cash flow to total debt, return on equity, and 10 consecutive years of dividend increases.</li>
+          <li><strong>Vanguard High Dividend Yield ETF (VYM):</strong> Broad market exposure tracking higher-yielding U.S. companies with an ultra-low expense ratio.</li>
+          <li><strong>JPMorgan Equity Premium Income ETF (JEPI):</strong> An actively managed covered-call ETF distributing high monthly income through options premium.</li>
         </ul>
 
-        <h2>The Crucial 60-Day Holding Period Rule</h2>
-        <p>To qualify for the lower tax rate, an investor must hold the underlying stock unhedged for <strong>more than 60 days during the 121-day window</strong> that begins 60 days prior to the ex-dividend date.</p>
+        <h2>Covered Call ETFs: Income vs. Upside Capping</h2>
+        <p>High-yield synthetic option ETFs (like JEPI and JEPQ) generate double-digit yields (8% to 11%), but trade away equity capital appreciation during strong bull rallies. Combine ETF research with our <a href="monthly-dividend-stocks.html">Monthly Dividend Screener</a>.</p>
+        """
+    ))
 
+# 12. NUEVO: REITS & BDCS DIVIDEND GUIDE
+with open("reit-bdc-dividend-guide.html", "w", encoding="utf-8") as f:
+    f.write(generar_plantilla(
+        titulo="REITs & BDCs High-Yield Guide: FFO, AFFO & Debt Safety",
+        subtitulo="Mastering real estate investment trusts and business development companies for maximum monthly income.",
+        pestana_activa="reit-bdc-dividend-guide.html",
+        contenido_filas="",
+        con_calculadora=False,
+        fecha_iso=hoy.isoformat(),
+        texto_seo="""
+        <h2>The Special Regulatory Structure of REITs & BDCs</h2>
+        <p>Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs) are legally mandated by Congress to pay out at least <strong>90% of their taxable income</strong> to shareholders as dividends in exchange for paying zero corporate income taxes.</p>
+        
+        <h2>Why Traditional P&E Ratios Fail for REITs</h2>
+        <p>Real estate properties carry heavy GAAP depreciation write-offs, which artificially depress net earnings while physical properties often appreciate in value. Smart investors measure performance using:</p>
+        <ul>
+          <li><strong>Funds From Operations (FFO):</strong> Net income plus depreciation and amortization, minus property sales gains.</li>
+          <li><strong>Adjusted Funds From Operations (AFFO):</strong> FFO minus recurring maintenance capital expenditures; the truest metric of dividend safety.</li>
+        </ul>
+
+        <h2>Tax Treatment Warning</h2>
+        <p>Because REITs and BDCs pay no corporate-level tax, their distributions are classified by the IRS as ordinary income rather than qualified dividends. Review our <a href="qualified-vs-ordinary-dividends.html">Tax Guide</a> to structure your holdings tax-efficiently.</p>
+        """
+    ))
+
+# 13. NUEVO: DIVIDEND GROWTH INVESTING (DGI) & YIELD ON COST
+with open("dividend-growth-investing.html", "w", encoding="utf-8") as f:
+    f.write(generar_plantilla(
+        titulo="Dividend Growth Investing (DGI) Strategy & Yield on Cost",
+        subtitulo="How focusing on dividend growth rate (DGR) beats static high-yield chasing over multi-decade time horizons.",
+        pestana_activa="dividend-growth-investing.html",
+        contenido_filas="",
+        con_calculadora=True,
+        fecha_iso=hoy.isoformat(),
+        texto_seo="""
+        <h2>High Yield Today vs. High Dividend Growth Tomorrow</h2>
+        <p>A common pitfall among novice income investors is prioritizing nominal yield today (e.g., a stagnant 8% utility) over dividend growth (e.g., a 2.5% yield compounding payouts at 10% per year).</p>
+        
+        <h2>The Concept of Yield on Cost (YoC)</h2>
+        <p>Yield on Cost measures the current annual dividend payment divided by your original purchase price. An investor who purchased Apple or Microsoft a decade ago may enjoy a Yield on Cost exceeding 15% or 20% on original invested capital, despite current nominal yields sitting under 1%.</p>
+
+        <h2>The Chowder Rule for Dividend Screening</h2>
         <div class="callout">
-          <strong>Tax Takeaway for Traders:</strong> The aggressive short-term "dividend capture strategy" results in ordinary tax treatment because the 60-day holding test is not satisfied.
+          <strong>The Chowder Number:</strong> Current Dividend Yield (%) + 5-Year Dividend Growth Rate (%). A score of 12% or higher indicates an attractive candidate for total return.
         </div>
-        <p>Check tomorrow's critical purchase deadlines on our <a href="tomorrow.html">Tomorrow Ex-Dividend Screener</a>.</p>
+        <p>Track elite compounding machines on our <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</p>
+        """
+    ))
+
+# 14. NUEVO: SPECIAL DIVIDENDS EXPLAINED
+with open("special-dividends-explained.html", "w", encoding="utf-8") as f:
+    f.write(generar_plantilla(
+        titulo="Special Dividends vs. Regular Dividends: Investor Guide",
+        subtitulo="Understanding non-recurring one-time payouts, asset sale distributions, and why annual yield calculations distort.",
+        pestana_activa="special-dividends-explained.html",
+        contenido_filas="",
+        con_calculadora=False,
+        fecha_iso=hoy.isoformat(),
+        texto_seo="""
+        <h2>What Is a Special Dividend?</h2>
+        <p>A special dividend is a non-recurring payment made by a company to shareholders, separate from its regular quarterly or monthly dividend cycle. Special dividends frequently result from exceptional one-time profits, windfall cash balances, asset divestitures, or corporate restructuring.</p>
+        
+        <h2>The Yield Calculation Distortion (Trap Alert)</h2>
+        <p>Many financial data aggregators annualize every declared distribution by multiplying it by 4 (quarterly) or 12 (monthly). If a company paying a $0.20 regular dividend suddenly declares a $5.00 special dividend, automated screeners may falsely project a massive 40% yield. Always verify the filing before executing capture trades.</p>
+        <p>Check verified upcoming dividend schedules on our <a href="tomorrow.html">Tomorrow Ex-Dividend Page</a>.</p>
         """
     ))
 
 # =========================================================
-# SITEMAP.XML COMPLETO (12 PÁGINAS)
+# SITEMAP.XML COMPLETO (16 URLs INDEXABLES)
 # =========================================================
 paginas_sitemap = [
     ("index.html", "1.0", "daily"),
@@ -734,6 +809,10 @@ paginas_sitemap = [
     ("monthly-dividend-stocks.html", "0.9", "daily"),
     ("high-yield-dividend-stocks.html", "0.9", "daily"),
     ("dividend-aristocrats.html", "0.8", "daily"),
+    ("best-dividend-etfs.html", "0.8", "weekly"),
+    ("reit-bdc-dividend-guide.html", "0.8", "weekly"),
+    ("dividend-growth-investing.html", "0.8", "weekly"),
+    ("special-dividends-explained.html", "0.7", "weekly"),
     ("drip-calculator-guide.html", "0.8", "weekly"),
     ("payout-ratio-safety.html", "0.8", "weekly"),
     ("qualified-vs-ordinary-dividends.html", "0.8", "weekly"),
@@ -758,4 +837,4 @@ sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 with open("sitemap.xml", "w", encoding="utf-8") as f:
     f.write(sitemap_xml)
 
-print("Sistema completo actualizado: Calculadora + Cluster de Autoridad Tópica + Sitemap expandido.")
+print("Ecosistema completado al 100%: 16 páginas interconectadas + Calculadora + Sitemap dinámico.")

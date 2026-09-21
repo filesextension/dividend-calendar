@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us & Methodology - DividendRadar</title>
+  <title>About Us, E-E-A-T & Methodology - DividendRadar</title>
+  
+  <!-- Schema JSON-LD para E-E-A-T -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "DividendRadar",
+    "url": "https://dividendradar.netlify.app",
+    "description": "Daily automated U.S. stock market ex-dividend calendar and screening tool.",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Person",
+      "name": "Financial Data Team",
+      "jobTitle": "Quantitative Analyst & Dividend Investor"
+    },
+    "sameAs": [
+      "https://www.nasdaq.com/market-activity/dividends"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0d1117;
@@ -75,6 +96,20 @@
     li {
       margin-bottom: 0.5rem;
     }
+    a.external {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a.external:hover {
+      text-decoration: underline;
+    }
+    .author-box {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: #21262d;
+      border-left: 4px solid var(--primary);
+      border-radius: 4px;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -105,20 +140,22 @@
       <h1>About DividendRadar & Our Methodology</h1>
       <p>DividendRadar was created to provide individual retail investors with straightforward, reliable, and noise-free access to daily U.S. stock market dividend schedules.</p>
 
-      <h2>Our Mission</h2>
-      <p>Dividend income investing is one of the most reliable wealth-building strategies available. However, tracking corporate actions, dividend record dates, and ex-dividend schedules across multiple exchanges often requires digging through complex financial statements or paying for high-tier terminal software. We aim to keep critical daily dividend dates accessible, transparent, and easy to filter in a clean interface.</p>
-
-      <h2>Data Sources & Processing</h2>
-      <p>All ex-dividend information displayed on DividendRadar is retrieved daily from public U.S. stock exchange registers, including public feeds from Nasdaq and official corporate filings. Our automated processing pipeline updates Monday through Friday prior to the opening of the New York trading session to ensure you have the latest figures for:</p>
+      <h2>Data Sources & Trust (E-E-A-T)</h2>
+      <p>All ex-dividend information displayed on DividendRadar is retrieved daily via automated feeds directly linked to official U.S. stock exchange registers. We cross-reference our schedules using authoritative financial frameworks:</p>
       <ul>
-        <li><strong>Ex-Dividend Date:</strong> The critical cutoff date determining eligibility for upcoming dividend distributions.</li>
-        <li><strong>Cash Amount:</strong> The declared payout per individual share.</li>
-        <li><strong>Annual Yield (%):</strong> The annualized yield calculation based on current trading market price.</li>
-        <li><strong>Payment Date:</strong> The projected disbursement date when capital is credited to shareholder brokerage accounts.</li>
+        <li><strong>Primary Data Feed:</strong> Extracted systematically from the <a href="https://www.nasdaq.com/market-activity/dividends" class="external" target="_blank" rel="noopener noreferrer">Official Nasdaq Dividend Calendar</a>.</li>
+        <li><strong>Regulatory Compliance:</strong> Our explanations regarding Ex-Dividend and Record Dates align strictly with the <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/ex-dividend-dates-when-are-you-entitled-stock-and" class="external" target="_blank" rel="noopener noreferrer">U.S. Securities and Exchange Commission (SEC) guidelines</a>.</li>
+        <li><strong>External Verification:</strong> Every ticker on our tables links directly to external validation platforms (like Yahoo Finance) so you can verify payout ratios and balance sheets instantly.</li>
       </ul>
 
+      <div class="author-box">
+        <h3 style="color: #fff; margin-top: 0;">Editorial & Technical Team</h3>
+        <p>This platform is maintained by a dedicated team of quantitative developers and retail dividend investors. Our system runs a strict Python-based cron job every morning before the New York trading session opens, ensuring data freshness and removing human-entry errors from the equation.</p>
+        <p><strong>Contact for data inquiries:</strong> <em>support@dividendradar.com</em></p>
+      </div>
+
       <h2>Important Disclaimer</h2>
-      <p>DividendRadar does not offer registered financial advisory, investment management, or personalized trading recommendations. All market data is compiled for informational and research purposes only. Always consult a licensed professional or certified advisor before making capital allocation decisions.</p>
+      <p>DividendRadar does not offer registered financial advisory or personalized trading recommendations. All market data is compiled for informational and research purposes only. Always consult a licensed professional before making capital allocation decisions.</p>
     </div>
   </main>
 

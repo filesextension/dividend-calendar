@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stocks Going Ex-Dividend Tomorrow - DividendRadar</title>
-  <meta name="description" content="Critical cutoff list for tomorrow, September 22, 2026. Action required today.">
+  <title>Special Dividends vs. Regular Dividends: Investor Guide - DividendRadar</title>
+  <meta name="description" content="Understanding non-recurring one-time payouts, asset sale distributions, and why annual yield calculations distort.">
   
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Stocks Going Ex-Dividend Tomorrow",
-    "description": "Critical cutoff list for tomorrow, September 22, 2026. Action required today.",
+    "name": "Special Dividends vs. Regular Dividends: Investor Guide",
+    "description": "Understanding non-recurring one-time payouts, asset sale distributions, and why annual yield calculations distort.",
     "dateModified": "2026-09-21",
     "publisher": {
       "@type": "Organization",
@@ -294,7 +294,7 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html">Today</a>
-<a href="tomorrow.html" class="active">Tomorrow</a>
+<a href="tomorrow.html">Tomorrow</a>
 <a href="this-week.html">This Week</a>
 <a href="next-week.html">Next Week</a>
 <a href="monthly-dividend-stocks.html">Monthly</a>
@@ -312,138 +312,24 @@
 
   <main>
     <div class="hero">
-      <h1>Stocks Going Ex-Dividend Tomorrow</h1>
-      <p>Critical cutoff list for tomorrow, September 22, 2026. Action required today.</p>
+      <h1>Special Dividends vs. Regular Dividends: Investor Guide</h1>
+      <p>Understanding non-recurring one-time payouts, asset sale distributions, and why annual yield calculations distort.</p>
     </div>
 
-    <div class="callout"><strong>Action Required:</strong> To receive these declared dividends, you must purchase qualifying shares before today's market close (4:00 PM EST).</div>
     
-<div class="calc-card">
-  <div class="calc-header">
-    <h3>🧮 Interactive Dividend Yield & Income Calculator</h3>
-    <p>Estimate your passive cash flow and projected payouts before entering positions.</p>
-  </div>
-  <div class="calc-grid">
-    <div class="calc-input">
-      <label for="inv-amount">Total Investment ($):</label>
-      <input type="number" id="inv-amount" value="5000" step="500" oninput="calcularDividendos()">
-    </div>
-    <div class="calc-input">
-      <label for="inv-yield">Annual Dividend Yield (%):</label>
-      <input type="number" id="inv-yield" value="4.5" step="0.1" oninput="calcularDividendos()">
-    </div>
-    <div class="calc-input">
-      <label for="inv-frequency">Payout Frequency:</label>
-      <select id="inv-frequency" onchange="calcularDividendos()">
-        <option value="4">Quarterly (4x/year)</option>
-        <option value="12">Monthly (12x/year)</option>
-        <option value="2">Semi-Annual (2x/year)</option>
-        <option value="1">Annual (1x/year)</option>
-      </select>
-    </div>
-  </div>
-  <div class="calc-results">
-    <div class="result-box">
-      <span class="label">Annual Passive Income:</span>
-      <span class="value text-accent" id="res-annual">$225.00</span>
-    </div>
-    <div class="result-box">
-      <span class="label">Per Distribution Payout:</span>
-      <span class="value" id="res-payout">$56.25</span>
-    </div>
-    <div class="result-box">
-      <span class="label">10-Year DRIP Forecast:</span>
-      <span class="value text-primary" id="res-drip">$7,764.85</span>
-    </div>
-  </div>
-</div>
+    
 
-
-    <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody>
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/ADAM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ADAM on Yahoo Finance">ADAM</a></td>
-            <td>Adamas Trust, Inc. Common Stock</td>
-            <td class="num font-bold text-accent">0.3</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>10/28/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/BSY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BSY on Yahoo Finance">BSY</a></td>
-            <td>Bentley Systems, Incorporated Class B Common Stock</td>
-            <td class="num font-bold text-accent">0.07</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/29/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/USOI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify USOI on Yahoo Finance">USOI</a></td>
-            <td>Credit Suisse AG Credit Suisse X-Links Crude Oil Shares Covered Call ETN</td>
-            <td class="num font-bold text-accent">1.7002</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/25/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/GLDI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GLDI on Yahoo Finance">GLDI</a></td>
-            <td>Credit Suisse X-Links Gold Shares Covered Call ETNs due February 2, 2033</td>
-            <td class="num font-bold text-accent">2.4852</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/25/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/SLVO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SLVO on Yahoo Finance">SLVO</a></td>
-            <td>Credit Suisse X-Links Silver Shares Covered Call ETNs due April 21, 2033</td>
-            <td class="num font-bold text-accent">1.899</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/25/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/GSM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GSM on Yahoo Finance">GSM</a></td>
-            <td>Ferroglobe PLC Ordinary Shares</td>
-            <td class="num font-bold text-accent">0.015</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/29/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/FORTY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FORTY on Yahoo Finance">FORTY</a></td>
-            <td>Formula Systems (1985) Ltd. American Depositary Shares</td>
-            <td class="num font-bold text-accent">1.63</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>10/16/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/LOGI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LOGI on Yahoo Finance">LOGI</a></td>
-            <td>Logitech International S.A. Ordinary Shares</td>
-            <td class="num font-bold text-accent">1.682136</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/23/2026</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
-            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
-            <td class="num font-bold text-accent">0.0516</td>
-            <td class="num">N/A%</td>
-            <td>9/22/2026</td>
-            <td>9/23/2026</td>
-        </tr>
-        </tbody></table></div>
+    
 
     <section class="editorial">
-      <h2>Immediate Trade Settlement Rules</h2><p>Under SEC T+1 settlement rules, orders must execute on the session prior to the ex-date. Be mindful of tax implications detailed in our <a href='qualified-vs-ordinary-dividends.html'>Qualified Dividend Tax Breakdown</a>.</p>
+      
+        <h2>What Is a Special Dividend?</h2>
+        <p>A special dividend is a non-recurring payment made by a company to shareholders, separate from its regular quarterly or monthly dividend cycle. Special dividends frequently result from exceptional one-time profits, windfall cash balances, asset divestitures, or corporate restructuring.</p>
+        
+        <h2>The Yield Calculation Distortion (Trap Alert)</h2>
+        <p>Many financial data aggregators annualize every declared distribution by multiplying it by 4 (quarterly) or 12 (monthly). If a company paying a $0.20 regular dividend suddenly declares a $5.00 special dividend, automated screeners may falsely project a massive 40% yield. Always verify the filing before executing capture trades.</p>
+        <p>Check verified upcoming dividend schedules on our <a href="tomorrow.html">Tomorrow Ex-Dividend Page</a>.</p>
+        
     </section>
   </main>
 
@@ -472,25 +358,6 @@
   </footer>
 
   
-<script>
-function calcularDividendos() {
-  const capital = parseFloat(document.getElementById('inv-amount').value) || 0;
-  const yieldPct = parseFloat(document.getElementById('inv-yield').value) || 0;
-  const frequency = parseInt(document.getElementById('inv-frequency').value) || 4;
-
-  const annualIncome = capital * (yieldPct / 100);
-  const perPayout = annualIncome / frequency;
-
-  const rate = yieldPct / 100;
-  const drip10Years = capital * Math.pow((1 + rate / frequency), frequency * 10);
-
-  document.getElementById('res-annual').innerText = '$' + annualIncome.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-  document.getElementById('res-payout').innerText = '$' + perPayout.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-  document.getElementById('res-drip').innerText = '$' + drip10Years.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-}
-window.addEventListener('DOMContentLoaded', calcularDividendos);
-</script>
-
   <script>
     function filtrarTabla() {
       const input = document.getElementById("filtro");

@@ -3,24 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REITs & BDCs High-Yield Guide: FFO, AFFO & Debt Safety - DividendRadar</title>
-  <meta name="description" content="Mastering real estate investment trusts and business development companies for maximum monthly income.">
+  <title>REITs & BDCs High-Yield Dividend Guide: FFO, AFFO & Debt Safety - DividendRadar</title>
+  <meta name="description" content="In-depth analysis of Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs). Learn FFO/AFFO payout evaluation, interest rate risks, and tax rules.">
   
+  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "REITs & BDCs High-Yield Guide: FFO, AFFO & Debt Safety",
-    "description": "Mastering real estate investment trusts and business development companies for maximum monthly income.",
-    "dateModified": "2026-09-21",
-    "publisher": {
-      "@type": "Organization",
-      "name": "DividendRadar"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "REITs & BDCs High-Yield Income Guide (FFO, AFFO & Debt Safety)",
+        "description": "Comprehensive analytical framework for assessing Real Estate Investment Trusts and Business Development Companies, statutory 90% payout rules, and cash flow durability.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "DividendRadar"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why do traditional P/E ratios fail when analyzing REITs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard Price-to-Earnings (P/E) ratios rely on GAAP net income, which deducts substantial real estate depreciation expenses. Because physical commercial properties typically appreciate or maintain market value rather than deteriorate to zero, GAAP depreciation artificially understates true earnings power. Investors must use Price-to-FFO (Funds From Operations) or Price-to-AFFO instead."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between FFO and AFFO in REIT financial statements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Funds From Operations (FFO) adds back depreciation and amortization to net income and strips out one-time gains or losses from property liquidations. Adjusted Funds From Operations (AFFO) takes FFO and subtracts routine capital expenditures (CapEx) required to maintain the properties, providing the most accurate measurement of recurring cash available for dividend distribution."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does interest rate policy impact REIT and BDC stock performance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "REITs and BDCs rely heavily on debt financing to acquire assets. When interest rates rise, borrowing costs escalate, reducing operating profit margins. Additionally, higher risk-free Treasury yields reduce the relative appeal of equity dividend yields, creating valuation compression across the real estate sector."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are dividends received from REITs and BDCs qualified for lower tax brackets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the United States, REIT and BDC distributions are generally classified as ordinary income rather than qualified dividends because these entities pay zero corporate-level income tax. However, domestic individual investors holding REIT shares in taxable accounts may benefit from the Section 199A Qualified Business Income (QBI) deduction, which allows an exclusion of up to 20% of eligible ordinary REIT dividends."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What constitutes a safe AFFO payout ratio for a commercial net lease REIT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For triple-net-lease REITs with stable long-term tenant contracts (such as Realty Income or Agree Realty), an AFFO payout ratio between 70% and 80% is considered healthy and sustainable. Payout ratios consistently exceeding 90% leave little margin of safety for tenant vacancies or rising debt refinance costs."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
-    
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do interest rates affect REIT stock prices so heavily?", "acceptedAnswer": {"@type": "Answer", "text": "REITs rely continuously on debt issuance to buy commercial real estate properties. When interest rates rise, borrowing costs surge and higher bond yields compete with REIT dividend yields."}}]}</script>
+
   <style>
     :root {
       --bg: #0d1117;
@@ -38,7 +86,7 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background-color: var(--card);
@@ -78,238 +126,122 @@
       border: 1px solid var(--border);
     }
     main {
-      max-width: 1100px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: 2.5rem auto;
       padding: 0 1.5rem;
     }
-    .hero {
-      text-align: center;
-      margin-bottom: 2rem;
+    .article-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
     }
-    .hero h1 {
-      font-size: 2.2rem;
+    h1 {
       color: #fff;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-top: 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
     }
-    .hero p {
+    h2 {
+      color: #fff;
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    p, li {
       color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 750px;
-      margin: 0 auto;
+      font-size: 1.02rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    strong {
+      color: var(--text);
     }
     .callout {
-      background-color: rgba(88, 166, 255, 0.1);
+      background-color: rgba(88, 166, 255, 0.08);
       border-left: 4px solid var(--primary);
-      padding: 1rem 1.2rem;
-      margin: 1.5rem 0;
+      padding: 1.2rem 1.4rem;
+      margin: 1.8rem 0;
       border-radius: 0 6px 6px 0;
-      color: #c9d1d9;
     }
-    .calc-card {
-      background: #1c2128;
-      border: 1px solid #444c56;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .calc-header h3 {
-      color: #fff;
-      margin-top: 0;
-      font-size: 1.25rem;
-      margin-bottom: 0.3rem;
-    }
-    .calc-header p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-top: 0;
-      margin-bottom: 1.2rem;
-    }
-    .calc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-    }
-    .calc-input label {
-      display: block;
+    .callout p {
+      margin: 0;
       color: var(--text);
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
     }
-    .calc-input input, .calc-input select {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: #fff;
-      padding: 0.6rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      outline: none;
-    }
-    .calc-input input:focus, .calc-input select:focus {
-      border-color: var(--primary);
-    }
-    .calc-results {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    .result-box {
-      background: rgba(0,0,0,0.2);
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .result-box .label {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.2rem;
-    }
-    .result-box .value {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #fff;
-    }
-    .search-box {
-      margin: 1.5rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .search-box input {
-      background-color: var(--card);
-      border: 1px solid var(--border);
-      color: #fff;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      width: 100%;
-      max-width: 380px;
-      outline: none;
-    }
-    .search-box input:focus {
-      border-color: var(--primary);
-    }
-    .table-container {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
+    .table-box {
       overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
+      font-size: 0.92rem;
     }
     th, td {
-      padding: 0.9rem 1.2rem;
+      padding: 0.85rem 1rem;
       border-bottom: 1px solid var(--border);
     }
     th {
-      background-color: rgba(255, 255, 255, 0.03);
+      background: #21262d;
       color: #fff;
-      font-weight: 600;
-      font-size: 0.85rem;
       text-transform: uppercase;
+      font-size: 0.8rem;
       letter-spacing: 0.5px;
     }
     tr:last-child td {
       border-bottom: none;
     }
-    tr:hover td {
-      background-color: rgba(255, 255, 255, 0.02);
-    }
-    a.badge {
+    .text-accent { color: var(--accent); font-weight: bold; }
+    .badge {
       background-color: #21262d;
       border: 1px solid var(--border);
       color: var(--primary);
-      padding: 0.2rem 0.5rem;
+      padding: 0.15rem 0.45rem;
       border-radius: 4px;
       font-weight: bold;
-      font-size: 0.85rem;
-      text-decoration: none;
-      display: inline-block;
     }
-    a.badge:hover {
-      background-color: var(--primary);
-      color: #fff;
-    }
-    .text-accent { color: var(--accent); }
-    .text-primary { color: var(--primary); }
-    .font-bold { font-weight: bold; }
-    .num { text-align: right; }
-    th.num { text-align: right; }
-    .editorial {
+    /* FAQs */
+    .faq-section {
       margin-top: 3rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 2.2rem;
-    }
-    .editorial h2 {
-      color: #fff;
-      font-size: 1.4rem;
-      margin-top: 1.8rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-    .editorial h2:first-child {
-      margin-top: 0;
-    }
-    .editorial h3 {
-      color: var(--primary);
-      font-size: 1.15rem;
-      margin-top: 1.4rem;
-    }
-    .editorial p, .editorial li {
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    .editorial ul, .editorial ol {
-      padding-left: 1.5rem;
-    }
-    .editorial li {
-      margin-bottom: 0.5rem;
-    }
-    .editorial a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .editorial a:hover {
-      text-decoration: underline;
-    }
-    /* FAQS ACCORDION */
-    .faq-container {
-      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
+      padding-top: 2rem;
     }
     .faq-item {
       background: #1c2128;
       border: 1px solid var(--border);
       border-radius: 6px;
-      margin-bottom: 0.8rem;
-      padding: 0.9rem 1.2rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
     }
     .faq-item summary {
       cursor: pointer;
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.05rem;
+      font-weight: 600;
       outline: none;
     }
     .faq-item summary:hover {
       color: var(--primary);
     }
     .faq-answer {
-      margin-top: 0.8rem;
+      margin-top: 0.9rem;
       padding-top: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
     .faq-answer p {
       margin: 0;
@@ -338,53 +270,130 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html">Today</a>
-<a href="tomorrow.html">Tomorrow</a>
-<a href="this-week.html">This Week</a>
-<a href="next-week.html">Next Week</a>
-<a href="monthly-dividend-stocks.html">Monthly</a>
-<a href="high-yield-dividend-stocks.html">High Yield</a>
-<a href="dividend-aristocrats.html">Aristocrats</a>
-<a href="best-dividend-etfs.html">ETFs</a>
-<a href="reit-bdc-dividend-guide.html" class="active">REITs & BDCs</a>
-<a href="dividend-growth-investing.html">DGI Strategy</a>
-<a href="drip-calculator-guide.html">DRIP</a>
-<a href="payout-ratio-safety.html">Safety</a>
-<a href="qualified-vs-ordinary-dividends.html">Taxes</a>
-
+      <a href="tomorrow.html">Tomorrow</a>
+      <a href="this-week.html">This Week</a>
+      <a href="next-week.html">Next Week</a>
+      <a href="monthly-dividend-stocks.html">Monthly</a>
+      <a href="high-yield-dividend-stocks.html">High Yield</a>
+      <a href="dividend-aristocrats.html">Aristocrats</a>
+      <a href="best-dividend-etfs.html">ETFs</a>
+      <a href="reit-bdc-dividend-guide.html" class="active">REITs & BDCs</a>
+      <a href="dividend-growth-investing.html">DGI Strategy</a>
+      <a href="drip-calculator-guide.html">DRIP</a>
+      <a href="payout-ratio-safety.html">Safety</a>
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
     </nav>
   </header>
 
   <main>
-    <div class="hero">
-      <h1>REITs & BDCs High-Yield Guide: FFO, AFFO & Debt Safety</h1>
-      <p>Mastering real estate investment trusts and business development companies for maximum monthly income.</p>
-    </div>
-
-    
-    
-
-    
-
-    <section class="editorial">
+    <article class="article-container">
+      <h1>REITs & BDCs High-Yield Income Guide: FFO, AFFO & Balance Sheet Safety</h1>
+      <p>For income-oriented equity investors, <strong>Real Estate Investment Trusts (REITs)</strong> and <strong>Business Development Companies (BDCs)</strong> represent the highest yielding asset classes publicly accessible on major U.S. stock exchanges. Yields in these sectors frequently range from 5.0% to 11.0%, drastically exceeding the broader S&P 500 average.</p>
       
-        <h2>The Special Regulatory Structure of REITs & BDCs</h2>
-        <p>Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs) are legally mandated by Congress to pay out at least <strong>90% of their taxable income</strong> to shareholders as dividends in exchange for paying zero corporate income taxes.</p>
+      <p>However, these elevated distributions are not a byproduct of excess profitability or corporate generosity; they are legally mandated by United States federal statutory code. Navigating these vehicles successfully requires abandoning traditional GAAP accounting metrics and analyzing operational cash flows through specialized lenses: <strong>FFO, AFFO, and net debt leverage</strong>.</p>
+
+      <h2>The Statutory Mandate: The 90% Rule</h2>
+      <p>Congress established both REITs (in 1960) and BDCs (in 1980) with specific regulatory exemptions. Under IRS guidelines, as long as these entities distribute at least <strong>90% of their taxable ordinary income</strong> directly to shareholders as dividends each fiscal year, they are exempt from paying federal corporate income taxes at the entity level.</p>
+      
+      <div class="callout">
+        <p><strong>The Operational Reality:</strong> Because REITs and BDCs pay out virtually all annual earnings, they cannot organically compound capital like traditional corporations (such as Microsoft or Apple). To acquire new buildings or fund business loans, they must continuously issue new equity shares (secondary offerings) or raise capital in the debt markets.</p>
+      </div>
+
+      <h2>Why Traditional GAAP Net Income & P/E Ratios Distort Real Estate Analysis</h2>
+      <p>Under standard Generally Accepted Accounting Principles (GAAP), property owners must record massive non-cash depreciation write-offs against physical buildings over a multi-decade schedule (typically 27.5 to 39 years). This accounting convention creates a severe valuation distortion:</p>
+      <ul>
+        <li><strong>Paper Losses vs. Real Value:</strong> A well-located industrial logistics center or grocery-anchored retail facility often appreciates in market value over time while lease rates rise with inflation.</li>
+        <li><strong>Depressed Net Earnings:</strong> Depreciation charges artificially suppress GAAP Net Income. If an investor calculates a standard Dividend Payout Ratio <em>(Dividends / Net Income)</em>, a healthy REIT will frequently appear to have a dangerous payout ratio of 120% to 180%, causing novice investors to assume an imminent dividend cut.</li>
+      </ul>
+
+      <h2>The Specialized Metrics: FFO vs. AFFO</h2>
+      <p>To accurately gauge dividend safety and cash generation, the financial industry developed standardized supplemental metrics defined by the National Association of Real Estate Investment Trusts (Nareit):</p>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Formula / Calculation Method</th>
+              <th>Primary Analytic Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>FFO</strong> (Funds From Operations)</td>
+              <td>Net Income + Depreciation & Amortization &minus; Gains on Asset Sales</td>
+              <td>Removes artificial depreciation write-downs to show underlying operational earnings.</td>
+            </tr>
+            <tr>
+              <td><strong>AFFO</strong> (Adjusted Funds From Operations)</td>
+              <td>FFO &minus; Recurring Maintenance CapEx &plusmn; Straight-line Rent Adjustments</td>
+              <td>The gold standard: measures genuine, unencumbered free cash flow available for dividend payouts.</td>
+            </tr>
+            <tr>
+              <td><strong>AFFO Payout Ratio</strong></td>
+              <td>(Annual Dividend Per Share / Annual AFFO Per Share) &times; 100</td>
+              <td>Evaluates whether the distribution is safely covered by real tenant rental receipts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Evaluating Business Development Companies (BDCs)</h2>
+      <p>While REITs own physical brick-and-mortar property, <strong>BDCs act as private credit lenders</strong> to middle-market U.S. businesses that cannot easily access public corporate bond markets. Premier operators include firms like <strong>Main Street Capital (MAIN)</strong>, <strong>Ares Capital (ARCC)</strong>, and <strong>Blue Owl Capital (OBDC)</strong>.</p>
+
+      <h3>Key BDC Safety Criteria:</h3>
+      <ol>
+        <li><strong>First-Lien Senior Secured Loans:</strong> High-quality BDCs allocate 70% or more of their loan books to first-lien senior secured debt. In the event of a borrower default or restructuring, first-lien holders are at the front of the queue to recover capital before junior debt or equity holders.</li>
+        <li><strong>Floating-Rate vs. Fixed-Rate Exposure:</strong> BDC loan books are primarily floating-rate (benchmarked to SOFR), while their own debt liabilities are often fixed-rate bonds. When benchmark rates rise, BDC net interest margins expand dramatically, generating surplus earnings distributed as regular or <a href="special-dividends-explained.html">Special Dividends</a>.</li>
+        <li><strong>Non-Accrual Rates:</strong> The critical early-warning metric for BDCs. Non-accruals reflect the percentage of portfolio loans where borrowers have stopped making interest payments. A healthy BDC maintains non-accruals at cost below 2.0%. A spike above 4.0% indicates credit deterioration and impending dividend risk.</li>
+      </ol>
+
+      <h2>Tax Treatment Warning for Retail Investors</h2>
+      <p>Because REITs and BDCs pay zero federal corporate taxes, the IRS generally classifies their distributions as <strong>ordinary non-qualified dividends</strong>, taxable at standard marginal income tax brackets (up to 37%).</p>
+      <p>For investors holding shares inside a standard taxable brokerage account, tax drag can significantly reduce net annualized yields. For this reason, income investors frequently locate REIT and BDC holdings within tax-advantaged retirement accounts (such as a Roth IRA or Traditional 401k) where distributions compound tax-free. For a complete tax framework, explore our <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Dividends Guide</a>.</p>
+
+      <p>To screen upcoming declared distributions for premier monthly REITs and BDCs, monitor our live <a href="monthly-dividend-stocks.html">Monthly Dividend Stocks Calendar</a>.</p>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions About REITs and BDCs</h2>
         
-        <h2>Why Traditional P/E Ratios Fail for REITs</h2>
-        <p>Real estate properties carry heavy GAAP depreciation write-offs, which artificially depress net earnings while physical properties often appreciate in value. Smart investors measure performance using:</p>
-        <ul>
-          <li><strong>Funds From Operations (FFO):</strong> Net income plus depreciation and amortization, minus property sales gains.</li>
-          <li><strong>Adjusted Funds From Operations (AFFO):</strong> FFO minus recurring maintenance capital expenditures; the truest metric of dividend safety.</li>
-        </ul>
-        <p>Review taxation details in our <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Tax Guide</a>.</p>
-        
-      <div class="faq-container"><h2>Frequently Asked Questions</h2>
         <details class="faq-item">
-          <summary><strong>Why do interest rates affect REIT stock prices so heavily?</strong></summary>
-          <div class="faq-answer"><p>REITs rely continuously on debt issuance to buy commercial real estate properties. When interest rates rise, borrowing costs surge and higher bond yields compete with REIT dividend yields.</p></div>
+          <summary>Why do traditional P/E ratios fail when analyzing REITs?</summary>
+          <div class="faq-answer">
+            <p>Standard Price-to-Earnings (P/E) ratios rely on GAAP net income, which deducts substantial real estate depreciation expenses. Because physical commercial properties typically appreciate or maintain market value rather than deteriorate to zero, GAAP depreciation artificially understates true earnings power. Investors must use Price-to-FFO (Funds From Operations) or Price-to-AFFO instead.</p>
+          </div>
         </details>
-        </div>
-    </section>
+
+        <details class="faq-item">
+          <summary>What is the difference between FFO and AFFO in REIT financial statements?</summary>
+          <div class="faq-answer">
+            <p>Funds From Operations (FFO) adds back depreciation and amortization to net income and strips out one-time gains or losses from property liquidations. Adjusted Funds From Operations (AFFO) takes FFO and subtracts routine capital expenditures (CapEx) required to maintain the properties, providing the most accurate measurement of recurring cash available for dividend distribution.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does interest rate policy impact REIT and BDC stock performance?</summary>
+          <div class="faq-answer">
+            <p>REITs and BDCs rely heavily on debt financing to acquire assets. When interest rates rise, borrowing costs escalate, reducing operating profit margins. Additionally, higher risk-free Treasury yields reduce the relative appeal of equity dividend yields, creating valuation compression across the real estate sector.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are dividends received from REITs and BDCs qualified for lower tax brackets?</summary>
+          <div class="faq-answer">
+            <p>In the United States, REIT and BDC distributions are generally classified as ordinary income rather than qualified dividends because these entities pay zero corporate-level income tax. However, domestic individual investors holding REIT shares in taxable accounts may benefit from the Section 199A Qualified Business Income (QBI) deduction, which allows an exclusion of up to 20% of eligible ordinary REIT dividends.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What constitutes a safe AFFO payout ratio for a commercial net lease REIT?</summary>
+          <div class="faq-answer">
+            <p>For triple-net-lease REITs with stable long-term tenant contracts (such as Realty Income or Agree Realty), an AFFO payout ratio between 70% and 80% is considered healthy and sustainable. Payout ratios consistently exceeding 90% leave little margin of safety for tenant vacancies or rising debt refinance costs.</p>
+          </div>
+        </details>
+      </section>
+    </article>
   </main>
 
   <footer>
@@ -410,28 +419,5 @@
     </p>
     <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
-
-  
-  <script>
-    function filtrarTabla() {
-      const input = document.getElementById("filtro");
-      if(!input) return;
-      const filtro = input.value.toUpperCase();
-      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
-      for (let i = 1; i < tr.length; i++) {
-        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
-        const tdNombre = tr[i].getElementsByTagName("td")[1];
-        if (tdSimbolo || tdNombre) {
-          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
-          const txtNombre = tdNombre.textContent || tdNombre.innerText;
-          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }
-      }
-    }
-  </script>
 </body>
 </html>

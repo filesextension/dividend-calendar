@@ -3,7 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service - DividendRadar</title>
+  <title>The Complete Ex-Dividend Strategy & Settlement Guide - DividendRadar</title>
+  <meta name="description" content="Master the corporate dividend timeline: Declaration, Ex-Dividend, Record, and Payment dates. Understand SEC T+1 settlement cycles and dividend capture execution.">
+  
+  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "The Complete Ex-Dividend Strategy & Settlement Guide",
+        "description": "Comprehensive institutional guide explaining the four critical corporate dividend dates, SEC T+1 settlement rules, ex-date price markdown mechanics, and execution strategies.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "DividendRadar"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between the Ex-Dividend Date and the Record Date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The record date is the date by which an investor must officially appear on the company's shareholder register to receive the dividend. The ex-dividend date is established by the stock exchange (typically one business day before the record date under T+1 settlement) to account for the time required for electronic trade clearing. If you buy on or after the ex-dividend date, the trade will not settle in time for the record date, and the dividend belongs to the seller."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the SEC T+1 settlement rule and how does it impact dividend eligibility?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under the SEC T+1 settlement rule, financial transactions in U.S. equities settle one business day after the transaction date (Trade Date + 1). Because trades settle in 24 hours, the ex-dividend date is set exactly on the business day immediately preceding the company's designated record date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I sell a stock on its ex-dividend date and still receive the payout?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you owned the equity prior to the ex-dividend date, you may sell your shares at any time during the trading session on the ex-dividend date (or any day thereafter) and you remain legally entitled to collect the cash distribution on the scheduled payment date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does a stock's market price drop on the ex-dividend date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When a firm pays a dividend, physical cash leaves the corporate balance sheet, permanently reducing the intrinsic economic book value of the enterprise. Consequently, stock exchanges automatically adjust the opening benchmark price of the equity downward by the approximate declared cash dividend per share prior to the market opening bell."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Dividend Capture Strategy profitable after transaction costs and taxes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most retail investors, the pure dividend capture strategy produces disappointing risk-adjusted returns. Because the stock price drops by the dividend amount on the ex-date, traders rely on rapid price recovery. After accounting for bid-ask spread friction, market volatility, and ordinary income tax treatment (failing the 61-day holding period test), capture strategies frequently underperform long-term buy-and-hold compounding."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0d1117;
@@ -14,21 +79,24 @@
       --primary: #58a6ff;
       --accent: #2ea043;
     }
+    * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background-color: var(--card);
       border-bottom: 1px solid var(--border);
-      padding: 1.2rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
     header a.brand {
       color: #fff;
@@ -36,51 +104,189 @@
       font-weight: bold;
       text-decoration: none;
     }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
     nav a {
       color: var(--text-muted);
       text-decoration: none;
-      margin-left: 1.5rem;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.55rem;
+      border-radius: 4px;
+      transition: all 0.2s;
     }
-    nav a:hover, nav a.active {
+    nav a:hover {
       color: var(--primary);
     }
+    nav a.active {
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
+    }
     main {
-      max-width: 800px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: 2.5rem auto;
       padding: 0 1.5rem;
+    }
+    .article-container {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-    }
-    .content-block {
-      padding: 2rem;
+      padding: 2.5rem;
     }
     h1 {
       color: #fff;
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-top: 0;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.8rem;
+      padding-bottom: 1rem;
     }
     h2 {
       color: #fff;
-      margin-top: 1.8rem;
-      font-size: 1.25rem;
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
     }
     p, li {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    strong {
+      color: var(--text);
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 1.2rem 1.4rem;
+      margin: 1.8rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p {
+      margin: 0;
+      color: var(--text);
+    }
+    .timeline-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .timeline-card {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .timeline-step {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-bottom: 0.6rem;
+    }
+    .timeline-card h4 {
+      color: #fff;
+      margin: 0 0 0.4rem 0;
+      font-size: 1.05rem;
+    }
+    .timeline-card p {
+      font-size: 0.88rem;
+      margin: 0;
+    }
+    .table-box {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #21262d;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .text-accent { color: var(--accent); font-weight: bold; }
+    /* FAQs */
+    .faq-section {
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.9rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .faq-answer p {
+      margin: 0;
       color: var(--text-muted);
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 1.5rem;
       border-top: 1px solid var(--border);
       color: var(--text-muted);
       font-size: 0.85rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
     footer a {
       color: var(--primary);
       text-decoration: none;
       margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -88,40 +294,194 @@
   <header>
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
-      <a href="index.html">Calendar</a>
-      <a href="guide.html">Dividend Guide</a>
-      <a href="about.html">About</a>
+      <a href="index.html">Today</a>
+      <a href="tomorrow.html">Tomorrow</a>
+      <a href="this-week.html">This Week</a>
+      <a href="next-week.html">Next Week</a>
+      <a href="monthly-dividend-stocks.html">Monthly</a>
+      <a href="high-yield-dividend-stocks.html">High Yield</a>
+      <a href="dividend-aristocrats.html">Aristocrats</a>
+      <a href="best-dividend-etfs.html">ETFs</a>
+      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
+      <a href="dividend-growth-investing.html">DGI Strategy</a>
+      <a href="special-dividends-explained.html">Special Dividends</a>
+      <a href="drip-calculator-guide.html">DRIP</a>
+      <a href="payout-ratio-safety.html">Safety</a>
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+      <a href="guide.html" class="active">Guide</a>
     </nav>
   </header>
 
   <main>
-    <div class="content-block">
-      <h1>Terms of Service & Disclaimer</h1>
-      <p>Last updated: September 2026</p>
+    <article class="article-container">
+      <h1>The Complete Ex-Dividend Strategy & Settlement Guide</h1>
+      <p>Dividend investing is often described as straightforward: buy shares in profitable companies and collect quarterly cash distributions. However, executing this strategy in modern capital markets requires strict adherence to corporate scheduling and regulatory clearing rules established by the <strong>U.S. Securities and Exchange Commission (SEC)</strong> and the <strong>Depository Trust & Clearing Corporation (DTCC)</strong>.</p>
+      
+      <p>Missing a cutoff deadline by five minutes or misunderstanding how stock exchanges adjust opening share prices can eliminate anticipated cash flows or trigger unexpected tax liabilities. This comprehensive guide details the mechanics of the corporate dividend lifecycle, the impact of T+1 settlement, and trade execution strategies.</p>
 
-      <h2>1. Informational Purposes Only</h2>
-      <p>The information provided on DividendRadar is compiled solely for educational, research, and informational purposes. None of the content, tables, calculations, or data points published on this website constitute financial advice, investment recommendations, endorsement, or solicitation to buy or sell securities.</p>
+      <h2>The Four Pillars of the Dividend Timeline</h2>
+      <p>Every corporate dividend payment follows a rigorous chronological sequence of four distinct regulatory dates. Understanding which party is legally entitled to cash distributions requires analyzing each phase:</p>
 
-      <h2>2. No Professional Advisor Relationship</h2>
-      <p>Your use of DividendRadar does not create an advisor-client relationship. Financial markets carry inherent capital risks, and past dividend payout history or yield metrics are not guarantees of future performance. Users must conduct their own due diligence or consult with an authorized financial professional before executing any trading decisions.</p>
+      <div class="timeline-container">
+        <div class="timeline-card">
+          <div class="timeline-step">1</div>
+          <h4>Declaration Date</h4>
+          <p>The board announces payment amount, record date, and pay date via press release.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-step">2</div>
+          <h4>Ex-Dividend Date</h4>
+          <p>The exchange cutoff. Shares purchased on or after this date trade without the dividend.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-step">3</div>
+          <h4>Record Date</h4>
+          <p>The legal ledger check. The company verifies registered shareholders entitled to the distribution.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-step">4</div>
+          <h4>Payment Date</h4>
+          <p>Capital leaves treasury; brokerages credit cash balances or trigger automated DRIP purchases.</p>
+        </div>
+      </div>
 
-      <h2>3. Accuracy of Market Data</h2>
-      <p>While we aggregate data from public exchange records and corporate announcements, DividendRadar makes no warranties or guarantees regarding the absolute completeness, timeliness, or accuracy of the displayed schedules. Corporate declarations can change, be delayed, or undergo revisions without prior notice.</p>
+      <h2>1. The Declaration Date (Announcement)</h2>
+      <p>The process initiates when a corporation's board of directors formally votes to disburse capital to shareholders. During this session, the board issues a public press release and files Form 8-K with the SEC detailing three variables:</p>
+      <ul>
+        <li>The declared distribution per share (e.g., $0.85 per share).</li>
+        <li>The company-designated <strong>Record Date</strong>.</li>
+        <li>The scheduled distribution <strong>Payment Date</strong>.</li>
+      </ul>
+      <p>Until this vote occurs, corporate dividends are strictly non-binding intentions. A company may increase, freeze, or cancel upcoming dividends at any point prior to official declaration. Once declared, the dividend becomes a legal balance sheet liability for the enterprise.</p>
 
-      <h2>4. Limitation of Liability</h2>
-      <p>In no event shall DividendRadar, its creators, or contributors be held liable for any direct, indirect, incidental, or consequential losses resulting from the use or inability to use the market data presented on this website.</p>
-    </div>
+      <h2>2. The Ex-Dividend Date (The Regulatory Cutoff)</h2>
+      <p>The <strong>Ex-Dividend Date ("ex-date")</strong> is the single most vital operational milestone for equity traders. Crucially, the ex-dividend date is <em>not set by the company</em>; it is established directly by the stock exchanges (NYSE, NASDAQ, Cboe) in compliance with SEC clearing rules.</p>
+      
+      <div class="callout">
+        <p><strong>The Fundamental Rule:</strong> To receive an upcoming dividend, an investor must purchase the stock <strong>at least one full business day before the ex-dividend date</strong>. If you buy shares on the ex-dividend date itself, the dividend belongs to the previous owner.</p>
+      </div>
+
+      <h3>The SEC T+1 Settlement Mechanism Explained</h3>
+      <p>When you click "Buy" in your brokerage account, you do not instantly become a legal shareholder on the corporate ledger. The transaction undergoes electronic clearing through the National Securities Clearing Corporation (NSCC).</p>
+      <p>Under the regulatory <strong>T+1 settlement framework</strong>, stock transactions clear in <strong>one business day (Trade Date + 1)</strong>. For your name to be officially entered into the shareholder registry by the Record Date, the trade must have executed prior to the ex-dividend session:</p>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Action Scenario</th>
+              <th>Trade Execution Day</th>
+              <th>Clearing & Settlement (T+1)</th>
+              <th>Shareholder on Record Date?</th>
+              <th>Entitled to Dividend?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Buy 1 Day Prior to Ex-Date</strong></td>
+              <td>Monday (4:00 PM EST)</td>
+              <td>Tuesday (Ex-Date)</td>
+              <td class="text-accent">YES (Record Date Wed)</td>
+              <td class="text-accent">YES</td>
+            </tr>
+            <tr>
+              <td><strong>Buy ON Ex-Dividend Date</strong></td>
+              <td>Tuesday</td>
+              <td>Wednesday</td>
+              <td>NO (Misses Cutoff)</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <td><strong>Sell ON Ex-Dividend Date</strong></td>
+              <td>Tuesday</td>
+              <td>Wednesday</td>
+              <td class="text-accent">YES (Settled Prev. Cycle)</td>
+              <td class="text-accent">YES</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>3. The Mechanics of the Ex-Date Opening Price Markdown</h2>
+      <p>A frequent point of confusion among novice investors is the expectation of "free money" on the ex-date. Financial markets obey strict conservation of enterprise value:</p>
+      <p>If an enterprise worth $10 billion distributes $200 million in cold cash to shareholders, the enterprise value of the firm contracts by exactly $200 million the moment the right to that cash detaches from share certificates. Consequently, <strong>stock exchanges automatically adjust opening benchmark prices down by the approximate declared cash amount per share</strong> before pre-market trading opens on the ex-date morning.</p>
+
+      <h2>4. Tactical Considerations: The Dividend Capture Strategy</h2>
+      <p>The Dividend Capture Strategy is an active trading methodology where a trader enters a position on the afternoon prior to the ex-date (tracked on our <a href="tomorrow.html">Tomorrow Ex-Dividend Calendar</a>), captures entitlement to the dividend payment, and attempts to sell the shares as soon as trading opens on the ex-date (or once the markdown recovers).</p>
+
+      <h3>Why Most Retail Capture Traders Underperform:</h3>
+      <ol>
+        <li><strong>Friction and Bid-Ask Spread:</strong> Rapid round-trip trading incurs exchange transaction costs, brokerage liquidity fees, and spread slippage that erode small dividend margins.</li>
+        <li><strong>Downside Market Volatility:</strong> If broader macroeconomic sentiment turns negative on the ex-date morning, the equity may drop by 2% or 3%, wiping out a 0.8% quarterly distribution.</li>
+        <li><strong>Tax Drag:</strong> Shares held for less than 61 days fail the IRS unhedged holding test, subjecting payouts to standard marginal income taxes rather than preferential qualified capital gains brackets. See our <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Tax Guide</a>.</li>
+      </ol>
+
+      <p>Rather than short-term capture trading, academic research demonstrates that long-term total returns are maximized by assembling diversified baskets of dividend growers and utilizing automated reinvestment via a <a href="drip-calculator-guide.html">Dividend Reinvestment Plan (DRIP)</a> or screening vetted champions on our <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</p>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions About Dividend Schedules</h2>
+        
+        <details class="faq-item">
+          <summary>What is the difference between the Ex-Dividend Date and the Record Date?</summary>
+          <div class="faq-answer">
+            <p>The record date is the date by which an investor must officially appear on the company's shareholder register to receive the dividend. The ex-dividend date is established by the stock exchange (typically one business day before the record date under T+1 settlement) to account for the time required for electronic trade clearing. If you buy on or after the ex-dividend date, the trade will not settle in time for the record date, and the dividend belongs to the seller.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is the SEC T+1 settlement rule and how does it impact dividend eligibility?</summary>
+          <div class="faq-answer">
+            <p>Under the SEC T+1 settlement rule, financial transactions in U.S. equities settle one business day after the transaction date (Trade Date + 1). Because trades settle in 24 hours, the ex-dividend date is set exactly on the business day immediately preceding the company's designated record date.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I sell a stock on its ex-dividend date and still receive the payout?</summary>
+          <div class="faq-answer">
+            <p>Yes. If you owned the equity prior to the ex-dividend date, you may sell your shares at any time during the trading session on the ex-dividend date (or any day thereafter) and you remain legally entitled to collect the cash distribution on the scheduled payment date.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why does a stock's market price drop on the ex-dividend date?</summary>
+          <div class="faq-answer">
+            <p>When a firm pays a dividend, physical cash leaves the corporate balance sheet, permanently reducing the intrinsic economic book value of the enterprise. Consequently, stock exchanges automatically adjust the opening benchmark price of the equity downward by the approximate declared cash dividend per share prior to the market opening bell.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is the Dividend Capture Strategy profitable after transaction costs and taxes?</summary>
+          <div class="faq-answer">
+            <p>For most retail investors, the pure dividend capture strategy produces disappointing risk-adjusted returns. Because the stock price drops by the dividend amount on the ex-date, traders rely on rapid price recovery. After accounting for bid-ask spread friction, market volatility, and ordinary income tax treatment (failing the 61-day holding period test), capture strategies frequently underperform long-term buy-and-hold compounding.</p>
+          </div>
+        </details>
+      </section>
+    </article>
   </main>
 
   <footer>
-    <p>&copy; 2026 DividendRadar. Financial data provided for informational purposes only.</p>
+    <p>&copy; 2026 DividendRadar. Financial market research data updated daily.</p>
     <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About & Methodology</a> |
-      <a href="guide.html">Dividend Strategy Guide</a> |
-      <a href="terms.html">Terms of Service</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
+      <a href="monthly-dividend-stocks.html">Monthly Payers</a> |
+      <a href="high-yield-dividend-stocks.html">High Yield (&gt;6%)</a> |
+      <a href="dividend-aristocrats.html">Aristocrats</a> |
+      <a href="best-dividend-etfs.html">Dividend ETFs</a> |
+      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a> |
+      <a href="dividend-growth-investing.html">DGI Guide</a> |
+      <a href="special-dividends-explained.html">Special Dividends</a> |
+      <a href="drip-calculator-guide.html">DRIP</a> |
+      <a href="payout-ratio-safety.html">Safety</a> |
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a> |
+      <a href="about.html">About</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy</a>
     </p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
 </body>
 </html>

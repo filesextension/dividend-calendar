@@ -3,72 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dividend Growth Investing (DGI) Strategy & Yield on Cost Guide - DividendRadar</title>
-  <meta name="description" content="Master Dividend Growth Investing (DGI). Learn the Yield on Cost formula, the Chowder Rule framework, and why annual payout growth beats stagnant high yield.">
+  <title>Dividend Growth Investing (DGI) Strategy & Yield on Cost - DividendRadar</title>
+  <meta name="description" content="How focusing on dividend growth rate (DGR) beats static high-yield chasing over multi-decade time horizons.">
   
-  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "name": "Dividend Growth Investing (DGI) Strategy & Yield on Cost (YoC) Complete Guide",
-        "description": "Comprehensive guide explaining the mechanics of Dividend Growth Investing, multi-year compounding, Chowder Rule calculations, and Yield on Cost modeling.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "DividendRadar"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the core philosophy of Dividend Growth Investing (DGI)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The core philosophy of DGI is investing in fundamentally robust, cash-generative businesses that consistently expand their cash dividend payouts annually, irrespective of broader stock market price volatility. The objective is generating an exponentially growing, inflation-protected stream of passive income."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is Yield on Cost (YoC) calculated?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yield on Cost is calculated as: (Current Annual Dividend Per Share / Original Purchase Price Per Share) multiplied by 100. Unlike current market yield, YoC measures the cash return generated relative to your original invested capital basis."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the Chowder Rule and how do you calculate it?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Chowder Rule is a screening benchmark created by investor Lowell Miller. The formula is: Current Dividend Yield (%) + 5-Year Compound Annual Dividend Growth Rate (%). For standard broad-market equities, a Chowder Number of 12% or higher indicates an attractive candidate for long-term total return and compounding."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why is a 2.5% growing dividend often superior to an 8% static dividend?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A static 8% dividend suffers real purchasing power destruction from annual inflation and typically offers minimal capital appreciation. Conversely, a 2.5% yield growing payouts at 10% annually doubles its cash distribution every 7.2 years, driving both substantial capital appreciation and an expanding Yield on Cost."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Dividend Growth Investing protect against inflation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "High-quality dividend growers possess structural pricing power, enabling them to raise product prices as general consumer inflation accelerates. This expands operational gross profits, allowing executive management to hike dividends faster than the consumer price index (CPI)."
-            }
-          }
-        ]
-      }
-    ]
+    "@type": "WebPage",
+    "name": "Dividend Growth Investing (DGI) Strategy & Yield on Cost",
+    "description": "How focusing on dividend growth rate (DGR) beats static high-yield chasing over multi-decade time horizons.",
+    "dateModified": "2026-09-22",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DividendRadar"
+    }
   }
   </script>
-
+    
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Dividend Growth Investing beat the S&P 500 index?", "acceptedAnswer": {"@type": "Answer", "text": "Historically, companies initiating and growing dividends have outperformed the broad equal-weighted S&P 500 with significantly lower downside price volatility during bear markets."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -86,7 +38,7 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.7;
+      line-height: 1.6;
     }
     header {
       background-color: var(--card);
@@ -126,125 +78,238 @@
       border: 1px solid var(--border);
     }
     main {
-      max-width: 900px;
-      margin: 2.5rem auto;
+      max-width: 1100px;
+      margin: 2rem auto;
       padding: 0 1.5rem;
     }
-    .article-container {
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
+    }
+    .calc-card {
+      background: #1c2128;
+      border: 1px solid #444c56;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .calc-header h3 {
+      color: #fff;
+      margin-top: 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
+    .calc-header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .calc-input label {
+      display: block;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .calc-input input, .calc-input select {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .calc-input input:focus, .calc-input select:focus {
+      border-color: var(--primary);
+    }
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .result-box {
+      background: rgba(0,0,0,0.2);
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .result-box .label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+    .result-box .value {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .search-box {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .search-box input {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 380px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .table-container {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2.5rem;
-    }
-    h1 {
-      color: #fff;
-      font-size: 2.2rem;
-      line-height: 1.3;
-      margin-top: 0;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-    }
-    h2 {
-      color: #fff;
-      font-size: 1.45rem;
-      margin-top: 2.2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    p, li {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-    }
-    ul, ol {
-      padding-left: 1.6rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    strong {
-      color: var(--text);
-    }
-    .callout {
-      background-color: rgba(88, 166, 255, 0.08);
-      border-left: 4px solid var(--primary);
-      padding: 1.2rem 1.4rem;
-      margin: 1.8rem 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .callout p {
-      margin: 0;
-      color: var(--text);
-    }
-    .formula-box {
-      background: #1c2128;
-      border: 1px solid #444c56;
-      border-radius: 6px;
-      padding: 1.2rem;
-      text-align: center;
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-      font-size: 1.05rem;
-      color: var(--primary);
-      margin: 1.5rem 0;
-    }
-    .table-box {
       overflow-x: auto;
-      margin: 2rem 0;
-      border: 1px solid var(--border);
-      border-radius: 6px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      font-size: 0.92rem;
     }
     th, td {
-      padding: 0.85rem 1rem;
+      padding: 0.9rem 1.2rem;
       border-bottom: 1px solid var(--border);
     }
     th {
-      background: #21262d;
+      background-color: rgba(255, 255, 255, 0.03);
       color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      font-size: 0.8rem;
       letter-spacing: 0.5px;
     }
     tr:last-child td {
       border-bottom: none;
     }
-    .text-accent { color: var(--accent); font-weight: bold; }
-    /* FAQs */
-    .faq-section {
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    a.badge {
+      background-color: #21262d;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.badge:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+    .text-accent { color: var(--accent); }
+    .text-primary { color: var(--primary); }
+    .font-bold { font-weight: bold; }
+    .num { text-align: right; }
+    th.num { text-align: right; }
+    .editorial {
       margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.2rem;
+    }
+    .editorial h2 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .editorial h2:first-child {
+      margin-top: 0;
+    }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
+    .editorial p, .editorial li {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
+    }
+    .editorial a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .editorial a:hover {
+      text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
     .faq-item {
       background: #1c2128;
       border: 1px solid var(--border);
       border-radius: 6px;
-      margin-bottom: 1rem;
-      padding: 1rem 1.25rem;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
     }
     .faq-item summary {
       cursor: pointer;
       color: #fff;
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: 1rem;
       outline: none;
     }
     .faq-item summary:hover {
       color: var(--primary);
     }
     .faq-answer {
-      margin-top: 0.9rem;
+      margin-top: 0.8rem;
       padding-top: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
     .faq-answer p {
       margin: 0;
@@ -273,162 +338,92 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html">Today</a>
-      <a href="tomorrow.html">Tomorrow</a>
-      <a href="this-week.html">This Week</a>
-      <a href="next-week.html">Next Week</a>
-      <a href="monthly-dividend-stocks.html">Monthly</a>
-      <a href="high-yield-dividend-stocks.html">High Yield</a>
-      <a href="dividend-aristocrats.html">Aristocrats</a>
-      <a href="best-dividend-etfs.html">ETFs</a>
-      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
-      <a href="dividend-growth-investing.html" class="active">DGI Strategy</a>
-      <a href="drip-calculator-guide.html">DRIP</a>
-      <a href="payout-ratio-safety.html">Safety</a>
-      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+<a href="tomorrow.html">Tomorrow</a>
+<a href="this-week.html">This Week</a>
+<a href="next-week.html">Next Week</a>
+<a href="monthly-dividend-stocks.html">Monthly</a>
+<a href="high-yield-dividend-stocks.html">High Yield</a>
+<a href="dividend-aristocrats.html">Aristocrats</a>
+<a href="best-dividend-etfs.html">ETFs</a>
+<a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
+<a href="dividend-growth-investing.html" class="active">DGI Strategy</a>
+<a href="drip-calculator-guide.html">DRIP</a>
+<a href="payout-ratio-safety.html">Safety</a>
+<a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+
     </nav>
   </header>
 
   <main>
-    <article class="article-container">
-      <h1>Dividend Growth Investing (DGI) Strategy & Yield on Cost Framework</h1>
-      <p>The most common psychological trap among self-directed retail income investors is <strong>yield chasing</strong>: prioritizing equities with high current dividend yields (such as 8% or 10%) while disregarding underlying corporate balance sheet health and distribution growth potential.</p>
+    <div class="hero">
+      <h1>Dividend Growth Investing (DGI) Strategy & Yield on Cost</h1>
+      <p>How focusing on dividend growth rate (DGR) beats static high-yield chasing over multi-decade time horizons.</p>
+    </div>
+
+    
+    
+<div class="calc-card">
+  <div class="calc-header">
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
+  </div>
+  <div class="calc-grid">
+    <div class="calc-input">
+      <label for="inv-amount">Total Investment ($):</label>
+      <input type="number" id="inv-amount" value="5000" step="500" oninput="calcularDividendos()">
+    </div>
+    <div class="calc-input">
+      <label for="inv-yield">Annual Dividend Yield (%):</label>
+      <input type="number" id="inv-yield" value="4.5" step="0.1" oninput="calcularDividendos()">
+    </div>
+    <div class="calc-input">
+      <label for="inv-frequency">Payout Frequency:</label>
+      <select id="inv-frequency" onchange="calcularDividendos()">
+        <option value="4">Quarterly (4x/year)</option>
+        <option value="12">Monthly (12x/year)</option>
+        <option value="2">Semi-Annual (2x/year)</option>
+        <option value="1">Annual (1x/year)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-results">
+    <div class="result-box">
+      <span class="label">Annual Passive Income:</span>
+      <span class="value text-accent" id="res-annual">$225.00</span>
+    </div>
+    <div class="result-box">
+      <span class="label">Per Distribution Payout:</span>
+      <span class="value" id="res-payout">$56.25</span>
+    </div>
+    <div class="result-box">
+      <span class="label">10-Year DRIP Forecast:</span>
+      <span class="value text-primary" id="res-drip">$7,764.85</span>
+    </div>
+  </div>
+</div>
+
+
+    
+
+    <section class="editorial">
       
-      <p>Professional dividend allocators utilize a different paradigm: <strong>Dividend Growth Investing (DGI)</strong>. Rather than seeking maximum cash yield today, DGI focuses on high-quality companies with sustainable competitive advantages (economic moats) that consistently grow their dividend per share year after year. Over a multi-decade investing horizon, dividend growth systematically generates superior total returns and higher effective yield on initial capital.</p>
-
-      <h2>1. The Yield on Cost (YoC) Phenomenon Explained</h2>
-      <p>When you evaluate a stock on financial screening portals, you see its <em>Current Indicated Market Yield</em>. However, long-term investors track their real cash flow return using <strong>Yield on Cost (YoC)</strong>:</p>
-
-      <div class="formula-box">
-        Yield on Cost (YoC) = (Current Annual Dividend Per Share / Original Share Purchase Price) &times; 100
-      </div>
-
-      <p>While the current market yield fluctuates daily based on changing stock prices, your cost basis remains fixed. As the corporate board expands the annual dividend distribution, your personal cash return against your initial capital investment rises steadily.</p>
-
-      <h3>Real-World Mathematical Example: A 10-Year Compounding Case Study</h3>
-      <p>Imagine two investors allocating $10,000 in Year 0:</p>
-      <ul>
-        <li><strong>Investor A (High Static Yield):</strong> Buys a mature utility yielding <strong>8.0%</strong> with <strong>0% annual dividend growth</strong>.</li>
-        <li><strong>Investor B (Dividend Growth Champion):</strong> Buys a leading consumer staple or tech leader yielding <strong>3.0%</strong> with an average <strong>10% annual dividend growth rate</strong>.</li>
-      </ul>
-
-      <div class="table-box">
-        <table>
-          <thead>
-            <tr>
-              <th>Timeline Horizon</th>
-              <th>Investor A (Static 8% Yield)</th>
-              <th>Investor B (3% Initial + 10% DGR)</th>
-              <th>Investor B Yield on Cost (YoC)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Year 1</strong></td>
-              <td>$800.00</td>
-              <td>$300.00</td>
-              <td class="text-accent">3.00%</td>
-            </tr>
-            <tr>
-              <td><strong>Year 5</strong></td>
-              <td>$800.00</td>
-              <td>$439.23</td>
-              <td class="text-accent">4.39%</td>
-            </tr>
-            <tr>
-              <td><strong>Year 8</strong></td>
-              <td>$800.00</td>
-              <td>$584.62</td>
-              <td class="text-accent">5.85%</td>
-            </tr>
-            <tr>
-              <td><strong>Year 11</strong></td>
-              <td>$800.00</td>
-              <td>$778.12</td>
-              <td class="text-accent">7.78%</td>
-            </tr>
-            <tr>
-              <td><strong>Year 15</strong></td>
-              <td>$800.00</td>
-              <td><strong>$1,139.06</strong></td>
-              <td class="text-accent"><strong>11.39%</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Year 20</strong></td>
-              <td>$800.00</td>
-              <td><strong>$1,834.42</strong></td>
-              <td class="text-accent"><strong>18.34%</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="callout">
-        <p><strong>The Insight:</strong> By Year 12, Investor B collects more annual cash income than Investor A. By Year 20, Investor B collects more than double the cash flow annually (an 18.3% Yield on Cost), while also enjoying substantial capital appreciation on the underlying equity shares.</p>
-      </div>
-
-      <h2>2. Quantitative Screening: The Chowder Rule</h2>
-      <p>To identify companies that strike the optimal mathematical balance between current yield and future dividend growth, legendary income analyst Lowell Miller formulated <strong>The Chowder Rule</strong>:</p>
-
-      <div class="formula-box">
-        Chowder Number = Current Dividend Yield (%) + 5-Year Compound Annual Dividend Growth Rate (%)
-      </div>
-
-      <h3>Standard Chowder Thresholds:</h3>
-      <ul>
-        <li><strong>Broad Market Equities (Yield &lt; 3.0%):</strong> Requires a Chowder Number of at least <strong>12.0%</strong>. For example, a tech champion yielding 2.0% must demonstrate a 5-year dividend growth rate of 10.0% or higher.</li>
-        <li><strong>High-Yield Equities / Utilities / REITs (Yield &gt; 3.0%):</strong> Requires a Chowder Number of at least <strong>8.0%</strong>. For example, a premier REIT yielding 4.5% must demonstrate a 5-year dividend growth rate of at least 3.5%.</li>
-      </ul>
-
-      <h2>3. Core Pillars of an Elite Dividend Growth Company</h2>
-      <p>Before purchasing an equity approaching its cutoff on our <a href="tomorrow.html">Tomorrow Ex-Dividend Calendar</a>, confirm the business exhibits these three durable fundamentals:</p>
-      <ol>
-        <li><strong>Pricing Power Over Input Costs:</strong> True DGI stalwarts possess brand loyalty, patents, or high customer switching costs that allow them to raise consumer prices as producer inflation climbs. This ensures revenue outpaces operating expenses.</li>
-        <li><strong>Conservative Free Cash Flow Coverage:</strong> Sustainable dividend increases cannot be financed with debt. Verify that the company maintains an FCF payout ratio below 60% by reviewing our <a href="payout-ratio-safety.html">Payout Ratio Safety Guide</a>.</li>
-        <li><strong>Consistent Share Count Reduction (Buybacks):</strong> Companies that routinely retire 1% to 3% of their outstanding common stock annually reduce the total share base, making subsequent dividend-per-share increases cheaper for the corporate treasury to execute.</li>
-      </ol>
-
-      <p>To screen vetted corporate stalwarts that have successfully raised dividend payouts across recessions and inflation spikes for at least 25 consecutive years, visit our live <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</p>
-
-      <!-- FAQ Accordion -->
-      <section class="faq-section">
-        <h2>Frequently Asked Questions About Dividend Growth Investing</h2>
+        <h2>High Yield Today vs. High Dividend Growth Tomorrow</h2>
+        <p>A common pitfall among novice income investors is prioritizing nominal yield today (e.g., a stagnant 8% utility) over dividend growth (e.g., a 2.5% yield compounding payouts at 10% per year).</p>
         
-        <details class="faq-item">
-          <summary>What is the core philosophy of Dividend Growth Investing (DGI)?</summary>
-          <div class="faq-answer">
-            <p>The core philosophy of DGI is investing in fundamentally robust, cash-generative businesses that consistently expand their cash dividend payouts annually, irrespective of broader stock market price volatility. The objective is generating an exponentially growing, inflation-protected stream of passive income.</p>
-          </div>
-        </details>
+        <h2>The Concept of Yield on Cost (YoC)</h2>
+        <p>Yield on Cost measures current annual dividend income divided by your original purchase price. An investor who bought dividend growth champions like Microsoft or Apple a decade ago enjoys a Yield on Cost exceeding 15% to 25% on original capital today.</p>
 
+        <div class="callout">
+          <strong>The Chowder Rule:</strong> Current Dividend Yield (%) + 5-Year Dividend Growth Rate (%). A score above 12% indicates high total-return compounding potential.
+        </div>
+        
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
         <details class="faq-item">
-          <summary>How is Yield on Cost (YoC) calculated?</summary>
-          <div class="faq-answer">
-            <p>Yield on Cost is calculated as: (Current Annual Dividend Per Share / Original Purchase Price Per Share) multiplied by 100. Unlike current market yield, YoC measures the cash return generated relative to your original invested capital basis.</p>
-          </div>
+          <summary><strong>Can Dividend Growth Investing beat the S&amp;P 500 index?</strong></summary>
+          <div class="faq-answer"><p>Historically, companies initiating and growing dividends have outperformed the broad equal-weighted S&P 500 with significantly lower downside price volatility during bear markets.</p></div>
         </details>
-
-        <details class="faq-item">
-          <summary>What is the Chowder Rule and how do you calculate it?</summary>
-          <div class="faq-answer">
-            <p>The Chowder Rule is a screening benchmark created by investor Lowell Miller. The formula is: Current Dividend Yield (%) + 5-Year Compound Annual Dividend Growth Rate (%). For standard broad-market equities, a Chowder Number of 12% or higher indicates an attractive candidate for long-term total return and compounding.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Why is a 2.5% growing dividend often superior to an 8% static dividend?</summary>
-          <div class="faq-answer">
-            <p>A static 8% dividend suffers real purchasing power destruction from annual inflation and typically offers minimal capital appreciation. Conversely, a 2.5% yield growing payouts at 10% annually doubles its cash distribution every 7.2 years, driving both substantial capital appreciation and an expanding Yield on Cost.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>How does Dividend Growth Investing protect against inflation?</summary>
-          <div class="faq-answer">
-            <p>High-quality dividend growers possess structural pricing power, enabling them to raise product prices as general consumer inflation accelerates. This expands operational gross profits, allowing executive management to hike dividends faster than the consumer price index (CPI).</p>
-          </div>
-        </details>
-      </section>
-    </article>
+        </div>
+    </section>
   </main>
 
   <footer>
@@ -454,5 +449,47 @@
     </p>
     <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
+
+  
+<script>
+function calcularDividendos() {
+  const capital = parseFloat(document.getElementById('inv-amount').value) || 0;
+  const yieldPct = parseFloat(document.getElementById('inv-yield').value) || 0;
+  const frequency = parseInt(document.getElementById('inv-frequency').value) || 4;
+
+  const annualIncome = capital * (yieldPct / 100);
+  const perPayout = annualIncome / frequency;
+
+  const rate = yieldPct / 100;
+  const drip10Years = capital * Math.pow((1 + rate / frequency), frequency * 10);
+
+  document.getElementById('res-annual').innerText = '$' + annualIncome.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById('res-payout').innerText = '$' + perPayout.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById('res-drip').innerText = '$' + drip10Years.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+window.addEventListener('DOMContentLoaded', calcularDividendos);
+</script>
+
+  <script>
+    function filtrarTabla() {
+      const input = document.getElementById("filtro");
+      if(!input) return;
+      const filtro = input.value.toUpperCase();
+      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
+      for (let i = 1; i < tr.length; i++) {
+        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
+        const tdNombre = tr[i].getElementsByTagName("td")[1];
+        if (tdSimbolo || tdNombre) {
+          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
+          const txtNombre = tdNombre.textContent || tdNombre.innerText;
+          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>

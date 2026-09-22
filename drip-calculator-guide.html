@@ -3,72 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dividend Reinvestment Plan (DRIP) Guide: The Power of Compounding - DividendRadar</title>
-  <meta name="description" content="Master Dividend Reinvestment Plans (DRIP). Learn the compound growth formula, understand tax obligations on reinvested cash, and calculate 10- and 20-year snowball returns.">
+  <title>Dividend Reinvestment Plan (DRIP) Compounding Guide - DividendRadar</title>
+  <meta name="description" content="How automated dividend reinvestment accelerates wealth accumulation through exponential compound interest.">
   
-  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "name": "Dividend Reinvestment Plan (DRIP) Compounding & Investor Guide",
-        "description": "Comprehensive institutional guide explaining Dividend Reinvestment Plans (DRIP), mathematical compounding formulas, fractional share mechanics, and IRS tax rules.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "DividendRadar"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is a Dividend Reinvestment Plan (DRIP)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A Dividend Reinvestment Plan (DRIP) is an automated feature offered by brokerages and transfer agents that instantly uses declared cash dividend payouts to purchase additional whole or fractional shares of the underlying security, typically without paying trade commissions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I have to pay taxes on dividends if they are automatically reinvested via DRIP?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The IRS treats reinvested dividends identically to cash payouts received into your personal bank account. In a standard taxable brokerage account, you owe income or capital gains taxes on declared dividends during the fiscal tax year they are distributed, regardless of whether DRIP is enabled."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does DRIP alter my tax cost basis?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Each DRIP purchase creates an individual tax lot with a cost basis equal to the dollar value of the reinvested dividend divided by the share price at execution. When you eventually liquidate the stock, your total cost basis is higher, which reduces future taxable capital gains."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between synthetic DRIP and company-sponsored DRIP?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A synthetic DRIP is executed directly by retail brokerages (like Schwab, Fidelity, or Vanguard) by buying open-market fractional shares. A company-sponsored DRIP is administered directly by a company's transfer agent (like Computershare), sometimes offering treasury shares at a 1% to 5% discount to prevailing market prices."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "When should an investor turn off DRIP and collect cash dividends instead?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Investors typically disable DRIP when entering retirement to fund living expenses, when an underlying holding becomes significantly overvalued, or when they want to pool cash distributions to reallocate capital into undervalued opportunities across other asset classes."
-            }
-          }
-        ]
-      }
-    ]
+    "@type": "WebPage",
+    "name": "Dividend Reinvestment Plan (DRIP) Compounding Guide",
+    "description": "How automated dividend reinvestment accelerates wealth accumulation through exponential compound interest.",
+    "dateModified": "2026-09-22",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DividendRadar"
+    }
   }
   </script>
-
+    
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to pay taxes on dividends that are automatically reinvested via DRIP?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IRS treats reinvested dividends as cash income received during that tax year, even though you never transferred the money into your checking account."}}, {"@type": "Question", "name": "Does DRIP adjust my cost basis for capital gains taxes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Does DRIP adjust my cost basis for capital gains taxes? Yes. Each DRIP share purchase creates a new tax lot with its own cost basis equal to the market price paid at the time of reinvestment."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -86,7 +38,7 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.7;
+      line-height: 1.6;
     }
     header {
       background-color: var(--card);
@@ -126,125 +78,238 @@
       border: 1px solid var(--border);
     }
     main {
-      max-width: 900px;
-      margin: 2.5rem auto;
+      max-width: 1100px;
+      margin: 2rem auto;
       padding: 0 1.5rem;
     }
-    .article-container {
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
+    }
+    .calc-card {
+      background: #1c2128;
+      border: 1px solid #444c56;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .calc-header h3 {
+      color: #fff;
+      margin-top: 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
+    .calc-header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .calc-input label {
+      display: block;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .calc-input input, .calc-input select {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .calc-input input:focus, .calc-input select:focus {
+      border-color: var(--primary);
+    }
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .result-box {
+      background: rgba(0,0,0,0.2);
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .result-box .label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+    .result-box .value {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .search-box {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .search-box input {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 380px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .table-container {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2.5rem;
-    }
-    h1 {
-      color: #fff;
-      font-size: 2.2rem;
-      line-height: 1.3;
-      margin-top: 0;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-    }
-    h2 {
-      color: #fff;
-      font-size: 1.45rem;
-      margin-top: 2.2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    p, li {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-    }
-    ul, ol {
-      padding-left: 1.6rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    strong {
-      color: var(--text);
-    }
-    .callout {
-      background-color: rgba(88, 166, 255, 0.08);
-      border-left: 4px solid var(--primary);
-      padding: 1.2rem 1.4rem;
-      margin: 1.8rem 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .callout p {
-      margin: 0;
-      color: var(--text);
-    }
-    .formula-box {
-      background: #1c2128;
-      border: 1px solid #444c56;
-      border-radius: 6px;
-      padding: 1.2rem;
-      text-align: center;
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-      font-size: 1.05rem;
-      color: var(--primary);
-      margin: 1.5rem 0;
-    }
-    .table-box {
       overflow-x: auto;
-      margin: 2rem 0;
-      border: 1px solid var(--border);
-      border-radius: 6px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      font-size: 0.92rem;
     }
     th, td {
-      padding: 0.85rem 1rem;
+      padding: 0.9rem 1.2rem;
       border-bottom: 1px solid var(--border);
     }
     th {
-      background: #21262d;
+      background-color: rgba(255, 255, 255, 0.03);
       color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      font-size: 0.8rem;
       letter-spacing: 0.5px;
     }
     tr:last-child td {
       border-bottom: none;
     }
-    .text-accent { color: var(--accent); font-weight: bold; }
-    /* FAQs */
-    .faq-section {
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    a.badge {
+      background-color: #21262d;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.badge:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+    .text-accent { color: var(--accent); }
+    .text-primary { color: var(--primary); }
+    .font-bold { font-weight: bold; }
+    .num { text-align: right; }
+    th.num { text-align: right; }
+    .editorial {
       margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.2rem;
+    }
+    .editorial h2 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .editorial h2:first-child {
+      margin-top: 0;
+    }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
+    .editorial p, .editorial li {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
+    }
+    .editorial a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .editorial a:hover {
+      text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
     .faq-item {
       background: #1c2128;
       border: 1px solid var(--border);
       border-radius: 6px;
-      margin-bottom: 1rem;
-      padding: 1rem 1.25rem;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
     }
     .faq-item summary {
       cursor: pointer;
       color: #fff;
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: 1rem;
       outline: none;
     }
     .faq-item summary:hover {
       color: var(--primary);
     }
     .faq-answer {
-      margin-top: 0.9rem;
+      margin-top: 0.8rem;
       padding-top: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
     .faq-answer p {
       margin: 0;
@@ -273,173 +338,98 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html">Today</a>
-      <a href="tomorrow.html">Tomorrow</a>
-      <a href="this-week.html">This Week</a>
-      <a href="next-week.html">Next Week</a>
-      <a href="monthly-dividend-stocks.html">Monthly</a>
-      <a href="high-yield-dividend-stocks.html">High Yield</a>
-      <a href="dividend-aristocrats.html">Aristocrats</a>
-      <a href="best-dividend-etfs.html">ETFs</a>
-      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
-      <a href="dividend-growth-investing.html">DGI Strategy</a>
-      <a href="drip-calculator-guide.html" class="active">DRIP</a>
-      <a href="payout-ratio-safety.html">Safety</a>
-      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+<a href="tomorrow.html">Tomorrow</a>
+<a href="this-week.html">This Week</a>
+<a href="next-week.html">Next Week</a>
+<a href="monthly-dividend-stocks.html">Monthly</a>
+<a href="high-yield-dividend-stocks.html">High Yield</a>
+<a href="dividend-aristocrats.html">Aristocrats</a>
+<a href="best-dividend-etfs.html">ETFs</a>
+<a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
+<a href="dividend-growth-investing.html">DGI Strategy</a>
+<a href="drip-calculator-guide.html" class="active">DRIP</a>
+<a href="payout-ratio-safety.html">Safety</a>
+<a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+
     </nav>
   </header>
 
   <main>
-    <article class="article-container">
-      <h1>Dividend Reinvestment Plan (DRIP) Guide: Unleashing Exponential Compound Growth</h1>
-      <p>In retail equity investing, few wealth-generation mechanisms match the mathematical efficacy of a <strong>Dividend Reinvestment Plan (DRIP)</strong>. Historically, academic studies examining century-long equity returns (including research by Wharton professor Jeremy Siegel) conclude that reinvested dividends account for <strong>over 70% of the total real return of the S&P 500</strong> over multi-decade periods.</p>
+    <div class="hero">
+      <h1>Dividend Reinvestment Plan (DRIP) Compounding Guide</h1>
+      <p>How automated dividend reinvestment accelerates wealth accumulation through exponential compound interest.</p>
+    </div>
+
+    
+    
+<div class="calc-card">
+  <div class="calc-header">
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
+  </div>
+  <div class="calc-grid">
+    <div class="calc-input">
+      <label for="inv-amount">Total Investment ($):</label>
+      <input type="number" id="inv-amount" value="5000" step="500" oninput="calcularDividendos()">
+    </div>
+    <div class="calc-input">
+      <label for="inv-yield">Annual Dividend Yield (%):</label>
+      <input type="number" id="inv-yield" value="4.5" step="0.1" oninput="calcularDividendos()">
+    </div>
+    <div class="calc-input">
+      <label for="inv-frequency">Payout Frequency:</label>
+      <select id="inv-frequency" onchange="calcularDividendos()">
+        <option value="4">Quarterly (4x/year)</option>
+        <option value="12">Monthly (12x/year)</option>
+        <option value="2">Semi-Annual (2x/year)</option>
+        <option value="1">Annual (1x/year)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-results">
+    <div class="result-box">
+      <span class="label">Annual Passive Income:</span>
+      <span class="value text-accent" id="res-annual">$225.00</span>
+    </div>
+    <div class="result-box">
+      <span class="label">Per Distribution Payout:</span>
+      <span class="value" id="res-payout">$56.25</span>
+    </div>
+    <div class="result-box">
+      <span class="label">10-Year DRIP Forecast:</span>
+      <span class="value text-primary" id="res-drip">$7,764.85</span>
+    </div>
+  </div>
+</div>
+
+
+    
+
+    <section class="editorial">
       
-      <p>Without dividend reinvestment, an equity portfolio relies exclusively on price appreciation. By activating DRIP, you transform your portfolio into an autonomous capital-compounding engine: cash distributions buy more shares, those new shares generate higher subsequent distributions, and the cycle accelerates without requiring additional out-of-pocket savings.</p>
-
-      <h2>1. The Mechanics: How DRIP Functions in Practice</h2>
-      <p>When a corporation reaches its scheduled payment date (cross-referenced on our <a href="this-week.html">Weekly Dividend Schedule</a>), declared funds leave the corporate treasury. What happens next depends on your brokerage account settings:</p>
-
-      <h3>Cash Settlement (Default Without DRIP)</h3>
-      <p>The cash dividend is credited to your brokerage uninvested sweep account (core position). It sits idle earning prevailing money-market interest rates unless you manually execute a trade to purchase new shares, incurring potential transaction fees or timing friction.</p>
-
-      <h3>Automated DRIP Execution</h3>
-      <p>Your custodian immediately uses the exact net cash dividend to purchase additional shares of that same company at prevailing market prices on the distribution date. Modern electronic trading systems execute this with <strong>fractional share precision</strong> to three or four decimal points.</p>
-
-      <div class="callout">
-        <p><strong>Example:</strong> If you own 100 shares of a $100 stock that distributes a quarterly dividend of $1.50 per share, you receive $150.00. DRIP instantly buys exactly 1.500 new shares. For the subsequent quarter, your dividend is calculated across <strong>101.500 shares</strong> ($152.25 payout), even if you never add another dollar.</p>
-      </div>
-
-      <h2>2. Mathematical Modeling: Reinvestment vs. Cash Withdrawal</h2>
-      <p>To understand the exponential divergence caused by DRIP, examine a simulation modeling a <strong>$20,000 initial capital allocation</strong> into a quality dividend growth portfolio yielding <strong>3.5%</strong> with a moderate <strong>6.0% annual dividend growth rate</strong> and 4.0% average annual share price appreciation:</p>
-
-      <div class="table-box">
-        <table>
-          <thead>
-            <tr>
-              <th>Year Horizon</th>
-              <th>Portfolio Value (Cash Taken Out)</th>
-              <th>Portfolio Value (100% DRIP Enabled)</th>
-              <th>Annual Income (DRIP Enabled)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Year 0</strong></td>
-              <td>$20,000</td>
-              <td>$20,000</td>
-              <td>$700</td>
-            </tr>
-            <tr>
-              <td><strong>Year 5</strong></td>
-              <td>$24,333</td>
-              <td><strong>$29,082</strong></td>
-              <td>$1,176</td>
-            </tr>
-            <tr>
-              <td><strong>Year 10</strong></td>
-              <td>$29,604</td>
-              <td><strong>$43,158</strong></td>
-              <td>$2,019</td>
-            </tr>
-            <tr>
-              <td><strong>Year 15</strong></td>
-              <td>$36,021</td>
-              <td><strong>$65,249</strong></td>
-              <td>$3,546</td>
-            </tr>
-            <tr>
-              <td><strong>Year 20</strong></td>
-              <td>$43,822</td>
-              <td><strong>$100,489</strong></td>
-              <td>$6,368</td>
-            </tr>
-            <tr>
-              <td><strong>Year 25</strong></td>
-              <td>$53,317</td>
-              <td><strong>$157,631</strong></td>
-              <td>$11,692</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="callout">
-        <p><strong>The Takeaway:</strong> By Year 25, the DRIP portfolio is worth almost <strong>triple</strong> the cash-withdrawal portfolio, and generates over $11,600 in annual passive income on an original $20,000 investment basis (a Yield on Cost exceeding 58%).</p>
-      </div>
-
-      <h2>3. The DRIP Compounding Formula</h2>
-      <p>The mathematical progression of automated reinvestment compounded continuously across discrete distribution cycles is expressed as:</p>
-
-      <div class="formula-box">
-        A = P &times; (1 + r / n)<sup>(n &times; t)</sup>
-        <br><br>
-        <span style="font-size: 0.9rem; color: var(--text-muted);">
-          Where: A = Final Portfolio Balance | P = Initial Capital Investment Basis<br>
-          r = Total Annualized Rate of Return (Yield + Price Growth) | n = Payout Frequency (12 for Monthly, 4 for Quarterly)<br>
-          t = Total Duration in Years
-        </span>
-      </div>
-
-      <p>Notice that increasing <em>n</em> (payout frequency) accelerates compounding velocity. This is precisely why many income investors prioritize REITs and funds tracked in our <a href="monthly-dividend-stocks.html">Monthly Dividend Calendar</a>.</p>
-
-      <h2>4. The Tax Reality of DRIP (The IRS Constructive Receipt Rule)</h2>
-      <p>A frequent point of confusion among self-directed retail investors is taxation on reinvested capital. In the United States, the Internal Revenue Service enforces the <strong>Doctrine of Constructive Receipt</strong>:</p>
-
-      <ul>
-        <li><strong>Automatic Reinvestment Does NOT Defer Taxes:</strong> Even though you never touched the physical cash and your brokerage immediately purchased shares, the IRS considers the declared dividend taxable income in the tax year it was paid out.</li>
-        <li><strong>Form 1099-DIV:</strong> Every January, your brokerage issues Form 1099-DIV detailing all ordinary and qualified dividends credited to your account. You owe tax regardless of whether DRIP was enabled.</li>
-        <li><strong>Cost Basis Tracking:</strong> Every automatic fractional share purchase creates an independent tax lot. Modern brokerages track this automatically, ensuring that when you eventually sell the stock, your cost basis reflects all reinvested cash, preventing double taxation upon final capital liquidation.</li>
-      </ul>
-
-      <p>To understand the variance between lower-bracket preferential rates and ordinary marginal rates, consult our <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Dividends Tax Guide</a>.</p>
-
-      <h2>5. When Should an Investor Turn OFF DRIP?</h2>
-      <p>While DRIP is the optimal default strategy during the accumulation phase of an investor's career, there are three scenarios where turning DRIP off is advantageous:</p>
-      <ol>
-        <li><strong>Funding Immediate Retirement Living Expenses:</strong> In the distribution phase, turning off DRIP directs cash payouts straight to checking accounts, preventing forced share liquidations during bear markets.</li>
-        <li><strong>Extreme Stock Overvaluation:</strong> When an individual holding trades at an irrational multiple of earnings, blindly reinvesting capital into that stock averages your purchase price up at unattractive valuations.</li>
-        <li><strong>Strategic Capital Rebalancing:</strong> Disabling DRIP allows you to pool dividends from all holdings into cash, enabling disciplined manual deployment into whichever high-quality assets are currently trading at a discount on our <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</li>
-      </ol>
-
-      <!-- FAQ Accordion -->
-      <section class="faq-section">
-        <h2>Frequently Asked Questions About DRIP</h2>
+        <h2>What is a DRIP (Dividend Reinvestment Plan)?</h2>
+        <p>A Dividend Reinvestment Plan (DRIP) is an automated financial arrangement that directs your brokerage to immediately use cash dividend distributions to purchase additional whole or fractional shares of the dividend-paying entity, typically with zero transaction commissions.</p>
+        
+        <h2>The Mathematical Impact of DRIP Compounding</h2>
+        <p>When you reinvest dividends instead of taking cash payouts, two compounding forces work in tandem:</p>
+        <ol>
+          <li><strong>Share Count Expansion:</strong> Every distribution increases your total share ownership without out-of-pocket capital injections.</li>
+          <li><strong>Increased Future Dividends:</strong> The next dividend payout is calculated on a larger base of shares, creating an exponential "snowball effect."</li>
+        </ol>
+        <p>Over a 20-year horizon, historical S&P 500 data demonstrates that total returns with reinvested dividends outperform price-appreciation-only returns by more than 200%. Check our <a href="dividend-growth-investing.html">DGI Strategy Guide</a>.</p>
+        
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary><strong>Do I have to pay taxes on dividends that are automatically reinvested via DRIP?</strong></summary>
+          <div class="faq-answer"><p>Yes. The IRS treats reinvested dividends as cash income received during that tax year, even though you never transferred the money into your checking account.</p></div>
+        </details>
         
         <details class="faq-item">
-          <summary>What is a Dividend Reinvestment Plan (DRIP)?</summary>
-          <div class="faq-answer">
-            <p>A Dividend Reinvestment Plan (DRIP) is an automated feature offered by brokerages and transfer agents that instantly uses declared cash dividend payouts to purchase additional whole or fractional shares of the underlying security, typically without paying trade commissions.</p>
-          </div>
+          <summary><strong>Does DRIP adjust my cost basis for capital gains taxes?</strong></summary>
+          <div class="faq-answer"><p>Yes. Each DRIP share purchase creates a new tax lot with its own cost basis equal to the market price paid at the time of reinvestment.</p></div>
         </details>
-
-        <details class="faq-item">
-          <summary>Do I have to pay taxes on dividends if they are automatically reinvested via DRIP?</summary>
-          <div class="faq-answer">
-            <p>Yes. The IRS treats reinvested dividends identically to cash payouts received into your personal bank account. In a standard taxable brokerage account, you owe income or capital gains taxes on declared dividends during the fiscal tax year they are distributed, regardless of whether DRIP is enabled.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>How does DRIP alter my tax cost basis?</summary>
-          <div class="faq-answer">
-            <p>Each DRIP purchase creates an individual tax lot with a cost basis equal to the dollar value of the reinvested dividend divided by the share price at execution. When you eventually liquidate the stock, your total cost basis is higher, which reduces future taxable capital gains.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What is the difference between synthetic DRIP and company-sponsored DRIP?</summary>
-          <div class="faq-answer">
-            <p>A synthetic DRIP is executed directly by retail brokerages (like Schwab, Fidelity, or Vanguard) by buying open-market fractional shares. A company-sponsored DRIP is administered directly by a company's transfer agent (like Computershare), sometimes offering treasury shares at a 1% to 5% discount to prevailing market prices.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>When should an investor turn off DRIP and collect cash dividends instead?</summary>
-          <div class="faq-answer">
-            <p>Investors typically disable DRIP when entering retirement to fund living expenses, when an underlying holding becomes significantly overvalued, or when they want to pool cash distributions to reallocate capital into undervalued opportunities across other asset classes.</p>
-          </div>
-        </details>
-      </section>
-    </article>
+        </div>
+    </section>
   </main>
 
   <footer>
@@ -465,5 +455,47 @@
     </p>
     <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
+
+  
+<script>
+function calcularDividendos() {
+  const capital = parseFloat(document.getElementById('inv-amount').value) || 0;
+  const yieldPct = parseFloat(document.getElementById('inv-yield').value) || 0;
+  const frequency = parseInt(document.getElementById('inv-frequency').value) || 4;
+
+  const annualIncome = capital * (yieldPct / 100);
+  const perPayout = annualIncome / frequency;
+
+  const rate = yieldPct / 100;
+  const drip10Years = capital * Math.pow((1 + rate / frequency), frequency * 10);
+
+  document.getElementById('res-annual').innerText = '$' + annualIncome.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById('res-payout').innerText = '$' + perPayout.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById('res-drip').innerText = '$' + drip10Years.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+window.addEventListener('DOMContentLoaded', calcularDividendos);
+</script>
+
+  <script>
+    function filtrarTabla() {
+      const input = document.getElementById("filtro");
+      if(!input) return;
+      const filtro = input.value.toUpperCase();
+      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
+      for (let i = 1; i < tr.length; i++) {
+        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
+        const tdNombre = tr[i].getElementsByTagName("td")[1];
+        if (tdSimbolo || tdNombre) {
+          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
+          const txtNombre = tdNombre.textContent || tdNombre.innerText;
+          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>

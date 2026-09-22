@@ -3,72 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dividend Safety & Payout Ratio Guide: Detecting Dividend Cuts - DividendRadar</title>
-  <meta name="description" content="Master dividend safety analysis. Learn how to calculate GAAP vs Free Cash Flow payout ratios, identify value traps, and detect impending dividend cuts before they happen.">
+  <title>Dividend Safety: How to Analyze the Payout Ratio - DividendRadar</title>
+  <meta name="description" content="Detecting impending dividend cuts, value traps, and evaluating free cash flow dividend sustainability.">
   
-  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "name": "Dividend Safety & Payout Ratio Guide: Detecting Impending Dividend Cuts",
-        "description": "Comprehensive framework for evaluating corporate dividend coverage, free cash flow vs GAAP net income, balance sheet leverage, and sector risk thresholds.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "DividendRadar"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the standard formula for the Dividend Payout Ratio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The traditional accounting payout ratio is calculated as: (Total Annual Dividends Paid / Net Income) multiplied by 100, or equivalently: (Dividends Per Share / Diluted Earnings Per Share) multiplied by 100. It measures the percentage of accounting net profit returned to equity holders."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why is the Free Cash Flow (FCF) payout ratio more reliable than GAAP Net Income?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "GAAP Net Income is subject to non-cash accounting distortions, including depreciation schedules, goodwill write-downs, inventory adjustments, and unrealized asset gains. Free Cash Flow (Operating Cash Flow minus Capital Expenditures) measures the physical liquidity entering the company's bank accounts, representing true funds available to pay distributions without relying on debt."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is considered a dangerous payout ratio threshold for standard corporations?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For standard operating corporations (outside of REITs or regulated utilities), an EPS payout ratio consistently exceeding 75% to 80% represents an elevated risk profile. Payout ratios above 100% indicate the company is paying out more than it earns, draining cash reserves or issuing debt to sustain the distribution."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can a company with a safe payout ratio still cut its dividend?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Even if historical payout coverage appears safe, a dividend can be reduced or eliminated if a firm faces sudden debt refinancing hurdles, restrictive debt covenants, credit rating downgrades, aggressive capital expenditure mandates, or unexpected cyclical revenue collapses."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does interest coverage ratio relate to dividend safety?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Bondholders and lenders hold senior claim over company cash flows ahead of equity shareholders. If an enterprise's Interest Coverage Ratio (EBIT / Interest Expense) drops below 2.5x to 3.0x, executive management is often legally or operationally required to slash dividend distributions to service bond debt."
-            }
-          }
-        ]
-      }
-    ]
+    "@type": "WebPage",
+    "name": "Dividend Safety: How to Analyze the Payout Ratio",
+    "description": "Detecting impending dividend cuts, value traps, and evaluating free cash flow dividend sustainability.",
+    "dateModified": "2026-09-22",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DividendRadar"
+    }
   }
   </script>
-
+    
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is Free Cash Flow payout ratio better than Net Income payout ratio?", "acceptedAnswer": {"@type": "Answer", "text": "Net income includes non-cash accounting items like depreciation and goodwill write-downs. Free cash flow measures actual cash in the bank, providing an accurate view of dividend affordability."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -86,7 +38,7 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.7;
+      line-height: 1.6;
     }
     header {
       background-color: var(--card);
@@ -98,12 +50,12 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    header a.brand {{
+    header a.brand {
       color: #fff;
       font-size: 1.3rem;
       font-weight: bold;
       text-decoration: none;
-    }}
+    }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -126,125 +78,238 @@
       border: 1px solid var(--border);
     }
     main {
-      max-width: 900px;
-      margin: 2.5rem auto;
+      max-width: 1100px;
+      margin: 2rem auto;
       padding: 0 1.5rem;
     }
-    .article-container {
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+      color: #c9d1d9;
+    }
+    .calc-card {
+      background: #1c2128;
+      border: 1px solid #444c56;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .calc-header h3 {
+      color: #fff;
+      margin-top: 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
+    .calc-header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .calc-input label {
+      display: block;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .calc-input input, .calc-input select {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .calc-input input:focus, .calc-input select:focus {
+      border-color: var(--primary);
+    }
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .result-box {
+      background: rgba(0,0,0,0.2);
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .result-box .label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+    .result-box .value {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .search-box {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .search-box input {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 380px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .table-container {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2.5rem;
-    }
-    h1 {
-      color: #fff;
-      font-size: 2.2rem;
-      line-height: 1.3;
-      margin-top: 0;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-    }
-    h2 {
-      color: #fff;
-      font-size: 1.45rem;
-      margin-top: 2.2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    p, li {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-    }
-    ul, ol {
-      padding-left: 1.6rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    strong {
-      color: var(--text);
-    }
-    .callout {
-      background-color: rgba(88, 166, 255, 0.08);
-      border-left: 4px solid var(--primary);
-      padding: 1.2rem 1.4rem;
-      margin: 1.8rem 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .callout p {
-      margin: 0;
-      color: var(--text);
-    }
-    .formula-box {
-      background: #1c2128;
-      border: 1px solid #444c56;
-      border-radius: 6px;
-      padding: 1.2rem;
-      text-align: center;
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-      font-size: 1.05rem;
-      color: var(--primary);
-      margin: 1.5rem 0;
-    }
-    .table-box {
       overflow-x: auto;
-      margin: 2rem 0;
-      border: 1px solid var(--border);
-      border-radius: 6px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      font-size: 0.92rem;
     }
     th, td {
-      padding: 0.85rem 1rem;
+      padding: 0.9rem 1.2rem;
       border-bottom: 1px solid var(--border);
     }
     th {
-      background: #21262d;
+      background-color: rgba(255, 255, 255, 0.03);
       color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      font-size: 0.8rem;
       letter-spacing: 0.5px;
     }
     tr:last-child td {
       border-bottom: none;
     }
-    .text-accent { color: var(--accent); font-weight: bold; }
-    /* FAQs */
-    .faq-section {
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    a.badge {
+      background-color: #21262d;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.badge:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+    .text-accent { color: var(--accent); }
+    .text-primary { color: var(--primary); }
+    .font-bold { font-weight: bold; }
+    .num { text-align: right; }
+    th.num { text-align: right; }
+    .editorial {
       margin-top: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.2rem;
+    }
+    .editorial h2 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .editorial h2:first-child {
+      margin-top: 0;
+    }
+    .editorial h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+    }
+    .editorial p, .editorial li {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .editorial ul, .editorial ol {
+      padding-left: 1.5rem;
+    }
+    .editorial li {
+      margin-bottom: 0.5rem;
+    }
+    .editorial a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .editorial a:hover {
+      text-decoration: underline;
+    }
+    /* FAQS ACCORDION */
+    .faq-container {
+      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
     .faq-item {
       background: #1c2128;
       border: 1px solid var(--border);
       border-radius: 6px;
-      margin-bottom: 1rem;
-      padding: 1rem 1.25rem;
+      margin-bottom: 0.8rem;
+      padding: 0.9rem 1.2rem;
     }
     .faq-item summary {
       cursor: pointer;
       color: #fff;
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: 1rem;
       outline: none;
     }
     .faq-item summary:hover {
       color: var(--primary);
     }
     .faq-answer {
-      margin-top: 0.9rem;
+      margin-top: 0.8rem;
       padding-top: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
     .faq-answer p {
       margin: 0;
@@ -273,167 +338,55 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html">Today</a>
-      <a href="tomorrow.html">Tomorrow</a>
-      <a href="this-week.html">This Week</a>
-      <a href="next-week.html">Next Week</a>
-      <a href="monthly-dividend-stocks.html">Monthly</a>
-      <a href="high-yield-dividend-stocks.html">High Yield</a>
-      <a href="dividend-aristocrats.html">Aristocrats</a>
-      <a href="best-dividend-etfs.html">ETFs</a>
-      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
-      <a href="dividend-growth-investing.html">DGI Strategy</a>
-      <a href="drip-calculator-guide.html">DRIP</a>
-      <a href="payout-ratio-safety.html" class="active">Safety</a>
-      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+<a href="tomorrow.html">Tomorrow</a>
+<a href="this-week.html">This Week</a>
+<a href="next-week.html">Next Week</a>
+<a href="monthly-dividend-stocks.html">Monthly</a>
+<a href="high-yield-dividend-stocks.html">High Yield</a>
+<a href="dividend-aristocrats.html">Aristocrats</a>
+<a href="best-dividend-etfs.html">ETFs</a>
+<a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
+<a href="dividend-growth-investing.html">DGI Strategy</a>
+<a href="drip-calculator-guide.html">DRIP</a>
+<a href="payout-ratio-safety.html" class="active">Safety</a>
+<a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+
     </nav>
   </header>
 
   <main>
-    <article class="article-container">
-      <h1>Dividend Safety & Payout Ratio Guide: Detecting Impending Dividend Cuts</h1>
-      <p>In high-yield dividend investing, capital preservation takes precedence over headline yield. An eye-catching 9% or 11% yield offers zero total return if the underlying corporate board announces a 50% dividend reduction six months later, triggering an immediate 30% collapse in the company's equity market valuation.</p>
+    <div class="hero">
+      <h1>Dividend Safety: How to Analyze the Payout Ratio</h1>
+      <p>Detecting impending dividend cuts, value traps, and evaluating free cash flow dividend sustainability.</p>
+    </div>
+
+    
+    
+
+    
+
+    <section class="editorial">
       
-      <p>Dividend distributions are discretionary cash outflows authorized periodically by a company's board of directors. Analyzing dividend safety requires looking past historical declaration records and stress-testing whether real, unencumbered operating cash flows can support recurring shareholder distributions under adverse economic conditions.</p>
-
-      <h2>1. The Two Formulas: GAAP Earnings vs. Free Cash Flow</h2>
-      <p>Many financial data aggregators compute dividend coverage using GAAP Net Income alone. This methodology carries dangerous analytical blind spots.</p>
-
-      <h3>A. Traditional Earnings Payout Ratio (EPS Basis)</h3>
-      <div class="formula-box">
-        EPS Payout Ratio = (Annual Dividend Per Share / Diluted EPS) &times; 100
-      </div>
-      <p>While useful for mature consumer non-cyclicals, accounting earnings are frequently distorted by non-cash charges (depreciation, amortization, inventory impairments, restructuring fees). An enterprise can report positive net income while experiencing negative operational cash balances due to delayed customer receivables or ballooning inventory stockpiles.</p>
-
-      <h3>B. Free Cash Flow Payout Ratio (The Institutional Standard)</h3>
-      <div class="formula-box">
-        FCF Payout Ratio = (Total Cash Dividends Paid / Free Cash Flow) &times; 100
-        <br><br>
-        <span style="font-size: 0.9rem; color: var(--text-muted);">Where: Free Cash Flow = Cash Flow from Operations &minus; Capital Expenditures (CapEx)</span>
-      </div>
-      <p>Free Cash Flow measures tangible dollars remaining after paying operating expenses, employee payroll, corporate taxes, and purchasing physical machinery or facility maintenance required to keep the business operational. <strong>Dividends are paid in cash, not accounting net income.</strong> If a company’s FCF payout ratio consistently exceeds 80%, dividend cuts become mathematically inevitable during revenue downturns.</p>
-
-      <h2>Sector-by-Sector Payout Ratio Safety Thresholds</h2>
-      <p>What constitutes a dangerous payout ratio in one industry is routine in another. Capital intensity, customer demand inelasticity, and regulatory frameworks govern safe distribution limits:</p>
-
-      <div class="table-box">
-        <table>
-          <thead>
-            <tr>
-              <th>Sector / Asset Class</th>
-              <th>Safe Payout Range</th>
-              <th>Warning Zone</th>
-              <th>Critical Cut Risk</th>
-              <th>Primary Analytic Metric</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Consumer Staples & Food</strong></td>
-              <td>40% – 60%</td>
-              <td>65% – 75%</td>
-              <td>&gt; 80%</td>
-              <td>Free Cash Flow Payout</td>
-            </tr>
-            <tr>
-              <td><strong>Technology & Healthcare</strong></td>
-              <td>20% – 45%</td>
-              <td>50% – 65%</td>
-              <td>&gt; 70%</td>
-              <td>FCF Coverage + R&D Reinvestment</td>
-            </tr>
-            <tr>
-              <td><strong>Regulated Utilities</strong></td>
-              <td>60% – 70%</td>
-              <td>75% – 85%</td>
-              <td>&gt; 90%</td>
-              <td>Regulatory Rate Base & CapEx</td>
-            </tr>
-            <tr>
-              <td><strong>Real Estate (REITs)</strong></td>
-              <td>65% – 80%</td>
-              <td>82% – 90%</td>
-              <td>&gt; 95%</td>
-              <td>AFFO Payout Ratio</td>
-            </tr>
-            <tr>
-              <td><strong>Energy & Basic Materials</strong></td>
-              <td>25% – 40%</td>
-              <td>50% – 65%</td>
-              <td>&gt; 70%</td>
-              <td>Commodity Mid-Cycle Breakeven</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>2. Beyond Payout Ratios: The Balance Sheet Debt Wall</h2>
-      <p>A low payout ratio alone does not guarantee dividend safety. Bondholders and commercial bank lenders maintain senior legal priority over common equity shareholders. When evaluating upcoming dividend announcements on our <a href="this-week.html">Weekly Calendar</a>, inspect these two critical credit metrics:</p>
-
-      <h3>Net Debt to EBITDA (Leverage Ratio)</h3>
-      <p>Net Debt-to-EBITDA measures how many years of pre-tax cash earnings would be required to extinguish all balance sheet debt. For non-utility corporations, leverage exceeding <strong>3.5x to 4.0x</strong> severely constrains capital allocation. In a higher interest rate environment, debt refinancing costs consume operating cash, forcing management teams to divert capital away from dividends to debt redemption.</p>
-
-      <h3>Interest Coverage Ratio (EBIT / Interest Expense)</h3>
-      <p>This ratio measures whether current operating profits easily service recurring bond coupon obligations:</p>
-      <ul>
-        <li><strong>Greater than 5.0x (Safe):</strong> Ample buffer against rising refinancing rates or margin contractions.</li>
-        <li><strong>Between 2.0x and 3.5x (Moderate Concern):</strong> Minimal safety buffer; any cyclical earnings drop forces balance sheet triage.</li>
-        <li><strong>Below 2.0x (Imminent Threat):</strong> Credit agencies threaten junk downgrades; dividends are typically eliminated to preserve liquidity.</li>
-      </ul>
-
-      <div class="callout">
-        <p><strong>The Golden Takeaway:</strong> When a firm's credit rating drops toward BBB- or junk territory (BB+), management will almost always sacrifice the dividend payout to protect investment-grade status and maintain access to commercial paper markets.</p>
-      </div>
-
-      <h2>3. Identifying Value Traps: The 4 Red Flags</h2>
-      <ol>
-        <li><strong>Share Price Freefall with Static Dividend:</strong> A nominal yield rising from 4% to 10% because the equity price declined 60% over twelve months indicates institutional smart money is pricing in an inevitable dividend reduction. Check our <a href="high-yield-dividend-stocks.html">High Yield Screener (>6%)</a> with extreme caution.</li>
-        <li><strong>Issuing Debt to Fund Shareholder Distributions:</strong> If Cash Flow from Operations is smaller than the total dividend payout, and the cash flow statement shows net proceeds from borrowing, the company is borrowing money from banks to pay dividends. This practice is financially unsustainable.</li>
-        <li><strong>Dividend Growth Deceleration:</strong> A company with 15 years of consecutive increases that suddenly slows dividend growth from 7% per year to 0.5% per year is signaling internal balance sheet stress. Cross-reference with our <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</li>
-        <li><strong>Negative Free Cash Flow after CapEx:</strong> Even profitable software or hardware manufacturers will cut payouts if heavy capital investments in artificial intelligence infrastructure or manufacturing facilities turn net cash flow negative.</li>
-      </ol>
-
-      <p>To project the total return of financially vetted companies with sustainable dividend growth rates, test your scenario in our <a href="drip-calculator-guide.html">DRIP Compounding Guide & Calculator</a>.</p>
-
-      <!-- FAQ Accordion -->
-      <section class="faq-section">
-        <h2>Frequently Asked Questions About Dividend Safety</h2>
+        <h2>Understanding the Dividend Payout Ratio</h2>
+        <p>The Dividend Payout Ratio measures the percentage of net earnings paid to shareholders as dividends. It acts as the primary indicator of dividend safety.</p>
+        <div class="callout"><strong>Formula:</strong> Payout Ratio = (Total Annual Dividends / Net Income) &times; 100</div>
         
+        <h2>Warning Thresholds Across Sectors:</h2>
+        <ul>
+          <li><strong>0% - 50%:</strong> Healthy coverage with abundant cushion for reinvestment and capital expenditure.</li>
+          <li><strong>51% - 75%:</strong> Moderate safety typical for mature consumer staples and regulated utilities.</li>
+          <li><strong>76% - 95%:</strong> Thin margin of safety. Highly vulnerable during macroeconomic recessions.</li>
+          <li><strong>Over 100%:</strong> Critical alert. The firm is distributing more capital than it generates in GAAP earnings.</li>
+        </ul>
+        <p>For Real Estate entities, net income is distorted by depreciation. Learn how to evaluate REITs using AFFO in our <a href="reit-bdc-dividend-guide.html">REIT & BDC Dividend Guide</a>.</p>
+        
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
         <details class="faq-item">
-          <summary>What is the standard formula for the Dividend Payout Ratio?</summary>
-          <div class="faq-answer">
-            <p>The traditional accounting payout ratio is calculated as: (Total Annual Dividends Paid / Net Income) multiplied by 100, or equivalently: (Dividends Per Share / Diluted Earnings Per Share) multiplied by 100. It measures the percentage of accounting net profit returned to equity holders.</p>
-          </div>
+          <summary><strong>Why is Free Cash Flow payout ratio better than Net Income payout ratio?</strong></summary>
+          <div class="faq-answer"><p>Net income includes non-cash accounting items like depreciation and goodwill write-downs. Free cash flow measures actual cash in the bank, providing an accurate view of dividend affordability.</p></div>
         </details>
-
-        <details class="faq-item">
-          <summary>Why is the Free Cash Flow (FCF) payout ratio more reliable than GAAP Net Income?</summary>
-          <div class="faq-answer">
-            <p>GAAP Net Income is subject to non-cash accounting distortions, including depreciation schedules, goodwill write-downs, inventory adjustments, and unrealized asset gains. Free Cash Flow (Operating Cash Flow minus Capital Expenditures) measures the physical liquidity entering the company's bank accounts, representing true funds available to pay distributions without relying on debt.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What is considered a dangerous payout ratio threshold for standard corporations?</summary>
-          <div class="faq-answer">
-            <p>For standard operating corporations (outside of REITs or regulated utilities), an EPS payout ratio consistently exceeding 75% to 80% represents an elevated risk profile. Payout ratios above 100% indicate the company is paying out more than it earns, draining cash reserves or issuing debt to sustain the distribution.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can a company with a safe payout ratio still cut its dividend?</summary>
-          <div class="faq-answer">
-            <p>Yes. Even if historical payout coverage appears safe, a dividend can be reduced or eliminated if a firm faces sudden debt refinancing hurdles, restrictive debt covenants, credit rating downgrades, aggressive capital expenditure mandates, or unexpected cyclical revenue collapses.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>How does interest coverage ratio relate to dividend safety?</summary>
-          <div class="faq-answer">
-            <p>Bondholders and lenders hold senior claim over company cash flows ahead of equity shareholders. If an enterprise's Interest Coverage Ratio (EBIT / Interest Expense) drops below 2.5x to 3.0x, executive management is often legally or operationally required to slash dividend distributions to service bond debt.</p>
-          </div>
-        </details>
-      </section>
-    </article>
+        </div>
+    </section>
   </main>
 
   <footer>
@@ -459,5 +412,28 @@
     </p>
     <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
+
+  
+  <script>
+    function filtrarTabla() {
+      const input = document.getElementById("filtro");
+      if(!input) return;
+      const filtro = input.value.toUpperCase();
+      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
+      for (let i = 1; i < tr.length; i++) {
+        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
+        const tdNombre = tr[i].getElementsByTagName("td")[1];
+        if (tdSimbolo || tdNombre) {
+          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
+          const txtNombre = tdNombre.textContent || tdNombre.innerText;
+          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>

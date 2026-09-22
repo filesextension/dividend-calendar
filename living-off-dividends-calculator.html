@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Living Off Dividends Calculator: How Much Do You Need to Retire? - DividendRadar</title>
+  <meta name="description" content="Free Living Off Dividends Calculator. Calculate the exact portfolio capital required to cover your monthly living expenses through passive dividend cash flow.">
+  
+  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Living Off Dividends Calculator: How Much Do You Need to Retire?",
+        "description": "Interactive financial tool calculating exact capital required to fund living expenses via recurring dividend income, accounting for tax drag and portfolio yield.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "DividendRadar"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much money do you need to live off dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The exact capital required depends on your desired annual living expenses and average portfolio yield. For example, to generate $40,000 annually in passive income from a diversified 4.0% dividend portfolio, you need an invested balance of approximately $1,000,000 ($40,000 / 0.04), before accounting for income taxes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do I need to invest to get $1,000 a month in dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An income of $1,000 per month equals $12,000 per year. With a conservative 3.5% dividend yield (e.g., SCHD or broad dividend aristocrats), you need approximately $342,857. With a 5.0% yield (e.g., high-quality REITs or energy infrastructure), you need approximately $240,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is living off dividends better than the 4% withdrawal rule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Living off dividends eliminates the psychological pain and sequence-of-returns risk of selling equity shares during steep bear markets. Your share count remains completely intact, allowing dividends to cover recurring expenses without liquidating principal capital."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What average dividend yield is safe for a retirement portfolio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A sustainable, defensive dividend yield for long-term retirement portfolios typically sits between 3.5% and 5.0%. Chasing yields above 7% or 8% often introduces value traps, balance sheet distress, and elevated risk of corporate dividend cuts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do taxes reduce the income I receive when living off dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. In taxable brokerage accounts, qualified dividends are taxed at 0%, 15%, or 20% depending on your overall taxable bracket. Non-qualified dividends (such as REITs, BDCs, and covered-call ETFs) are taxed at standard ordinary federal income rates. Investors must account for effective tax drag when calculating gross capital requirements."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    header a.brand {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.55rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    nav a.active {
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
+    }
+    main {
+      max-width: 920px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    .article-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+    h1 {
+      color: #fff;
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-top: 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    h2 {
+      color: #fff;
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    strong {
+      color: var(--text);
+    }
+    /* CALCULADORA HERO */
+    .tool-box {
+      background: #1c2128;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .tool-box h3 {
+      color: #fff;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.35rem;
+    }
+    .tool-box p.tool-desc {
+      color: var(--text-muted);
+      margin: 0 0 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .field-group label {
+      display: block;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .field-group input, .field-group select {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      outline: none;
+    }
+    .field-group input:focus, .field-group select:focus {
+      border-color: var(--primary);
+    }
+    .results-hero {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.2rem;
+      text-align: center;
+    }
+    .result-stat .label {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+    .result-stat .num-primary {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .result-stat .num-secondary {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 1.2rem 1.4rem;
+      margin: 1.8rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p {
+      margin: 0;
+      color: var(--text);
+    }
+    .table-box {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #21262d;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .text-accent { color: var(--accent); font-weight: bold; }
+    /* FAQs */
+    .faq-section {
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.9rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">📈 DividendRadar</a>
+    <nav>
+      <a href="index.html">Today</a>
+      <a href="tomorrow.html">Tomorrow</a>
+      <a href="this-week.html">This Week</a>
+      <a href="monthly-dividend-stocks.html">Monthly</a>
+      <a href="high-yield-dividend-stocks.html">High Yield</a>
+      <a href="dividend-aristocrats.html">Aristocrats</a>
+      <a href="best-dividend-etfs.html">ETFs</a>
+      <a href="living-off-dividends-calculator.html" class="active">Retire on Dividends</a>
+      <a href="drip-calculator-guide.html">DRIP</a>
+      <a href="payout-ratio-safety.html">Safety</a>
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+      <a href="guide.html">Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article-container">
+      <h1>Living Off Dividends Calculator: Portfolio Target & FIRE Roadmap</h1>
+      <p>The ultimate objective for many equity income investors and proponents of the FIRE movement (Financial Independence, Retire Early) is <strong>living off dividends</strong>: generating sufficient recurring cash flow to cover complete household living expenses without ever being forced to liquidate shares of stock.</p>
+      
+      <p>Use the interactive calculator below to determine the exact portfolio size required to fund your target lifestyle, factoring in portfolio dividend yield and estimated income tax drag.</p>
+
+      <!-- CALCULADORA INTERACTIVA -->
+      <div class="tool-box">
+        <h3>💰 Living Off Dividends Target Calculator</h3>
+        <p class="tool-desc">Adjust your required monthly or annual cash flow to see the precise capital needed today.</p>
+        
+        <div class="input-grid">
+          <div class="field-group">
+            <label for="calc-mode">Calculate By:</label>
+            <select id="calc-mode" onchange="runLivingCalculator()">
+              <option value="monthly">Desired Monthly Income ($)</option>
+              <option value="annual">Desired Annual Income ($)</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="target-income" id="income-label">Desired Net Monthly Income ($):</label>
+            <input type="number" id="target-income" value="3500" step="250" oninput="runLivingCalculator()">
+          </div>
+          <div class="field-group">
+            <label for="target-yield">Average Portfolio Yield (%):</label>
+            <input type="number" id="target-yield" value="4.0" step="0.1" oninput="runLivingCalculator()">
+          </div>
+          <div class="field-group">
+            <label for="tax-rate">Estimated Tax Drag (%):</label>
+            <input type="number" id="tax-rate" value="15" step="1" oninput="runLivingCalculator()">
+          </div>
+        </div>
+
+        <div class="results-hero">
+          <div class="result-stat">
+            <span class="label">Total Portfolio Required</span>
+            <span class="num-primary" id="res-portfolio">$1,235,294</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Gross Annual Dividends</span>
+            <span class="num-secondary" id="res-gross-annual">$49,412</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Net Annual Cash In-Pocket</span>
+            <span class="num-secondary text-accent" id="res-net-annual">$42,000</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Net Monthly Paycheck</span>
+            <span class="num-secondary" id="res-net-monthly">$3,500</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>How Much Money Do You Need to Retire on Dividends? (Reference Matrix)</h2>
+      <p>The table below models the exact invested capital basis required to generate common monthly passive income benchmarks across different portfolio yield profiles, assuming a standard 15% qualified tax rate:</p>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Target Monthly Income</th>
+              <th>Target Annual Net</th>
+              <th>At 3.5% Yield (Defensive / SCHD)</th>
+              <th>At 4.5% Yield (Balanced / Aristocrats)</th>
+              <th>At 6.0% Yield (High Cash Flow / REITs)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>$1,000 / month</strong></td>
+              <td>$12,000</td>
+              <td>$403,361</td>
+              <td>$313,725</td>
+              <td class="text-accent">$235,294</td>
+            </tr>
+            <tr>
+              <td><strong>$2,500 / month</strong></td>
+              <td>$30,000</td>
+              <td>$1,008,403</td>
+              <td>$784,314</td>
+              <td class="text-accent">$588,235</td>
+            </tr>
+            <tr>
+              <td><strong>$4,000 / month</strong></td>
+              <td>$48,000</td>
+              <td>$1,613,445</td>
+              <td>$1,254,902</td>
+              <td class="text-accent">$941,176</td>
+            </tr>
+            <tr>
+              <td><strong>$6,000 / month</strong></td>
+              <td>$72,000</td>
+              <td>$2,420,168</td>
+              <td>$1,882,353</td>
+              <td class="text-accent">$1,411,765</td>
+            </tr>
+            <tr>
+              <td><strong>$10,000 / month</strong></td>
+              <td>$120,000</td>
+              <td>$4,033,613</td>
+              <td>$3,137,255</td>
+              <td class="text-accent">$2,352,941</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Why Living Off Dividends Beats the Traditional "4% Rule"</h2>
+      <p>Traditional retirement financial planning relies heavily on the <em>Trinity Study's 4% Rule</em>, which assumes you systematically sell off 4% of your total equity portfolio each year to fund living expenses.</p>
+      
+      <p>While mathematically sound in bull markets, the 4% rule exposes retirees to devastating <strong>Sequence of Returns Risk</strong>:</p>
+      <ul>
+        <li><strong>Forced Liquidations During Bear Markets:</strong> If the S&P 500 declines 30% in a severe recession, an investor adhering to the 4% rule must liquidate shares at bargain-basement prices, permanently impairing the portfolio's recovery capacity.</li>
+        <li><strong>The Dividend Shield:</strong> With a dividend-growth strategy, <em>you never sell a single share</em>. As long as you hold financially durable companies with solid coverage ratios, dividend checks arrive regularly, leaving your equity share count 100% intact.</li>
+      </ul>
+
+      <h2>The Mathematics of Living Off Dividends Formula</h2>
+      <p>The mathematical equation governing portfolio target capital is expressed as:</p>
+      
+      <div class="callout">
+        <p><strong>Required Portfolio = Desired Net Annual Income / [ Portfolio Yield &times; (1 &minus; Effective Tax Rate) ]</strong></p>
+      </div>
+
+      <h2>Three Critical Risk Factors to Manage:</h2>
+      <ol>
+        <li><strong>Avoid The Yield Trap Mirage:</strong> It is tempting to chase 9% or 11% yields to dramatically lower the capital required to retire. However, double-digit yields are frequently accompanied by capital erosion and impending dividend cuts. Read our comprehensive <a href="payout-ratio-safety.html">Payout Ratio Safety Guide</a> to protect your principal.</li>
+        <li><strong>Inflation Protection via Dividend Growth:</strong> A static $4,000 monthly payout will lose significant purchasing power over a 20-year retirement. Ensure a core portion of your portfolio is anchored in companies increasing dividends annually, such as those on our <a href="dividend-aristocrats.html">Dividend Aristocrats Radar</a>.</li>
+        <li><strong>Tax Drag Optimization:</strong> Structure high-yielding ordinary income securities (like those in our <a href="reit-bdc-dividend-guide.html">REIT & BDC Guide</a>) inside tax-advantaged accounts (Roth IRA / 401k) to maximize post-tax cash efficiency. Review the differences in our <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Tax Breakdown</a>.</li>
+      </ol>
+
+      <p>If you are still in the wealth-accumulation phase, consider accelerating your capital compounding with automated reinvestment using our <a href="drip-calculator-guide.html">Interactive DRIP Compounding Guide</a>.</p>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions About Living Off Dividends</h2>
+        
+        <details class="faq-item">
+          <summary>How much money do you need to live off dividends?</summary>
+          <div class="faq-answer">
+            <p>The exact capital required depends on your desired annual living expenses and average portfolio yield. For example, to generate $40,000 annually in passive income from a diversified 4.0% dividend portfolio, you need an invested balance of approximately $1,000,000 ($40,000 / 0.04), before accounting for income taxes.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much do I need to invest to get $1,000 a month in dividends?</summary>
+          <div class="faq-answer">
+            <p>An income of $1,000 per month equals $12,000 per year. With a conservative 3.5% dividend yield (e.g., SCHD or broad dividend aristocrats), you need approximately $342,857. With a 5.0% yield (e.g., high-quality REITs or energy infrastructure), you need approximately $240,000.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is living off dividends better than the 4% withdrawal rule?</summary>
+          <div class="faq-answer">
+            <p>Living off dividends eliminates the psychological pain and sequence-of-returns risk of selling equity shares during steep bear markets. Your share count remains completely intact, allowing dividends to cover recurring expenses without liquidating principal capital.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What average dividend yield is safe for a retirement portfolio?</summary>
+          <div class="faq-answer">
+            <p>A sustainable, defensive dividend yield for long-term retirement portfolios typically sits between 3.5% and 5.0%. Chasing yields above 7% or 8% often introduces value traps, balance sheet distress, and elevated risk of corporate dividend cuts.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do taxes reduce the income I receive when living off dividends?</summary>
+          <div class="faq-answer">
+            <p>Yes. In taxable brokerage accounts, qualified dividends are taxed at 0%, 15%, or 20% depending on your overall taxable bracket. Non-qualified dividends (such as REITs, BDCs, and covered-call ETFs) are taxed at standard ordinary federal income rates. Investors must account for effective tax drag when calculating gross capital requirements.</p>
+          </div>
+        </details>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DividendRadar. Financial market research data updated daily.</p>
+    <p>
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
+      <a href="monthly-dividend-stocks.html">Monthly Payers</a> |
+      <a href="high-yield-dividend-stocks.html">High Yield (&gt;6%)</a> |
+      <a href="dividend-aristocrats.html">Aristocrats</a> |
+      <a href="best-dividend-etfs.html">Dividend ETFs</a> |
+      <a href="living-off-dividends-calculator.html">Retire on Dividends</a> |
+      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a> |
+      <a href="dividend-growth-investing.html">DGI Guide</a> |
+      <a href="special-dividends-explained.html">Special Dividends</a> |
+      <a href="drip-calculator-guide.html">DRIP</a> |
+      <a href="payout-ratio-safety.html">Safety</a> |
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a> |
+      <a href="about.html">About</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy</a>
+    </p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
+  </footer>
+
+  <script>
+    function runLivingCalculator() {
+      const mode = document.getElementById('calc-mode').value;
+      const rawInput = parseFloat(document.getElementById('target-income').value) || 0;
+      const yieldPct = parseFloat(document.getElementById('target-yield').value) || 4.0;
+      const taxRatePct = parseFloat(document.getElementById('tax-rate').value) || 0;
+
+      const label = document.getElementById('income-label');
+      let netAnnual = 0;
+      let netMonthly = 0;
+
+      if (mode === 'monthly') {
+        label.innerText = "Desired Net Monthly Income ($):";
+        netMonthly = rawInput;
+        netAnnual = rawInput * 12;
+      } else {
+        label.innerText = "Desired Net Annual Income ($):";
+        netAnnual = rawInput;
+        netMonthly = rawInput / 12;
+      }
+
+      const taxMultiplier = 1 - (taxRatePct / 100);
+      const effectiveYield = (yieldPct / 100) * (taxMultiplier > 0 ? taxMultiplier : 1);
+      
+      const portfolioNeeded = effectiveYield > 0 ? (netAnnual / effectiveYield) : 0;
+      const grossAnnual = (yieldPct / 100) * portfolioNeeded;
+
+      document.getElementById('res-portfolio').innerText = '$' + Math.round(portfolioNeeded).toLocaleString('en-US');
+      document.getElementById('res-gross-annual').innerText = '$' + Math.round(grossAnnual).toLocaleString('en-US');
+      document.getElementById('res-net-annual').innerText = '$' + Math.round(netAnnual).toLocaleString('en-US');
+      document.getElementById('res-net-monthly').innerText = '$' + Math.round(netMonthly).toLocaleString('en-US');
+    }
+    window.addEventListener('DOMContentLoaded', runLivingCalculator);
+  </script>
+</body>
+</html>

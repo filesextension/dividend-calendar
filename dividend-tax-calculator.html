@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dividend Tax Calculator: Qualified vs Ordinary After-Tax Yield - DividendRadar</title>
+  <meta name="description" content="Free Dividend Tax Calculator. Compare post-tax cash income for Qualified Dividends, Ordinary REIT/BDC payouts, and international W-8BEN treaty rates.">
+  
+  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Dividend Tax Calculator: Qualified vs. Ordinary After-Tax Cash Flow",
+        "description": "Interactive tax estimator calculating net cash received from equity dividends based on IRS tax brackets, asset category (Qualified, REIT, BDC), and international W-8BEN withholding.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "DividendRadar"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How are qualified dividends taxed compared to ordinary dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Qualified dividends receive preferential long-term capital gains tax rates (0%, 15%, or 20%), provided the investor satisfies the IRS 60-day holding period test. Ordinary non-qualified dividends are taxed at your standard federal marginal income tax rate (ranging from 10% up to 37%)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are REIT and BDC dividends taxed at ordinary rates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs) pay zero corporate income tax under U.S. law by distributing at least 90% of their taxable income to shareholders. Because these profits were never taxed at the corporate level, the IRS taxes the distributions as ordinary income to shareholders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Section 199A deduction for REIT dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under the Section 199A Qualified Business Income (QBI) provision, eligible individual taxpayers holding REITs in taxable accounts can deduct up to 20% of their ordinary REIT dividends, effectively reducing their top marginal tax rate on those distributions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does U.S. withholding work for international investors with Form W-8BEN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non-U.S. investors are subject to a standard 30% statutory withholding tax on U.S. dividend income. If your country of residence maintains a bilateral tax treaty with the United States, submitting Form W-8BEN to your brokerage typically reduces this rate to 15%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does tax drag affect long-term dividend reinvestment (DRIP)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dividends held in taxable accounts are taxed in the year they are distributed, even when automatically reinvested via DRIP. Paying taxes out of pocket or reducing reinvestment amounts creates tax drag, which is why locating high-yield ordinary income assets in tax-advantaged accounts (like a Roth IRA or 401k) significantly improves compounding velocity."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    header a.brand {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.55rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    nav a.active {
+      color: #fff;
+      background: #21262d;
+      border: 1px solid var(--border);
+    }
+    main {
+      max-width: 920px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    .article-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+    h1 {
+      color: #fff;
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-top: 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    h2 {
+      color: #fff;
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    strong {
+      color: var(--text);
+    }
+    /* CALCULATOR TOOLBOX */
+    .tool-box {
+      background: #1c2128;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .tool-box h3 {
+      color: #fff;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.35rem;
+    }
+    .tool-box p.tool-desc {
+      color: var(--text-muted);
+      margin: 0 0 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .field-group label {
+      display: block;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+    .field-group input, .field-group select {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      outline: none;
+    }
+    .field-group input:focus, .field-group select:focus {
+      border-color: var(--primary);
+    }
+    .results-hero {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .result-stat .label {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+    .result-stat .num-primary {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .result-stat .num-secondary {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .callout {
+      background-color: rgba(88, 166, 255, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 1.2rem 1.4rem;
+      margin: 1.8rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p {
+      margin: 0;
+      color: var(--text);
+    }
+    .table-box {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #21262d;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .text-accent { color: var(--accent); font-weight: bold; }
+    .text-primary { color: var(--primary); font-weight: bold; }
+    /* FAQs */
+    .faq-section {
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+    .faq-item {
+      background: #1c2128;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      outline: none;
+    }
+    .faq-item summary:hover {
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 0.9rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .faq-answer p {
+      margin: 0;
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">📈 DividendRadar</a>
+    <nav>
+      <a href="index.html">Today</a>
+      <a href="tomorrow.html">Tomorrow</a>
+      <a href="this-week.html">This Week</a>
+      <a href="monthly-dividend-stocks.html">Monthly</a>
+      <a href="high-yield-dividend-stocks.html">High Yield</a>
+      <a href="dividend-aristocrats.html">Aristocrats</a>
+      <a href="best-dividend-etfs.html">ETFs</a>
+      <a href="living-off-dividends-calculator.html">Retire on Dividends</a>
+      <a href="yield-on-cost-calculator.html">YoC Calculator</a>
+      <a href="dividend-tax-calculator.html" class="active">Tax Calculator</a>
+      <a href="drip-calculator-guide.html">DRIP</a>
+      <a href="payout-ratio-safety.html">Safety</a>
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+      <a href="guide.html">Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article-container">
+      <h1>Dividend Tax Calculator: Qualified vs. Ordinary After-Tax Income</h1>
+      <p>Gross dividend yields displayed on screening tables can be deceiving. What ultimately determines portfolio compounding speed and spendable cash flow is your <strong>Net After-Tax Dividend Yield</strong>.</p>
+      
+      <p>Depending on whether distributions are classified by the IRS as <strong>Qualified Dividends</strong>, <strong>Ordinary Income</strong> (such as REITs, BDCs, and covered-call ETFs), or foreign holdings subject to <strong>W-8BEN withholding</strong>, effective tax drag can range from 0% to more than 37%.</p>
+
+      <!-- CALCULADORA INTERACTIVA -->
+      <div class="tool-box">
+        <h3>🧾 Interactive Net Dividend Tax Estimator</h3>
+        <p class="tool-desc">Calculate your exact net cash payout, estimated tax liability, and effective post-tax yield.</p>
+        
+        <div class="input-grid">
+          <div class="field-group">
+            <label for="tax-gross-dividend">Gross Annual Dividend ($):</label>
+            <input type="number" id="tax-gross-dividend" value="5000" step="500" oninput="runTaxCalculator()">
+          </div>
+          <div class="field-group">
+            <label for="tax-dividend-yield">Gross Portfolio Yield (%):</label>
+            <input type="number" id="tax-dividend-yield" value="4.5" step="0.1" oninput="runTaxCalculator()">
+          </div>
+          <div class="field-group">
+            <label for="tax-asset-type">Asset / Tax Classification:</label>
+            <select id="tax-asset-type" onchange="runTaxCalculator()">
+              <option value="qualified-15">U.S. Common Stock / Qualified (15% Bracket)</option>
+              <option value="qualified-0">U.S. Common Stock / Qualified (0% Bracket)</option>
+              <option value="qualified-20">U.S. Common Stock / Qualified (20% Top Bracket)</option>
+              <option value="ordinary-22">REIT / BDC / Ordinary (22% Marginal Bracket)</option>
+              <option value="ordinary-24">REIT / BDC / Ordinary (24% Marginal Bracket)</option>
+              <option value="ordinary-32">REIT / BDC / Ordinary (32% Marginal Bracket)</option>
+              <option value="ordinary-37">REIT / BDC / Ordinary (37% Top Marginal Bracket)</option>
+              <option value="w8ben-15">Non-U.S. Resident / W-8BEN Treaty (15% Withholding)</option>
+              <option value="w8ben-30">Non-U.S. Resident / No Treaty (30% Default Withholding)</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="tax-include-niit">Add 3.8% NIIT Surtax (High Earners)?</label>
+            <select id="tax-include-niit" onchange="runTaxCalculator()">
+              <option value="0">No (Standard Taxpayer)</option>
+              <option value="3.8">Yes (+3.8% Net Investment Income Tax)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-hero">
+          <div class="result-stat">
+            <span class="label">Gross Dividend</span>
+            <span class="num-secondary" id="res-gross">$5,000.00</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Estimated Tax Owed</span>
+            <span class="num-secondary" style="color: #f85149;" id="res-tax-owed">$750.00</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Net Cash In-Pocket</span>
+            <span class="num-primary" id="res-net-cash">$4,250.00</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Net After-Tax Yield</span>
+            <span class="num-primary" id="res-net-yield">3.83%</span>
+          </div>
+        </div>
+
+        <!-- COMPARADOR DE AHORRO -->
+        <div id="tax-comparison-callout" class="callout" style="margin-top: 1rem;">
+          <!-- Inyectado dinámicamente con JavaScript -->
+        </div>
+      </div>
+
+      <h2>Understanding Dividend Taxation in 2026</h2>
+      <p>The U.S. tax code treats dividends very differently depending on how the paying company is structured and how long you have held the underlying stock:</p>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Dividend Category</th>
+              <th>Federal Tax Rates</th>
+              <th>Holding Period Requirement</th>
+              <th>Common Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Qualified Dividends</strong></td>
+              <td class="text-accent">0%, 15%, or 20%</td>
+              <td>Held &gt; 60 days in a 121-day window around ex-date</td>
+              <td>Apple (AAPL), Coca-Cola (KO), SCHD, VYM</td>
+            </tr>
+            <tr>
+              <td><strong>Ordinary Dividends</strong></td>
+              <td style="color: #f85149;">10% up to 37%</td>
+              <td>None (always ordinary income)</td>
+              <td>Realty Income (O), Main Street Capital (MAIN), JEPI</td>
+            </tr>
+            <tr>
+              <td><strong>International (W-8BEN)</strong></td>
+              <td>15% treaty rate (or 30% default)</td>
+              <td>Subject to country bilateral tax treaties</td>
+              <td>Non-U.S. investors investing in U.S. equities</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>1. The 60-Day Holding Period Rule for Qualified Dividends</h2>
+      <p>To benefit from favorable capital gains rates, common stock dividends must satisfy the IRS holding period test: you must hold the stock unhedged for <strong>more than 60 days during a 121-day period</strong> centered on the ex-dividend date. Short-term dividend capture traders who buy shares one day before ex-date and sell immediately afterward fail this test, subjecting their distributions to ordinary marginal income taxes.</p>
+
+      <h2>2. Why REITs and BDCs Are Taxed as Ordinary Income</h2>
+      <p>Real Estate Investment Trusts and Business Development Companies are pass-through entities exempt from corporate-level federal tax as long as they distribute at least 90% of their taxable earnings to shareholders. Because these profits avoid corporate income taxation, the IRS taxes distributions to shareholders at ordinary individual rates. Read our deep-dive on <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>.</p>
+
+      <h2>3. The Section 199A QBI Deduction for REITs</h2>
+      <p>To reduce tax friction on domestic commercial real estate investments, individual U.S. taxpayers holding REITs in taxable brokerage accounts can take advantage of the <strong>Section 199A Qualified Business Income (QBI) deduction</strong>. This rule allows investors to deduct up to 20% of qualified ordinary REIT dividends on their tax return, effectively lowering the maximum tax rate on REIT distributions.</p>
+
+      <h2>4. Asset Location: Optimizing Tax-Advantaged Accounts</h2>
+      <p>Savvy dividend investors optimize net returns by aligning asset types with account structures:</p>
+      <ul>
+        <li><strong>Taxable Brokerage Accounts:</strong> Ideal for qualified dividend growth equities and index ETFs (like SCHD) that benefit from preferential 0% or 15% capital gains rates.</li>
+        <li><strong>Roth IRAs / 401(k)s:</strong> The ideal shelter for high-yielding ordinary income assets like REITs, BDCs, and covered-call ETFs (JEPI/JEPQ), allowing distributions to compound completely tax-free.</li>
+      </ul>
+
+      <p>For more detailed tax strategies, review our complete <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Dividends Tax Guide</a> or project retirement goals with our <a href="living-off-dividends-calculator.html">Living Off Dividends Calculator</a>.</p>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions About Dividend Taxes</h2>
+        
+        <details class="faq-item">
+          <summary>How are qualified dividends taxed compared to ordinary dividends?</summary>
+          <div class="faq-answer">
+            <p>Qualified dividends receive preferential long-term capital gains tax rates (0%, 15%, or 20%), provided the investor satisfies the IRS 60-day holding period test. Ordinary non-qualified dividends are taxed at your standard federal marginal income tax rate (ranging from 10% up to 37%).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why are REIT and BDC dividends taxed at ordinary rates?</summary>
+          <div class="faq-answer">
+            <p>Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs) pay zero corporate income tax under U.S. law by distributing at least 90% of their taxable income to shareholders. Because these profits were never taxed at the corporate level, the IRS taxes the distributions as ordinary income to shareholders.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is the Section 199A deduction for REIT dividends?</summary>
+          <div class="faq-answer">
+            <p>Under the Section 199A Qualified Business Income (QBI) provision, eligible individual taxpayers holding REITs in taxable accounts can deduct up to 20% of their ordinary REIT dividends, effectively reducing their top marginal tax rate on those distributions.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does U.S. withholding work for international investors with Form W-8BEN?</summary>
+          <div class="faq-answer">
+            <p>Non-U.S. investors are subject to a standard 30% statutory withholding tax on U.S. dividend income. If your country of residence maintains a bilateral tax treaty with the United States, submitting Form W-8BEN to your brokerage typically reduces this rate to 15%.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does tax drag affect long-term dividend reinvestment (DRIP)?</summary>
+          <div class="faq-answer">
+            <p>Dividends held in taxable accounts are taxed in the year they are distributed, even when automatically reinvested via DRIP. Paying taxes out of pocket or reducing reinvestment amounts creates tax drag, which is why locating high-yield ordinary income assets in tax-advantaged accounts (like a Roth IRA or 401k) significantly improves compounding velocity.</p>
+          </div>
+        </details>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DividendRadar. Financial market research data updated daily.</p>
+    <p>
+      <a href="index.html">Today</a> |
+      <a href="tomorrow.html">Tomorrow</a> |
+      <a href="this-week.html">This Week</a> |
+      <a href="next-week.html">Next Week</a> |
+      <a href="monthly-dividend-stocks.html">Monthly Payers</a> |
+      <a href="high-yield-dividend-stocks.html">High Yield (&gt;6%)</a> |
+      <a href="dividend-aristocrats.html">Aristocrats</a> |
+      <a href="best-dividend-etfs.html">Dividend ETFs</a> |
+      <a href="living-off-dividends-calculator.html">Retire on Dividends</a> |
+      <a href="yield-on-cost-calculator.html">YoC Calculator</a> |
+      <a href="dividend-tax-calculator.html">Tax Calculator</a> |
+      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a> |
+      <a href="dividend-growth-investing.html">DGI Guide</a> |
+      <a href="special-dividends-explained.html">Special Dividends</a> |
+      <a href="drip-calculator-guide.html">DRIP</a> |
+      <a href="payout-ratio-safety.html">Safety</a> |
+      <a href="qualified-vs-ordinary-dividends.html">Taxes</a> |
+      <a href="about.html">About</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="privacy.html">Privacy</a>
+    </p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
+  </footer>
+
+  <script>
+    function runTaxCalculator() {
+      const gross = parseFloat(document.getElementById('tax-gross-dividend').value) || 0;
+      const yieldPct = parseFloat(document.getElementById('tax-dividend-yield').value) || 0;
+      const assetType = document.getElementById('tax-asset-type').value;
+      const niit = parseFloat(document.getElementById('tax-include-niit').value) || 0;
+
+      let baseTaxRate = 15;
+      let isOrdinary = false;
+      let isW8 = false;
+
+      if (assetType === 'qualified-0') baseTaxRate = 0;
+      else if (assetType === 'qualified-15') baseTaxRate = 15;
+      else if (assetType === 'qualified-20') baseTaxRate = 20;
+      else if (assetType === 'ordinary-22') { baseTaxRate = 22; isOrdinary = true; }
+      else if (assetType === 'ordinary-24') { baseTaxRate = 24; isOrdinary = true; }
+      else if (assetType === 'ordinary-32') { baseTaxRate = 32; isOrdinary = true; }
+      else if (assetType === 'ordinary-37') { baseTaxRate = 37; isOrdinary = true; }
+      else if (assetType === 'w8ben-15') { baseTaxRate = 15; isW8 = true; }
+      else if (assetType === 'w8ben-30') { baseTaxRate = 30; isW8 = true; }
+
+      const totalTaxRate = isW8 ? baseTaxRate : (baseTaxRate + niit);
+      const taxOwed = gross * (totalTaxRate / 100);
+      const netCash = gross - taxOwed;
+      const netYield = yieldPct * (1 - (totalTaxRate / 100));
+
+      document.getElementById('res-gross').innerText = '$' + gross.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('res-tax-owed').innerText = '$' + taxOwed.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('res-net-cash').innerText = '$' + netCash.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('res-net-yield').innerText = netYield.toFixed(2) + '%';
+
+      // Mensaje dinámico de comparación
+      const calloutEl = document.getElementById('tax-comparison-callout');
+      if (isOrdinary) {
+        const qualifiedTaxOwed = gross * (0.15 + (niit / 100));
+        const savings = taxOwed - qualifiedTaxOwed;
+        calloutEl.innerHTML = `<strong>💡 Tax Optimization Insight:</strong> If this exact distribution was earned from a Qualified Dividend stock (taxed at 15%) instead of an ordinary income asset, you would save <strong>$${savings.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong> in taxes annually, increasing your net cash flow by <strong>$${(savings / 12).toFixed(2)}/month</strong>.`;
+      } else if (isW8 && baseTaxRate === 30) {
+        const treatySavings = gross * 0.15;
+        calloutEl.innerHTML = `<strong>⚠️ Warning for International Investors:</strong> Submitting a valid Form W-8BEN under a bilateral tax treaty reduces withholding from 30% to 15%, instantly putting an extra <strong>$${treatySavings.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong> directly into your account.`;
+      } else {
+        calloutEl.innerHTML = `<strong>✅ Tax-Efficient Structure:</strong> Qualified dividends allow you to retain <strong>${(100 - totalTaxRate).toFixed(1)}%</strong> of your gross corporate distributions, significantly accelerating compound growth compared to fixed-income or bond yields.`;
+      }
+    }
+    window.addEventListener('DOMContentLoaded', runTaxCalculator);
+  </script>
+</body>
+</html>

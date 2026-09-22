@@ -4,23 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qualified vs. Ordinary Dividends: Complete IRS Tax Guide - DividendRadar</title>
-  <meta name="description" content="Understand preferential capital gains rates, IRS holding period requirements, and tax-efficient portfolio management.">
+  <meta name="description" content="Master dividend taxation rules. Understand the IRS 60-day holding period test, preferential long-term capital gains tax brackets, and foreign withholding rates.">
   
+  <!-- Schema WebPage y FAQPage para Google Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Qualified vs. Ordinary Dividends: Complete IRS Tax Guide",
-    "description": "Understand preferential capital gains rates, IRS holding period requirements, and tax-efficient portfolio management.",
-    "dateModified": "2026-09-21",
-    "publisher": {
-      "@type": "Organization",
-      "name": "DividendRadar"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Qualified vs. Ordinary Dividends: Complete IRS Tax Guide",
+        "description": "Comprehensive institutional tax guide covering ordinary income vs preferential capital gains treatment on corporate dividends, holding period rules, and Form 1099-DIV.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "DividendRadar"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the primary difference between qualified and ordinary dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ordinary (non-qualified) dividends are taxed at your standard federal income tax marginal rate, which can reach up to 37%. Qualified dividends meet statutory IRS requirements and are taxed at favorable long-term capital gains rates: 0%, 15%, or 20%, depending on your overall taxable income."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the exact IRS 60-day holding period rule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To classify a common stock dividend as qualified, you must hold the underlying stock unhedged for more than 60 days during a 121-day window that begins 60 days prior to the ex-dividend date and ends 60 days after the ex-dividend date. Days where your downside risk is diminished (e.g., holding protective put options or short positions) do not count toward this 60-day requirement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are REIT and BDC dividends almost always taxed as ordinary income?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs) pay zero federal corporate income tax because they pass through at least 90% of their taxable earnings to shareholders. Because this capital was never taxed at the corporate level, the IRS taxes distributions to shareholders at standard ordinary income rates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the short-term dividend capture strategy produce qualified dividends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Dividend capture traders purchase shares right before the ex-date and sell shortly thereafter. Because they hold shares for only a few days or weeks, they fail the statutory 61-day holding period test, causing all distributions to be classified and taxed as ordinary income."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does tax withholding work for non-U.S. international dividend investors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non-resident alien investors are typically subject to a statutory 30% U.S. dividend withholding tax deducted automatically at the brokerage level. However, if your country of tax residence maintains a bilateral tax treaty with the United States and you submit Form W-8BEN, this withholding rate is commonly reduced to 15%."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
-    
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are foreign stock dividends qualified for U.S. investors?", "acceptedAnswer": {"@type": "Answer", "text": "Foreign companies eligible for benefits of a comprehensive U.S. tax treaty or whose ADRs trade readily on established U.S. securities exchanges can qualify for preferential rates."}}]}</script>
+
   <style>
     :root {
       --bg: #0d1117;
@@ -38,7 +86,7 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       background-color: var(--card);
@@ -78,238 +126,114 @@
       border: 1px solid var(--border);
     }
     main {
-      max-width: 1100px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: 2.5rem auto;
       padding: 0 1.5rem;
     }
-    .hero {
-      text-align: center;
-      margin-bottom: 2rem;
+    .article-container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
     }
-    .hero h1 {
-      font-size: 2.2rem;
+    h1 {
       color: #fff;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-top: 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
     }
-    .hero p {
+    h2 {
+      color: #fff;
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    p, li {
       color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 750px;
-      margin: 0 auto;
+      font-size: 1.02rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    strong {
+      color: var(--text);
     }
     .callout {
-      background-color: rgba(88, 166, 255, 0.1);
+      background-color: rgba(88, 166, 255, 0.08);
       border-left: 4px solid var(--primary);
-      padding: 1rem 1.2rem;
-      margin: 1.5rem 0;
+      padding: 1.2rem 1.4rem;
+      margin: 1.8rem 0;
       border-radius: 0 6px 6px 0;
-      color: #c9d1d9;
     }
-    .calc-card {
-      background: #1c2128;
-      border: 1px solid #444c56;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .calc-header h3 {
-      color: #fff;
-      margin-top: 0;
-      font-size: 1.25rem;
-      margin-bottom: 0.3rem;
-    }
-    .calc-header p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-top: 0;
-      margin-bottom: 1.2rem;
-    }
-    .calc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-    }
-    .calc-input label {
-      display: block;
+    .callout p {
+      margin: 0;
       color: var(--text);
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
     }
-    .calc-input input, .calc-input select {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: #fff;
-      padding: 0.6rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      outline: none;
-    }
-    .calc-input input:focus, .calc-input select:focus {
-      border-color: var(--primary);
-    }
-    .calc-results {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    .result-box {
-      background: rgba(0,0,0,0.2);
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .result-box .label {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.2rem;
-    }
-    .result-box .value {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #fff;
-    }
-    .search-box {
-      margin: 1.5rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .search-box input {
-      background-color: var(--card);
-      border: 1px solid var(--border);
-      color: #fff;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      width: 100%;
-      max-width: 380px;
-      outline: none;
-    }
-    .search-box input:focus {
-      border-color: var(--primary);
-    }
-    .table-container {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
+    .table-box {
       overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
+      font-size: 0.92rem;
     }
     th, td {
-      padding: 0.9rem 1.2rem;
+      padding: 0.85rem 1rem;
       border-bottom: 1px solid var(--border);
     }
     th {
-      background-color: rgba(255, 255, 255, 0.03);
+      background: #21262d;
       color: #fff;
-      font-weight: 600;
-      font-size: 0.85rem;
       text-transform: uppercase;
+      font-size: 0.8rem;
       letter-spacing: 0.5px;
     }
     tr:last-child td {
       border-bottom: none;
     }
-    tr:hover td {
-      background-color: rgba(255, 255, 255, 0.02);
-    }
-    a.badge {
-      background-color: #21262d;
-      border: 1px solid var(--border);
-      color: var(--primary);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 0.85rem;
-      text-decoration: none;
-      display: inline-block;
-    }
-    a.badge:hover {
-      background-color: var(--primary);
-      color: #fff;
-    }
-    .text-accent { color: var(--accent); }
-    .text-primary { color: var(--primary); }
-    .font-bold { font-weight: bold; }
-    .num { text-align: right; }
-    th.num { text-align: right; }
-    .editorial {
+    .text-accent { color: var(--accent); font-weight: bold; }
+    /* FAQs */
+    .faq-section {
       margin-top: 3rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 2.2rem;
-    }
-    .editorial h2 {
-      color: #fff;
-      font-size: 1.4rem;
-      margin-top: 1.8rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-    .editorial h2:first-child {
-      margin-top: 0;
-    }
-    .editorial h3 {
-      color: var(--primary);
-      font-size: 1.15rem;
-      margin-top: 1.4rem;
-    }
-    .editorial p, .editorial li {
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    .editorial ul, .editorial ol {
-      padding-left: 1.5rem;
-    }
-    .editorial li {
-      margin-bottom: 0.5rem;
-    }
-    .editorial a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .editorial a:hover {
-      text-decoration: underline;
-    }
-    /* FAQS ACCORDION */
-    .faq-container {
-      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
+      padding-top: 2rem;
     }
     .faq-item {
       background: #1c2128;
       border: 1px solid var(--border);
       border-radius: 6px;
-      margin-bottom: 0.8rem;
-      padding: 0.9rem 1.2rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
     }
     .faq-item summary {
       cursor: pointer;
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.05rem;
+      font-weight: 600;
       outline: none;
     }
     .faq-item summary:hover {
       color: var(--primary);
     }
     .faq-answer {
-      margin-top: 0.8rem;
+      margin-top: 0.9rem;
       padding-top: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
     .faq-answer p {
       margin: 0;
@@ -338,51 +262,135 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html">Today</a>
-<a href="tomorrow.html">Tomorrow</a>
-<a href="this-week.html">This Week</a>
-<a href="next-week.html">Next Week</a>
-<a href="monthly-dividend-stocks.html">Monthly</a>
-<a href="high-yield-dividend-stocks.html">High Yield</a>
-<a href="dividend-aristocrats.html">Aristocrats</a>
-<a href="best-dividend-etfs.html">ETFs</a>
-<a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
-<a href="dividend-growth-investing.html">DGI Strategy</a>
-<a href="drip-calculator-guide.html">DRIP</a>
-<a href="payout-ratio-safety.html">Safety</a>
-<a href="qualified-vs-ordinary-dividends.html" class="active">Taxes</a>
-
+      <a href="tomorrow.html">Tomorrow</a>
+      <a href="this-week.html">This Week</a>
+      <a href="next-week.html">Next Week</a>
+      <a href="monthly-dividend-stocks.html">Monthly</a>
+      <a href="high-yield-dividend-stocks.html">High Yield</a>
+      <a href="dividend-aristocrats.html">Aristocrats</a>
+      <a href="best-dividend-etfs.html">ETFs</a>
+      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
+      <a href="dividend-growth-investing.html">DGI Strategy</a>
+      <a href="drip-calculator-guide.html">DRIP</a>
+      <a href="payout-ratio-safety.html">Safety</a>
+      <a href="qualified-vs-ordinary-dividends.html" class="active">Taxes</a>
     </nav>
   </header>
 
   <main>
-    <div class="hero">
-      <h1>Qualified vs. Ordinary Dividends: Complete IRS Tax Guide</h1>
-      <p>Understand preferential capital gains rates, IRS holding period requirements, and tax-efficient portfolio management.</p>
-    </div>
-
-    
-    
-
-    
-
-    <section class="editorial">
+    <article class="article-container">
+      <h1>Qualified vs. Ordinary Dividends: Complete IRS Tax Guide for Income Investors</h1>
+      <p>Gross dividend yield is an incomplete metric; <strong>net post-tax yield is what actually compounds</strong> inside your brokerage account. In the United States, how the Internal Revenue Service (IRS) taxes your dividend income creates an immense divergence in net wealth accumulation.</p>
       
-        <h2>Ordinary vs. Qualified Dividend Tax Rates</h2>
-        <p>How dividends are taxed depends on IRS classification:</p>
-        <ul>
-          <li><strong>Ordinary Dividends:</strong> Taxed as regular income (up to 37%). Typical for REITs, BDCs, and short-term holdings.</li>
-          <li><strong>Qualified Dividends:</strong> Taxed at favorable long-term capital gains rates (0%, 15%, or 20% depending on taxable income).</li>
-        </ul>
-        <h2>The Crucial 60-Day Holding Period Rule</h2>
-        <p>To qualify for lower capital gains rates, shares must be held unhedged for at least 61 days during a 121-day period centered on the ex-dividend date. Short-term dividend capture traders rarely meet this requirement.</p>
+      <p>Depending on corporate entity structuring and your personal holding duration, cash distributions are partitioned into two categories: <strong>Ordinary (Non-Qualified) Dividends</strong> and <strong>Qualified Dividends</strong>. The difference in tax liability can exceed 17 percentage points, significantly impacting long-term portfolio returns.</p>
+
+      <h2>1. The Two Tax Regimes: Ordinary vs. Qualified</h2>
+      <p>Every dollar paid out by corporations is reported annually on <strong>Form 1099-DIV</strong>. Here is how the IRS categorizes these payments:</p>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Classification</th>
+              <th>Form 1099-DIV Box</th>
+              <th>Federal Tax Treatment</th>
+              <th>Typical Securities Generating This Payout</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ordinary Dividends</strong></td>
+              <td>Box 1a</td>
+              <td>Taxed at your standard marginal income rate (10%, 12%, 22%, 24%, 32%, 35%, or 37%).</td>
+              <td>REITs, BDCs, Money Market Funds, Covered Call Options ETFs (JEPI), Short-Term Holdings.</td>
+            </tr>
+            <tr>
+              <td><strong>Qualified Dividends</strong></td>
+              <td>Box 1b</td>
+              <td>Taxed at favorable Long-Term Capital Gains rates (<strong>0%, 15%, or 20%</strong>).</td>
+              <td>Domestic operating corporations (Apple, Coca-Cola, Microsoft), qualifying foreign ADRs, traditional index ETFs (SCHD, VYM).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>2. Federal Qualified Dividend Tax Brackets</h2>
+      <p>Qualified dividends enjoy the same preferential tax treatment as long-term capital gains, designed to mitigate double taxation on corporate profits that were already taxed at the entity level:</p>
+
+      <ul>
+        <li><strong>0% Capital Gains Rate:</strong> Applies to taxpayers whose overall taxable income falls within lower thresholds (e.g., up to approximately $47,000 for single filers or $94,000 for married filing jointly). Within this band, <em>qualified dividends are completely tax-free</em> at the federal level.</li>
+        <li><strong>15% Capital Gains Rate:</strong> The standard rate applying to the vast majority of middle- and upper-middle-income retail investors.</li>
+        <li><strong>20% Capital Gains Rate:</strong> Applies to high-income earners exceeding top statutory thresholds (e.g., above approximately $518,000 for single filers).</li>
+        <li><strong>Net Investment Income Tax (NIIT):</strong> High earners with modified adjusted gross income exceeding $200,000 (single) or $250,000 (married) are subject to an additional <strong>3.8% surtax</strong> on investment income.</li>
+      </ul>
+
+      <h2>3. The Critical Test: The IRS 60-Day Holding Period Rule</h2>
+      <p>Even if an enterprise is an eligible U.S. corporation (such as an S&P 500 Dividend Aristocrat), its distribution does not automatically become qualified. The shareholder must independently satisfy the statutory holding period test defined under <strong>Internal Revenue Code Section 1(h)(11)</strong>:</p>
+
+      <div class="callout">
+        <p><strong>The Rule:</strong> You must hold the common stock unhedged for <strong>more than 60 days during the 121-day period</strong> that begins 60 days prior to the ex-dividend date and ends 60 days after the ex-dividend date.</p>
+      </div>
+
+      <h3>Why This Matters for Dividend Capture Traders</h3>
+      <p>Traders running short-term capture strategies (buying a stock 1 session prior to the ex-date and selling immediately post-cutoff) fail the 61-day unhedged holding test. Consequently, all distributions collected via capture trading are classified as ordinary income, diminishing the strategy's net post-tax profitability.</p>
+
+      <h2>4. Assets Excluded from Qualified Status</h2>
+      <p>Certain investment categories are statutorily prohibited from qualifying for preferential rates, regardless of how long you hold the shares:</p>
+      <ol>
+        <li><strong>Real Estate Investment Trusts (REITs):</strong> Because REITs pay zero corporate tax by distributing 90% of earnings, distributions are taxed as ordinary income. However, domestic individual filers holding REITs in taxable accounts may utilize the <strong>Section 199A Qualified Business Income (QBI) deduction</strong>, which allows an exemption of up to 20% of eligible ordinary REIT dividends. Explore vetted commercial property operators in our <a href="reit-bdc-dividend-guide.html">REIT & BDC Guide</a>.</li>
+        <li><strong>Covered Call & Option-Income ETFs:</strong> Funds like JEPI, JEPQ, and QYLD generate the majority of their monthly distributions from selling index call options. This income is classified as non-qualified ordinary income. See our comparative breakdown in the <a href="best-dividend-etfs.html">Dividend ETF Guide</a>.</li>
+        <li><strong>Bond and Fixed-Income Funds:</strong> Fixed-income ETF distributions are composed of debt coupon interest, which is always taxed at ordinary federal marginal income brackets.</li>
+      </ol>
+
+      <h2>5. International Investors & Cross-Border Withholding (Form W-8BEN)</h2>
+      <p>For non-U.S. investors purchasing U.S.-listed dividend equities from abroad:</p>
+      <ul>
+        <li><strong>Statutory 30% Withholding:</strong> By default, U.S. brokerages withhold a flat 30% from all declared dividend payouts before crediting cash balances.</li>
+        <li><strong>Tax Treaty Reductions (Form W-8BEN):</strong> If your country of fiscal residence maintains a comprehensive double-taxation treaty with the United States, filing Form W-8BEN reduces this withholding rate (typically down to <strong>15%</strong> for countries like Canada, the UK, Spain, France, Germany, Japan, and Australia).</li>
+      </ul>
+
+      <p>To project multi-year compounding scenarios accounting for dividend reinvestment mechanics, test your assumptions in our <a href="drip-calculator-guide.html">DRIP Compounding Guide</a>, or check upcoming declaration cutoffs on our live <a href="tomorrow.html">Tomorrow Ex-Dividend Calendar</a>.</p>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions About Dividend Taxes</h2>
         
-      <div class="faq-container"><h2>Frequently Asked Questions</h2>
         <details class="faq-item">
-          <summary><strong>Are foreign stock dividends qualified for U.S. investors?</strong></summary>
-          <div class="faq-answer"><p>Foreign companies eligible for benefits of a comprehensive U.S. tax treaty or whose ADRs trade readily on established U.S. securities exchanges can qualify for preferential rates.</p></div>
+          <summary>What is the primary difference between qualified and ordinary dividends?</summary>
+          <div class="faq-answer">
+            <p>Ordinary (non-qualified) dividends are taxed at your standard federal income tax marginal rate, which can reach up to 37%. Qualified dividends meet statutory IRS requirements and are taxed at favorable long-term capital gains rates: 0%, 15%, or 20%, depending on your overall taxable income.</p>
+          </div>
         </details>
-        </div>
-    </section>
+
+        <details class="faq-item">
+          <summary>What is the exact IRS 60-day holding period rule?</summary>
+          <div class="faq-answer">
+            <p>To classify a common stock dividend as qualified, you must hold the underlying stock unhedged for more than 60 days during a 121-day window that begins 60 days prior to the ex-dividend date and ends 60 days after the ex-dividend date. Days where your downside risk is diminished (e.g., holding protective put options or short positions) do not count toward this 60-day requirement.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why are REIT and BDC dividends almost always taxed as ordinary income?</summary>
+          <div class="faq-answer">
+            <p>Real Estate Investment Trusts (REITs) and Business Development Companies (BDCs) pay zero federal corporate income tax because they pass through at least 90% of their taxable earnings to shareholders. Because this capital was never taxed at the corporate level, the IRS taxes distributions to shareholders at standard ordinary income rates.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does the short-term dividend capture strategy produce qualified dividends?</summary>
+          <div class="faq-answer">
+            <p>No. Dividend capture traders purchase shares right before the ex-date and sell shortly thereafter. Because they hold shares for only a few days or weeks, they fail the statutory 61-day holding period test, causing all distributions to be classified and taxed as ordinary income.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does tax withholding work for non-U.S. international dividend investors?</summary>
+          <div class="faq-answer">
+            <p>Non-resident alien investors are typically subject to a statutory 30% U.S. dividend withholding tax deducted automatically at the brokerage level. However, if your country of tax residence maintains a bilateral tax treaty with the United States and you submit Form W-8BEN, this withholding rate is commonly reduced to 15%.</p>
+          </div>
+        </details>
+      </section>
+    </article>
   </main>
 
   <footer>
@@ -408,28 +416,5 @@
     </p>
     <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
-
-  
-  <script>
-    function filtrarTabla() {
-      const input = document.getElementById("filtro");
-      if(!input) return;
-      const filtro = input.value.toUpperCase();
-      const tr = document.getElementById("tabla-dividendos").getElementsByTagName("tr");
-      for (let i = 1; i < tr.length; i++) {
-        const tdSimbolo = tr[i].getElementsByTagName("td")[0];
-        const tdNombre = tr[i].getElementsByTagName("td")[1];
-        if (tdSimbolo || tdNombre) {
-          const txtSimbolo = tdSimbolo.textContent || tdSimbolo.innerText;
-          const txtNombre = tdNombre.textContent || tdNombre.innerText;
-          if (txtSimbolo.toUpperCase().indexOf(filtro) > -1 || txtNombre.toUpperCase().indexOf(filtro) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }
-      }
-    }
-  </script>
 </body>
 </html>

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Today's Ex-Dividend Stocks Calendar - DividendRadar</title>
-  <meta name="description" content="Real-time U.S. equities and ETFs trading ex-dividend today, September 28, 2026. Review distribution amounts and payment dates.">
+  <meta name="description" content="Real-time U.S. equities trading ex-dividend today, September 28, 2026.">
   
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Today's Ex-Dividend Stocks Calendar",
-    "description": "Real-time U.S. equities and ETFs trading ex-dividend today, September 28, 2026.",
+    "description": "Real-time U.S. equities trading ex-dividend today, September 28, 2026.",
     "dateModified": "2026-09-28",
     "publisher": {
       "@type": "Organization",
@@ -20,47 +20,7 @@
   }
   </script>
     
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "If I buy a stock on its ex-dividend date today, do I get the dividend?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Under standard settlement rules, you must buy shares before the ex-dividend date. If you purchase today, the dividend goes to the previous owner."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why did the stock open lower today despite no market news?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Exchanges automatically adjust opening prices down by the declared cash dividend amount to reflect cash leaving the corporate balance sheet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I sell my stock today and still receive the payout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. If you owned the security before today's opening bell, you are registered for the distribution and can sell anytime on or after the ex-dividend date."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between Ex-Dividend Date and Record Date?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The record date is when the company compiles its shareholder registry. Because trades take time to settle, the ex-dividend date is set before the record date."
-        }
-      }
-    ]
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "If I buy a stock on its ex-dividend date today, do I get the dividend?", "acceptedAnswer": {"@type": "Answer", "text": "No. You must purchase shares at least one full business day before the ex-dividend date. If you buy today, the dividend belongs to the previous owner."}}, {"@type": "Question", "name": "Why did the stock open lower today despite no bad earnings news?", "acceptedAnswer": {"@type": "Answer", "text": "Stock exchanges automatically adjust opening prices down by the approximate declared dividend cash amount to reflect corporate cash leaving the company balance sheet."}}, {"@type": "Question", "name": "Can I sell my stock today and still receive the payout?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! If you held the stock before today's market opening bell and sell at any time on or after the ex-dividend date, you remain fully entitled to receive the dividend on the payment date."}}]}</script>
   <style>
     :root {
       --bg: #0d1117;
@@ -324,6 +284,7 @@
     .editorial a:hover {
       text-decoration: underline;
     }
+    /* FAQS ACCORDION */
     .faq-container {
       margin-top: 2.5rem;
       border-top: 1px solid var(--border);
@@ -377,343 +338,595 @@
     <a href="index.html" class="brand">📈 DividendRadar</a>
     <nav>
       <a href="index.html" class="active">Today</a>
-      <a href="tomorrow.html">Tomorrow</a>
-      <a href="this-week.html">This Week</a>
-      <a href="next-week.html">Next Week</a>
-      <a href="monthly-dividend-stocks.html">Monthly</a>
-      <a href="high-yield-dividend-stocks.html">High Yield</a>
-      <a href="dividend-aristocrats.html">Aristocrats</a>
-      <a href="best-dividend-etfs.html">ETFs</a>
-      <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
-      <a href="dividend-growth-investing.html">DGI Strategy</a>
-      <a href="drip-calculator-guide.html">DRIP</a>
-      <a href="payout-ratio-safety.html">Safety</a>
-      <a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+<a href="tomorrow.html">Tomorrow</a>
+<a href="this-week.html">This Week</a>
+<a href="next-week.html">Next Week</a>
+<a href="monthly-dividend-stocks.html">Monthly</a>
+<a href="high-yield-dividend-stocks.html">High Yield</a>
+<a href="dividend-aristocrats.html">Aristocrats</a>
+<a href="best-dividend-etfs.html">ETFs</a>
+<a href="reit-bdc-dividend-guide.html">REITs & BDCs</a>
+<a href="dividend-growth-investing.html">DGI Strategy</a>
+<a href="drip-calculator-guide.html">DRIP</a>
+<a href="payout-ratio-safety.html">Safety</a>
+<a href="qualified-vs-ordinary-dividends.html">Taxes</a>
+
     </nav>
   </header>
 
   <main>
     <div class="hero">
       <h1>Today's Ex-Dividend Stocks Calendar</h1>
-      <p>Real-time U.S. equities trading ex-dividend today. Check declared cash amounts and payment dates.</p>
+      <p>Real-time U.S. equities trading ex-dividend today, September 28, 2026.</p>
     </div>
 
-    <div class="callout"><strong>Notice:</strong> Securities listed below are trading ex-dividend today. Purchasing shares today will not qualify for the declared cash distribution.</div>
+    <div class="callout"><strong>Notice:</strong> Equities listed below are trading ex-dividend today. Purchasing shares today will NOT qualify for the current declared distribution.</div>
     
-    <div class="calc-card">
-      <div class="calc-header">
-        <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
-        <p>Estimate your passive income, distribution payouts, and long-term compound growth.</p>
-      </div>
-      <div class="calc-grid">
-        <div class="calc-input">
-          <label for="inv-amount">Total Investment ($):</label>
-          <input type="number" id="inv-amount" value="5000" step="500" oninput="calcularDividendos()">
-        </div>
-        <div class="calc-input">
-          <label for="inv-yield">Annual Dividend Yield (%):</label>
-          <input type="number" id="inv-yield" value="4.5" step="0.1" oninput="calcularDividendos()">
-        </div>
-        <div class="calc-input">
-          <label for="inv-frequency">Payout Frequency:</label>
-          <select id="inv-frequency" onchange="calcularDividendos()">
-            <option value="4">Quarterly (4x/year)</option>
-            <option value="12">Monthly (12x/year)</option>
-            <option value="2">Semi-Annual (2x/year)</option>
-            <option value="1">Annual (1x/year)</option>
-          </select>
-        </div>
-      </div>
-      <div class="calc-results">
-        <div class="result-box">
-          <span class="label">Annual Passive Income:</span>
-          <span class="value text-accent" id="res-annual">$225.00</span>
-        </div>
-        <div class="result-box">
-          <span class="label">Per Distribution Payout:</span>
-          <span class="value" id="res-payout">$56.25</span>
-        </div>
-        <div class="result-box">
-          <span class="label">10-Year DRIP Forecast:</span>
-          <span class="value text-primary" id="res-drip">$7,764.85</span>
-        </div>
-      </div>
+<div class="calc-card">
+  <div class="calc-header">
+    <h3>🧮 Interactive Dividend Yield & Cash Flow Calculator</h3>
+    <p>Estimate your passive income, distribution paychecks, and long-term compound growth.</p>
+  </div>
+  <div class="calc-grid">
+    <div class="calc-input">
+      <label for="inv-amount">Total Investment ($):</label>
+      <input type="number" id="inv-amount" value="5000" step="500" oninput="calcularDividendos()">
     </div>
+    <div class="calc-input">
+      <label for="inv-yield">Annual Dividend Yield (%):</label>
+      <input type="number" id="inv-yield" value="4.5" step="0.1" oninput="calcularDividendos()">
+    </div>
+    <div class="calc-input">
+      <label for="inv-frequency">Payout Frequency:</label>
+      <select id="inv-frequency" onchange="calcularDividendos()">
+        <option value="4">Quarterly (4x/year)</option>
+        <option value="12">Monthly (12x/year)</option>
+        <option value="2">Semi-Annual (2x/year)</option>
+        <option value="1">Annual (1x/year)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-results">
+    <div class="result-box">
+      <span class="label">Annual Passive Income:</span>
+      <span class="value text-accent" id="res-annual">$225.00</span>
+    </div>
+    <div class="result-box">
+      <span class="label">Per Distribution Payout:</span>
+      <span class="value" id="res-payout">$56.25</span>
+    </div>
+    <div class="result-box">
+      <span class="label">10-Year DRIP Forecast:</span>
+      <span class="value text-primary" id="res-drip">$7,764.85</span>
+    </div>
+  </div>
+</div>
 
-    <div class="search-box">
-      <input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()">
-      <span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: Nasdaq Live Feeds</span>
-    </div>
 
-    <div class="table-container">
-      <table id="tabla-dividendos">
-        <thead>
-          <tr>
-            <th>Symbol</th>
-            <th>Company Name</th>
-            <th class="num">Cash Distribution</th>
-            <th>Ex-Dividend Date</th>
-            <th>Pay Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/ALRS" target="_blank" rel="noopener noreferrer" class="badge">ALRS</a></td>
-            <td>Alerus Financial Corporation Common Stock</td>
-            <td class="num font-bold text-accent">$0.22</td>
-            <td>09/25/2026</td>
+    <div class="search-box"><input type="text" id="filtro" placeholder="Search by ticker or company name..." onkeyup="filtrarTabla()"><span style="font-size: 0.85rem; color: var(--text-muted);">Data feed: <a href="https://www.nasdaq.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Nasdaq API Live</a></span></div><div class="table-container"><table id="tabla-dividendos"><thead><tr><th>Symbol</th><th>Company Name</th><th class="num">Cash Amount</th><th class="num">Yield (%)</th><th>Ex-Dividend Date</th><th>Pay Date</th></tr></thead><tbody>
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/IVAL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify IVAL on Yahoo Finance">IVAL</a></td>
+            <td>Alpha Architect International Quantitative Value ETF</td>
+            <td class="num font-bold text-accent">0.2068131</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/QVAL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QVAL on Yahoo Finance">QVAL</a></td>
+            <td>Alpha Architect U.S. Quantitative Value ETF</td>
+            <td class="num font-bold text-accent">0.2414726</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ABCS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ABCS on Yahoo Finance">ABCS</a></td>
+            <td>Alpha Blue Capital US Small-Mid Cap Dynamic ETF</td>
+            <td class="num font-bold text-accent">0.0890905</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/DIVD" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DIVD on Yahoo Finance">DIVD</a></td>
+            <td>Altrius Global Dividend ETF</td>
+            <td class="num font-bold text-accent">0.0674322</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ROE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ROE on Yahoo Finance">ROE</a></td>
+            <td>Astoria US Equal Weight Quality Kings ETF</td>
+            <td class="num font-bold text-accent">0.0869138</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/GQQQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GQQQ on Yahoo Finance">GQQQ</a></td>
+            <td>Astoria US Quality Growth Kings ETF</td>
+            <td class="num font-bold text-accent">0.0303296</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/SMRI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SMRI on Yahoo Finance">SMRI</a></td>
+            <td>Bushido Capital US Equity ETF</td>
+            <td class="num font-bold text-accent">0.4377573</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/RNIN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify RNIN on Yahoo Finance">RNIN</a></td>
+            <td>Bushido Capital US SMID Cap Equity ETF</td>
+            <td class="num font-bold text-accent">0.0767642</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ENDW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ENDW on Yahoo Finance">ENDW</a></td>
+            <td>Cambria Endowment Style ETF</td>
+            <td class="num font-bold text-accent">0.1625429</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/GEQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GEQ on Yahoo Finance">GEQ</a></td>
+            <td>Cambria Global EW 2 ETF</td>
+            <td class="num font-bold text-accent">0.1720178</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/GEW" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GEW on Yahoo Finance">GEW</a></td>
+            <td>Cambria Global EW ETF</td>
+            <td class="num font-bold text-accent">0.1844531</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/DVGR" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DVGR on Yahoo Finance">DVGR</a></td>
+            <td>DAC 3D Dividend Growth ETF</td>
+            <td class="num font-bold text-accent">0.0725393</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/DAK" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DAK on Yahoo Finance">DAK</a></td>
+            <td>Dakota Active Equity ETF</td>
+            <td class="num font-bold text-accent">0.0582707</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/DADS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify DADS on Yahoo Finance">DADS</a></td>
+            <td>Digital Asset Debt Strategy ETF</td>
+            <td class="num font-bold text-accent">0.2015</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/TDSB" target="_blank" rel="noopener noreferrer" class="badge" title="Verify TDSB on Yahoo Finance">TDSB</a></td>
+            <td>ETC Cabana Target Beta ETF</td>
+            <td class="num font-bold text-accent">0.0435</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/TDSC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify TDSC on Yahoo Finance">TDSC</a></td>
+            <td>ETC Cabana Target Drawdown 10 ETF</td>
+            <td class="num font-bold text-accent">0.1065</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ZTEN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ZTEN on Yahoo Finance">ZTEN</a></td>
+            <td>F/m 10-Year Investment Grade Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.2200626</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ZTWO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ZTWO on Yahoo Finance">ZTWO</a></td>
+            <td>F/m 2-Year Investment Grade Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.1817182</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ZTRE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ZTRE on Yahoo Finance">ZTRE</a></td>
+            <td>F/m 3-Year Investment Grade Corporate Bond ETF</td>
+            <td class="num font-bold text-accent">0.1845238</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ZHOG" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ZHOG on Yahoo Finance">ZHOG</a></td>
+            <td>F/m Opportunistic Income ETF</td>
+            <td class="num font-bold text-accent">0.1989256</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ZMUN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ZMUN on Yahoo Finance">ZMUN</a></td>
+            <td>F/m Ultrashort Tax-Free Municipal ETF</td>
+            <td class="num font-bold text-accent">0.1653167</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/TBIL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify TBIL on Yahoo Finance">TBIL</a></td>
+            <td>F/m US Treasury 3 Month Bill Fund</td>
+            <td class="num font-bold text-accent">0.156604</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/YBST" target="_blank" rel="noopener noreferrer" class="badge" title="Verify YBST on Yahoo Finance">YBST</a></td>
+            <td>GraniteShares YieldBoost Single Stock Universe ETF</td>
+            <td class="num font-bold text-accent">0.10033</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/YBTY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify YBTY on Yahoo Finance">YBTY</a></td>
+            <td>GraniteShares YieldBoost TopYielders ETF</td>
+            <td class="num font-bold text-accent">0.10299</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/GSBC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GSBC on Yahoo Finance">GSBC</a></td>
+            <td>Great Southern Bancorp, Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.43</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/GGAL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GGAL on Yahoo Finance">GGAL</a></td>
+            <td>Grupo Financiero Galicia S.A. American Depositary Shares</td>
+            <td class="num font-bold text-accent">0.04786</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/05/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/HIS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify HIS on Yahoo Finance">HIS</a></td>
+            <td>Humilis US Focused Opportunities ETF</td>
+            <td class="num font-bold text-accent">0.0129348</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/INDB" target="_blank" rel="noopener noreferrer" class="badge" title="Verify INDB on Yahoo Finance">INDB</a></td>
+            <td>Independent Bank Corp. Common Stock</td>
+            <td class="num font-bold text-accent">0.64</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
             <td>10/09/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/LIEN" target="_blank" rel="noopener noreferrer" class="badge">LIEN</a></td>
-            <td>Chicago Atlantic BDC, Inc. Common Stock</td>
-            <td class="num font-bold text-accent">$0.34</td>
-            <td>09/25/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/REAI" target="_blank" rel="noopener noreferrer" class="badge" title="Verify REAI on Yahoo Finance">REAI</a></td>
+            <td>Intelligent Real Estate ETF</td>
+            <td class="num font-bold text-accent">0.3251</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/ISBA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify ISBA on Yahoo Finance">ISBA</a></td>
+            <td>Isabella Bank Corporation Common stock</td>
+            <td class="num font-bold text-accent">0.28</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/BZ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify BZ on Yahoo Finance">BZ</a></td>
+            <td>KANZHUN LIMITED American Depository Shares</td>
+            <td class="num font-bold text-accent">0.51</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/14/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/KEAT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KEAT on Yahoo Finance">KEAT</a></td>
+            <td>Keating Active ETF</td>
+            <td class="num font-bold text-accent">0.2170427</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/KDP" target="_blank" rel="noopener noreferrer" class="badge" title="Verify KDP on Yahoo Finance">KDP</a></td>
+            <td>Keurig Dr Pepper Inc. Common Stock</td>
+            <td class="num font-bold text-accent">0.23</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
             <td>10/09/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/QLDY" target="_blank" rel="noopener noreferrer" class="badge">QLDY</a></td>
-            <td>Defiance Nasdaq 100 LightningSpread Income ETF</td>
-            <td class="num font-bold text-accent">$0.1593</td>
-            <td>09/25/2026</td>
-            <td>09/28/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/FGBI" target="_blank" rel="noopener noreferrer" class="badge">FGBI</a></td>
-            <td>First Guaranty Bancshares, Inc. Common Stock</td>
-            <td class="num font-bold text-accent">$0.01</td>
-            <td>09/25/2026</td>
-            <td>09/30/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/FIYY" target="_blank" rel="noopener noreferrer" class="badge">FIYY</a></td>
-            <td>GraniteShares YieldBOOST 20Y Treasuries ETF</td>
-            <td class="num font-bold text-accent">$0.0094</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/AMYY" target="_blank" rel="noopener noreferrer" class="badge">AMYY</a></td>
-            <td>GraniteShares YieldBOOST AMD ETF</td>
-            <td class="num font-bold text-accent">$0.1777</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/AZYY" target="_blank" rel="noopener noreferrer" class="badge">AZYY</a></td>
-            <td>GraniteShares YieldBoost AMZN ETF</td>
-            <td class="num font-bold text-accent">$0.0931</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/BBYY" target="_blank" rel="noopener noreferrer" class="badge">BBYY</a></td>
-            <td>GraniteShares YieldBOOST BABA ETF</td>
-            <td class="num font-bold text-accent">$0.0689</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/BIOY" target="_blank" rel="noopener noreferrer" class="badge">BIOY</a></td>
-            <td>GraniteShares YieldBOOST Biotech ETF</td>
-            <td class="num font-bold text-accent">$0.2323</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/XBTY" target="_blank" rel="noopener noreferrer" class="badge">XBTY</a></td>
-            <td>GraniteShares YieldBOOST Bitcoin ETF</td>
-            <td class="num font-bold text-accent">$0.0320</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/COYY" target="_blank" rel="noopener noreferrer" class="badge">COYY</a></td>
-            <td>GraniteShares YieldBOOST COIN ETF</td>
-            <td class="num font-bold text-accent">$0.1840</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/CRY" target="_blank" rel="noopener noreferrer" class="badge">CRY</a></td>
-            <td>GraniteShares YieldBOOST CRCL ETF</td>
-            <td class="num font-bold text-accent">$0.2732</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/CWY" target="_blank" rel="noopener noreferrer" class="badge">CWY</a></td>
-            <td>GraniteShares YieldBOOST CRWV ETF</td>
-            <td class="num font-bold text-accent">$0.2333</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/XEY" target="_blank" rel="noopener noreferrer" class="badge">XEY</a></td>
-            <td>GraniteShares YieldBOOST Ether ETF</td>
-            <td class="num font-bold text-accent">$0.1383</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/FINY" target="_blank" rel="noopener noreferrer" class="badge">FINY</a></td>
-            <td>GraniteShares YieldBOOST Financials ETF</td>
-            <td class="num font-bold text-accent">$0.0516</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/NUGY" target="_blank" rel="noopener noreferrer" class="badge">NUGY</a></td>
-            <td>GraniteShares YieldBOOST Gold Miners ETF</td>
-            <td class="num font-bold text-accent">$0.1392</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/HMYY" target="_blank" rel="noopener noreferrer" class="badge">HMYY</a></td>
-            <td>GraniteShares YieldBoost HIMS ETF</td>
-            <td class="num font-bold text-accent">$0.0819</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/HOYY" target="_blank" rel="noopener noreferrer" class="badge">HOYY</a></td>
-            <td>GraniteShares YieldBOOST HOOD ETF</td>
-            <td class="num font-bold text-accent">$0.0718</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/FBYY" target="_blank" rel="noopener noreferrer" class="badge">FBYY</a></td>
-            <td>GraniteShares YieldBOOST META ETF</td>
-            <td class="num font-bold text-accent">$0.0640</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/MTYY" target="_blank" rel="noopener noreferrer" class="badge">MTYY</a></td>
-            <td>GraniteShares YieldBOOST MSTR ETF</td>
-            <td class="num font-bold text-accent">$0.1354</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/MUYY" target="_blank" rel="noopener noreferrer" class="badge">MUYY</a></td>
-            <td>GraniteShares YieldBOOST MU ETF</td>
-            <td class="num font-bold text-accent">$0.2191</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/NVYY" target="_blank" rel="noopener noreferrer" class="badge">NVYY</a></td>
-            <td>GraniteShares YieldBOOST NVDA ETF</td>
-            <td class="num font-bold text-accent">$0.0759</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/PLYY" target="_blank" rel="noopener noreferrer" class="badge">PLYY</a></td>
-            <td>GraniteShares YieldBOOST PLTR ETF</td>
-            <td class="num font-bold text-accent">$0.0838</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/TQQY" target="_blank" rel="noopener noreferrer" class="badge">TQQY</a></td>
-            <td>GraniteShares YieldBOOST QQQ ETF</td>
-            <td class="num font-bold text-accent">$0.0592</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/SEMY" target="_blank" rel="noopener noreferrer" class="badge">SEMY</a></td>
-            <td>GraniteShares YieldBOOST Semiconductor ETF</td>
-            <td class="num font-bold text-accent">$0.1650</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/SMYY" target="_blank" rel="noopener noreferrer" class="badge">SMYY</a></td>
-            <td>GraniteShares YieldBOOST SMCI ETF</td>
-            <td class="num font-bold text-accent">$0.0865</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/TSYY" target="_blank" rel="noopener noreferrer" class="badge">TSYY</a></td>
-            <td>GraniteShares YieldBOOST TSLA ETF</td>
-            <td class="num font-bold text-accent">$0.1786</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/TMYY" target="_blank" rel="noopener noreferrer" class="badge">TMYY</a></td>
-            <td>GraniteShares YieldBOOST TSM ETF</td>
-            <td class="num font-bold text-accent">$0.1635</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/TOWN" target="_blank" rel="noopener noreferrer" class="badge">TOWN</a></td>
-            <td>TowneBank Common Stock</td>
-            <td class="num font-bold text-accent">$0.2800</td>
-            <td>09/25/2026</td>
-            <td>10/09/2026</td>
-          </tr>
-          <tr>
-            <td><a href="https://finance.yahoo.com/quote/DGRW" target="_blank" rel="noopener noreferrer" class="badge">DGRW</a></td>
-            <td>WisdomTree U.S. Quality Dividend Growth Fund</td>
-            <td class="num font-bold text-accent">$0.1700</td>
-            <td>09/25/2026</td>
-            <td>09/29/2026</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/FDIV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify FDIV on Yahoo Finance">FDIV</a></td>
+            <td>MarketDesk Focused U.S. Dividend ETF</td>
+            <td class="num font-bold text-accent">0.1792611</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/MKAM" target="_blank" rel="noopener noreferrer" class="badge" title="Verify MKAM on Yahoo Finance">MKAM</a></td>
+            <td>MKAM ETF</td>
+            <td class="num font-bold text-accent">0.1471263</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/PFDE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PFDE on Yahoo Finance">PFDE</a></td>
+            <td>Pathfinder Disciplined US Equity ETF</td>
+            <td class="num font-bold text-accent">0.02</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/PFOE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PFOE on Yahoo Finance">PFOE</a></td>
+            <td>Pathfinder Focused Opportunities ETF</td>
+            <td class="num font-bold text-accent">0.01</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/PSEC" target="_blank" rel="noopener noreferrer" class="badge" title="Verify PSEC on Yahoo Finance">PSEC</a></td>
+            <td>Prospect Capital Corporation Common Stock</td>
+            <td class="num font-bold text-accent">0.035</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>10/21/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/NVPS" target="_blank" rel="noopener noreferrer" class="badge" title="Verify NVPS on Yahoo Finance">NVPS</a></td>
+            <td>PurePlay Nvidia Ecosystem Picks &amp; Shovels Index ETF</td>
+            <td class="num font-bold text-accent">0.0087</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/NIXT" target="_blank" rel="noopener noreferrer" class="badge" title="Verify NIXT on Yahoo Finance">NIXT</a></td>
+            <td>Research Affiliates Deletions ETF</td>
+            <td class="num font-bold text-accent">0.0909025</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/USDX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify USDX on Yahoo Finance">USDX</a></td>
+            <td>SGI Enhanced Core ETF</td>
+            <td class="num font-bold text-accent">0.06</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/GINX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify GINX on Yahoo Finance">GINX</a></td>
+            <td>SGI Enhanced Global Income ETF</td>
+            <td class="num font-bold text-accent">0.15</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/LDRX" target="_blank" rel="noopener noreferrer" class="badge" title="Verify LDRX on Yahoo Finance">LDRX</a></td>
+            <td>SGI Enhanced Market Leaders ETF</td>
+            <td class="num font-bold text-accent">0.04</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/QXQ" target="_blank" rel="noopener noreferrer" class="badge" title="Verify QXQ on Yahoo Finance">QXQ</a></td>
+            <td>SGI Enhanced Nasdaq-100 ETF</td>
+            <td class="num font-bold text-accent">0.08</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/SATA" target="_blank" rel="noopener noreferrer" class="badge" title="Verify SATA on Yahoo Finance">SATA</a></td>
+            <td>Strive, Inc. Variable Rate Series A Perpetual Preferred Stock</td>
+            <td class="num font-bold text-accent">0.0516</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/UTEN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UTEN on Yahoo Finance">UTEN</a></td>
+            <td>US Treasury 10 Year Note ETF</td>
+            <td class="num font-bold text-accent">0.1529331</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/OBIL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify OBIL on Yahoo Finance">OBIL</a></td>
+            <td>US Treasury 12 Month Bill ETF</td>
+            <td class="num font-bold text-accent">0.1723077</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/UTWO" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UTWO on Yahoo Finance">UTWO</a></td>
+            <td>US Treasury 2 Year Note ETF</td>
+            <td class="num font-bold text-accent">0.1584</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/UTWY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UTWY on Yahoo Finance">UTWY</a></td>
+            <td>US Treasury 20 Year Bond ETF</td>
+            <td class="num font-bold text-accent">0.163584</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/UTRE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UTRE on Yahoo Finance">UTRE</a></td>
+            <td>US Treasury 3 Year Note ETF</td>
+            <td class="num font-bold text-accent">0.1665506</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/UTHY" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UTHY on Yahoo Finance">UTHY</a></td>
+            <td>US Treasury 30 Year Bond ETF</td>
+            <td class="num font-bold text-accent">0.1555102</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/UFIV" target="_blank" rel="noopener noreferrer" class="badge" title="Verify UFIV on Yahoo Finance">UFIV</a></td>
+            <td>US Treasury 5 Year Note ETF</td>
+            <td class="num font-bold text-accent">0.1646694</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/XBIL" target="_blank" rel="noopener noreferrer" class="badge" title="Verify XBIL on Yahoo Finance">XBIL</a></td>
+            <td>US Treasury 6 Month Bill ETF</td>
+            <td class="num font-bold text-accent">0.1590338</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/USVN" target="_blank" rel="noopener noreferrer" class="badge" title="Verify USVN on Yahoo Finance">USVN</a></td>
+            <td>US Treasury 7 Year Note ETF</td>
+            <td class="num font-bold text-accent">0.1647611</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/29/2026</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://finance.yahoo.com/quote/YOKE" target="_blank" rel="noopener noreferrer" class="badge" title="Verify YOKE on Yahoo Finance">YOKE</a></td>
+            <td>YOKE Core ETF</td>
+            <td class="num font-bold text-accent">0.0572039</td>
+            <td class="num">N/A%</td>
+            <td>9/28/2026</td>
+            <td>9/30/2026</td>
+        </tr>
+        </tbody></table></div>
 
     <section class="editorial">
-      <h2>Daily Market Analysis & Ex-Dividend Mechanics</h2>
-      <p>The ex-dividend date represents the definitive cutoff established by stock exchanges and regulatory frameworks to determine ownership rights for announced corporate distributions. Under standard market settlement conventions (T+1 settlement governed by the U.S. Securities and Exchange Commission), an investor must execute their buy order at least one full trading day prior to the ex-dividend date to appear on the company's official shareholder register by the record date.</p>
+      
+<h2>Understanding Today's Ex-Dividend Trading Session</h2>
+<p>When an equity trades <strong>ex-dividend today</strong>, it has reached its official regulatory cutoff point. Under U.S. Securities and Exchange Commission (SEC) settlement regulations, trading ex-dividend means the right to the upcoming dividend has officially detached from the stock certificate.</p>
 
-      <h3>Price Adjustment Mechanics: What to Expect at the Opening Bell</h3>
-      <p>A frequent point of confusion among retail investors is the opening price behavior of securities trading ex-dividend. Before the opening auction, exchanges adjust the security's previous closing price downward by the exact cash distribution amount declared by the board of directors. This adjustment reflects a fundamental corporate finance reality: cash disbursed to shareholders departs the firm's balance sheet, reducing enterprise book value dollar-for-dollar.</p>
-      <p>For example, if an exchange-traded fund or equity closes at $45.00 and distributes $0.25 per share, the technical baseline open becomes $44.75. Broader morning market volatility and bid-ask spreads will fluctuate around this adjusted baseline.</p>
+<h3>What Happens to the Stock Price Today?</h3>
+<p>On the morning of the ex-date, the opening share price is automatically adjusted downward by the exchange by approximately the exact declared dividend cash amount. Because the company will disburse capital from its treasury to shareholders, the enterprise value of the firm contracts by that precise cash sum. If external broader market momentum is neutral, an equity trading at $50 that declared a $1.00 dividend will open around $49.00.</p>
 
-      <h3>Navigating High-Yield ETFs and Covered Call Funds</h3>
-      <p>Today's calendar features multiple synthetic yield and derivative-enhanced vehicles (such as YieldBOOST and covered-call income funds). While their annualized distributions appear exceptionally lucrative, investors should evaluate the underlying structural mechanics:</p>
-      <ul>
-        <li><strong>Return of Capital (ROC) vs. Net Investment Income:</strong> Distributions derived from synthetic call options often classify partially as return of capital for tax purposes, adjusting your cost basis downward rather than registering solely as ordinary income.</li>
-        <li><strong>NAV Erosion Risks:</strong> High-frequency payouts generated by capped upside option strategies can constrain capital appreciation during aggressive bull markets. Sustainable long-term yield requires tracking total return rather than headline cash payouts alone.</li>
-        <li><strong>Tax Treatment:</strong> Unlike qualified dividends from traditional domestic corporations, income from derivative-based funds and debt instruments is predominantly taxed at ordinary marginal income rates. Consult our <a href="qualified-vs-ordinary-dividends.html">Qualified vs. Ordinary Dividends Guide</a> for detailed tax brackets.</li>
-      </ul>
+<h3>Can You Buy Today and Receive the Dividend?</h3>
+<p><strong>No.</strong> Purchasing shares on or after the ex-dividend date disqualifies you from the declared payment. The cash disbursement will be routed to the previous shareholder who owned the shares prior to this morning's market open. To receive upcoming payments, plan your orders ahead using our <a href="tomorrow.html">Tomorrow Ex-Dividend Calendar</a>.</p>
 
-      <h3>Execution Strategy for Income Investors</h3>
-      <p>If your strategy centers on dividend capture or compounding passive income streams:</p>
-      <ol>
-        <li><strong>Never chase yield on ex-date morning:</strong> Buying shares today permanently surrenders the upcoming payment to the seller. Use our <a href="tomorrow.html">Tomorrow Ex-Dividend Schedule</a> to queue limit orders 24 hours in advance.</li>
-        <li><strong>Monitor Dividend Safety:</strong> Cross-reference cash distributions against underlying operating cash flow and free cash flow payout ratios. A cash distribution exceeding 85% of net earnings poses sustainability risks during economic contractions. Check our <a href="payout-ratio-safety.html">Payout Ratio Safety Guide</a> for detailed thresholds.</li>
-        <li><strong>Automate Reinvestment:</strong> Utilize Dividend Reinvestment Plans (DRIP) to leverage compound interest without incurring per-transaction brokerage fees.</li>
-      </ol>
-
-      <div class="faq-container">
-        <h2>Frequently Asked Questions</h2>
+      <div class="faq-container"><h2>Frequently Asked Questions</h2>
         <details class="faq-item">
           <summary><strong>If I buy a stock on its ex-dividend date today, do I get the dividend?</strong></summary>
-          <div class="faq-answer"><p>No. Standard SEC settlement requires settlement before the record date. Purchasing on or after the ex-dividend date means the declared payment belongs entirely to the seller.</p></div>
+          <div class="faq-answer"><p>No. You must purchase shares at least one full business day before the ex-dividend date. If you buy today, the dividend belongs to the previous owner.</p></div>
         </details>
+        
         <details class="faq-item">
-          <summary><strong>Can I sell my shares today and still collect the distribution?</strong></summary>
-          <div class="faq-answer"><p>Yes. If you owned the shares prior to the opening bell on the ex-dividend date, the dividend rights have detached in your favor. You may sell at open and the company will disburse payment to your account on the designated Pay Date.</p></div>
+          <summary><strong>Why did the stock open lower today despite no bad earnings news?</strong></summary>
+          <div class="faq-answer"><p>Stock exchanges automatically adjust opening prices down by the approximate declared dividend cash amount to reflect corporate cash leaving the company balance sheet.</p></div>
         </details>
+        
         <details class="faq-item">
-          <summary><strong>What is the difference between the Ex-Dividend Date and the Record Date?</strong></summary>
-          <div class="faq-answer"><p>The record date is the internal date when the company reviews its shareholder books. Due to trade clearing timelines, the ex-dividend date is set by the exchange one business day prior to ensure records settle properly.</p></div>
+          <summary><strong>Can I sell my stock today and still receive the payout?</strong></summary>
+          <div class="faq-answer"><p>Yes! If you held the stock before today's market opening bell and sell at any time on or after the ex-dividend date, you remain fully entitled to receive the dividend on the payment date.</p></div>
         </details>
-        <details class="faq-item">
-          <summary><strong>Why do synthetic dividend ETFs declare distributions so frequently?</strong></summary>
-          <div class="faq-answer"><p>Covered-call and options-based income ETFs write weekly or monthly option contracts against baseline equity holdings, distributing option premiums rapidly to offer predictable cash flows to income-oriented portfolios.</p></div>
-        </details>
-      </div>
+        </div>
     </section>
   </main>
 
@@ -725,7 +938,7 @@
       <a href="this-week.html">This Week</a> |
       <a href="next-week.html">Next Week</a> |
       <a href="monthly-dividend-stocks.html">Monthly Payers</a> |
-      <a href="high-yield-dividend-stocks.html">High Yield (>6%)</a> |
+      <a href="high-yield-dividend-stocks.html">High Yield (&gt;6%)</a> |
       <a href="dividend-aristocrats.html">Aristocrats</a> |
       <a href="best-dividend-etfs.html">Dividend ETFs</a> |
       <a href="reit-bdc-dividend-guide.html">REITs & BDCs</a> |
@@ -736,33 +949,30 @@
       <a href="qualified-vs-ordinary-dividends.html">Taxes</a> |
       <a href="about.html">About</a> |
       <a href="terms.html">Terms</a> |
-      <a href="privacy.html">Privacy</a> |
-      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privacy</a>
     </p>
-    <p style="margin-top: 1rem; color: #8b949e; font-size: 0.78rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <strong>Disclaimer:</strong> DividendRadar is a financial publishing and data analysis platform. All content, tools, and data feeds are provided strictly for informational and educational purposes and do not constitute financial, investment, legal, or tax advice. Market quotes and distributions may experience latency.
-    </p>
-    <p style="margin-top: 0.8rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
+    <p style="margin-top: 1rem; color: #58a6ff;">Contact: support@dividendradar.com</p>
   </footer>
 
-  <script>
-  function calcularDividendos() {
-    const capital = parseFloat(document.getElementById('inv-amount').value) || 0;
-    const yieldPct = parseFloat(document.getElementById('inv-yield').value) || 0;
-    const frequency = parseInt(document.getElementById('inv-frequency').value) || 4;
+  
+<script>
+function calcularDividendos() {
+  const capital = parseFloat(document.getElementById('inv-amount').value) || 0;
+  const yieldPct = parseFloat(document.getElementById('inv-yield').value) || 0;
+  const frequency = parseInt(document.getElementById('inv-frequency').value) || 4;
 
-    const annualIncome = capital * (yieldPct / 100);
-    const perPayout = annualIncome / frequency;
+  const annualIncome = capital * (yieldPct / 100);
+  const perPayout = annualIncome / frequency;
 
-    const rate = yieldPct / 100;
-    const drip10Years = capital * Math.pow((1 + rate / frequency), frequency * 10);
+  const rate = yieldPct / 100;
+  const drip10Years = capital * Math.pow((1 + rate / frequency), frequency * 10);
 
-    document.getElementById('res-annual').innerText = '$' + annualIncome.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-    document.getElementById('res-payout').innerText = '$' + perPayout.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-    document.getElementById('res-drip').innerText = '$' + drip10Years.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-  }
-  window.addEventListener('DOMContentLoaded', calcularDividendos);
-  </script>
+  document.getElementById('res-annual').innerText = '$' + annualIncome.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById('res-payout').innerText = '$' + perPayout.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById('res-drip').innerText = '$' + drip10Years.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+window.addEventListener('DOMContentLoaded', calcularDividendos);
+</script>
 
   <script>
     function filtrarTabla() {

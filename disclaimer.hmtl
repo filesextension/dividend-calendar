@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Financial Disclaimer - DividendRadar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; background: #0d1117; color: #c9d1d9; max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.7; }
+    h1, h2 { color: #fff; }
+    a { color: #58a6ff; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">&larr; Return to DividendRadar</a></p>
+  <h1>Financial & Legal Disclaimer</h1>
+  <p>The information provided by DividendRadar ("we," "us," or "our") on dividendsradar.com is for general informational and educational purposes only.</p>
+  <h2>No Financial Advice</h2>
+  <p>None of the financial data, distribution schedules, yields, or interactive tools constitute individual investment advice, endorsement, or financial recommendations. Always conduct independent research or consult with a licensed financial advisor before making equity purchases.</p>
+  <h2>Data Accuracy</h2>
+  <p>While we source our data feeds from reputable market feeds and public regulatory filings, DividendRadar makes no warranties regarding completeness, timeliness, or absolute accuracy of cash distribution values or ex-dividend dates.</p>
+</body>
+</html>
